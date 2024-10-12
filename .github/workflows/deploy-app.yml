@@ -28,7 +28,7 @@ jobs:
         run: |
           source pyenv/bin/activate
           shiny static-assets remove
-          shinylive export src_shiny_app docs
+          shinylive export app.py docs
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

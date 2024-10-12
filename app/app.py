@@ -5,14 +5,12 @@ import matplotlib.pyplot as plt
 
 app_ui = ui.page_fluid(
     ui.layout_sidebar(
-        ui.panel_sidebar(
+        ui.sidebar(
             ui.h2("Page Charts 2s"),
             ui.hr(),
             ui.input_slider(id="slider", label="Number of bins:", min=5, max=25, value=15)
         ),
-        ui.panel_main(
-            ui.output_plot(id="histogram")
-        )
+        ui.output_plot(id="histogram")
     )
 )
 

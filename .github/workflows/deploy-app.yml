@@ -37,3 +37,4 @@ jobs:
           publish_dir: ./docs
           publish_branch: gh-pages
           allow_empty_commit: true
+          keep_files: true

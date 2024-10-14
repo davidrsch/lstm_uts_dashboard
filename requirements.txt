@@ -38,7 +38,7 @@ parso==0.8.4
 pathlib==1.0.1
 pillow==10.4.0
 platformdirs==4.3.6
-prompt-toolkit==3.0.36
+prompt-toolkit>=3.0,<3.1
 psutil==6.0.0
 pure_eval==0.2.3
 Pygments==2.18.0

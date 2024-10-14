@@ -54,6 +54,9 @@ app_ui = ui.page_fluid(
             svg {
                 margin: 0px !important;
             }
+            body {
+                background-color: rgb(183, 217, 255);
+            }
             """
         )
     ),
@@ -79,8 +82,12 @@ app_ui = ui.page_fluid(
                 class_ = "card ms-depth-8",
                 style = "padding: 22px; border-radius: 0px; height: 151px;"
             ),
-            class_ = "ms-Grid-col ms-sm12 ms-md1"
+            class_ = "ms-Grid-col ms-sm12 ms-lg6 ms-xl1"
         ),
+        ui.div(
+            class_ = "ms-Grid-col ms-sm12 ms-hiddenLgUp",
+            style = "height:10px;"
+            ),
         ui.div(
             ui.div(
                 ui.div("Best model parameters:", style = "font-size: 12.67px;"),
@@ -88,8 +95,12 @@ app_ui = ui.page_fluid(
                 class_ = "card ms-depth-8",
                 style = "padding: 22px;  border-radius: 0px; height: 151px;"
             ),
-            class_ = "ms-Grid-col ms-sm12 ms-md6"
+            class_ = "ms-Grid-col ms-sm12 ms-lg6"
         ),
+        ui.div(
+            class_ = "ms-Grid-col ms-sm12 ms-lg12 ms-hiddenXlUp",
+            style = "height:10px;"
+            ),
         ui.div(
             ui.div(
                 ui.div("Average RMSE", style = "font-size: 18px;"),
@@ -99,8 +110,12 @@ app_ui = ui.page_fluid(
                 class_ = "card ms-depth-8",
                 style = "padding: 22px; height: 95px;  border-radius: 0px; height: 151px;"
             ),
-            class_ = "ms-Grid-col ms-sm12 ms-md2"
+            class_ = "ms-Grid-col ms-sm12 ms-lg4 ms-xl2"
         ),
+        ui.div(
+            class_ = "ms-Grid-col ms-sm12 ms-hiddenLgUp",
+            style = "height:10px;"
+            ),
         ui.div(
             ui.div(
                 ui.div("Modals:", style = "font-size: 12.67px;"),
@@ -128,8 +143,12 @@ app_ui = ui.page_fluid(
                 class_ = "card ms-depth-8",
                 style = "padding: 22px; height: 95px; border-radius: 0px; height: 151px;"
             ),
-            class_ = "ms-Grid-col ms-sm12 ms-md1"
+            class_ = "ms-Grid-col ms-sm12 ms-lg4 ms-xl1"
         ),
+        ui.div(
+            class_ = "ms-Grid-col ms-sm12 ms-hiddenLgUp",
+            style = "height:10px;"
+            ),
         ui.div(
             ui.div(
                 ui.tags.a(
@@ -142,7 +161,7 @@ app_ui = ui.page_fluid(
                 class_ = "card ms-depth-8",
                 style = "padding: 22px; height: 151px; display: flex; align-items: center; justify-content: center; border-radius: 0px;"
             ),
-            class_ = "ms-Grid-col ms-sm12 ms-md2"
+            class_ = "ms-Grid-col ms-sm12 ms-lg4 ms-xl2"
         ),
         class_ = "ms-Grid-row",
         style = "display: flex; flex-wrap: wrap;"
@@ -194,8 +213,12 @@ app_ui = ui.page_fluid(
                 class_ = "card ms-depth-8",
                 style = "padding: 22px; border-radius: 0px;"
             ),
-            class_ = "ms-Grid-col ms-sm12 ms-md6"
+            class_ = "ms-Grid-col ms-lg12 ms-xl6"
         ),
+        ui.div(
+            class_ = "ms-Grid-col ms-lg12 ms-hiddenXlUp",
+            style = "height:10px;"
+            ),
         ui.div(
             ui.div(
                 ui.div(
@@ -215,7 +238,7 @@ app_ui = ui.page_fluid(
                 class_ = "card ms-depth-8",
                 style = "padding: 22px; border-radius: 0px;"
             ),
-            class_ = "ms-Grid-col ms-sm12 ms-md6"
+            class_ = "ms-Grid-col ms-lg12 ms-xl6"
         ),
         class_ = "ms-Grid-row",
         style = "display: flex; flex-wrap: wrap;"

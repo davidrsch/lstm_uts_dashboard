@@ -1,19 +1,61 @@
 from shiny import App, reactive, render, ui
 from faicons import icon_svg
-from pathlib import Path
 
 import json
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-import os
-
-css_file = os.path.join(os.path.dirname(__file__), "style", "styles.css")
 
 app_ui = ui.page_fluid(
     ui.head_content(
         ui.tags.link(rel="stylesheet", href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css"),
-        ui.tags.link(rel="stylesheet", href="style/styles.css")
+        ui.tags.style(
+            """
+            table {
+                margin-bottom: 0px !important;
+            }
+            #best_model_rmse{
+                font-size: 24.67px;
+            }
+            .custom-row {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 2%;
+            }
+            .custom-col {
+                flex: 1;
+                min-width: 20%;
+                padding-top: 2px;
+                padding-bottom: 2px;
+                font-size: 0.8em;
+            }
+            .custom-col .shiny-input-select {
+                height: 30px;
+                font-size: 0.8em;
+            }
+            .modal-content {
+                border-radius: 0px;
+            }
+            .modal-header, .modal-body, modal-footer {
+                padding: 10px;
+            }
+            .modal-title {
+                font-size: 18px;
+            }
+            .modal-footer .btn {
+                padding: 10px;
+                font-size: 13px;
+                border-radius: 0px;
+            }
+            shiny-data-frame {
+                font-size: 14px;
+            }
+            svg {
+                margin: 0px !important;
+            }
+            """
+        )
     ),
     ui.div(
         class_ = "ms-Grid-row",

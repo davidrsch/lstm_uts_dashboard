@@ -2,6 +2,7 @@ anyio==4.6.0
 appdirs==1.4.4
 asgiref==3.8.1
 asttokens==2.4.1
+backcall==0.2.0
 chevron==0.14.0
 click==8.1.7
 colorama==0.4.6
@@ -36,9 +37,10 @@ packaging==24.1
 pandas==2.2.3
 parso==0.8.4
 pathlib==1.0.1
+pickleshare==0.7.5
 pillow==10.4.0
 platformdirs==4.3.6
-prompt-toolkit>=3.0,<3.1
+prompt-toolkit==3.0.36
 psutil==6.0.0
 pure_eval==0.2.3
 Pygments==2.18.0

@@ -8,7 +8,6 @@ import seaborn as sns
 
 app_ui = ui.page_fluid(
     ui.head_content(
-        ui.tags.link(rel="shortcut icon", href="https://raw.githubusercontent.com/davidrsch/LSTM_UTS/refs/heads/main/app/static/favicon.ico"),
         ui.tags.link(rel="stylesheet", href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css"),
         ui.tags.style(
             """

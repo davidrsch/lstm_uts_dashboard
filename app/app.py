@@ -8,6 +8,7 @@ import seaborn as sns
 
 app_ui = ui.page_fluid(
     ui.head_content(
+        ui.tags.link(rel="shortcut icon", href="https://raw.githubusercontent.com/davidrsch/LSTM_UTS/refs/heads/main/app/static/favicon.ico"),
         ui.tags.link(rel="stylesheet", href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css"),
         ui.tags.style(
             """
@@ -255,8 +256,7 @@ app_ui = ui.page_fluid(
         const inputFile = document.querySelector('.form-group:has(#buttonUpload)');
         inputFile.style.display = 'none';
         """
-    ),
-    favicon = "https://raw.githubusercontent.com/davidrsch/LSTM_UTS/refs/heads/main/app/static/favicon.ico" 
+    ) 
 )
 
 def server(input, output, session):

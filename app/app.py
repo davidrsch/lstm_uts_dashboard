@@ -255,7 +255,8 @@ app_ui = ui.page_fluid(
         const inputFile = document.querySelector('.form-group:has(#buttonUpload)');
         inputFile.style.display = 'none';
         """
-    )
+    ),
+    favicon = "https://raw.githubusercontent.com/davidrsch/LSTM_UTS/refs/heads/main/app/static/favicon.ico" 
 )
 
 def server(input, output, session):

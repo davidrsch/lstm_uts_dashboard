@@ -363,7 +363,7 @@ def server(input, output, session):
             ax1.plot(test_results.index, test_results['min'], color='blue')
             ax1.plot(test_results.index, test_results['max_95'], color='blue')
             ax1.plot(test_results.index, test_results['min_5'], color='blue', label='Predicted')
-            ax1.plot(test_results.index, test_results['value'], color='green', label='Real')
+            ax1.plot(test_results.index, test_results['value'], color='green', label='Real', alpha=0.5)
             ax1.set_ylabel('Predicted and Real values')
             ax1.legend()
 

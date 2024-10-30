@@ -1,4 +1,4 @@
-// Shinylive 0.7.0
+// Shinylive 0.9.0
 // Copyright 2024 Posit, PBC
 import {
   FCJSONtoFC,
@@ -16,14 +16,14 @@ import {
   sleep,
   stringToUint8Array,
   uint8ArrayToString
-} from "./chunk-VTIKB4TP.js";
+} from "./chunk-ASVBLSKJ.js";
 import {
   __commonJS,
   __privateAdd,
   __privateMethod,
   __require,
   __toESM
-} from "./chunk-6XGWWLNE.js";
+} from "./chunk-YYZJYZVZ.js";
 
 // node_modules/scheduler/cjs/scheduler.development.js
 var require_scheduler_development = __commonJS({
@@ -1479,17 +1479,17 @@ var require_react_dom_development = __commonJS({
               var sampleLines = sample.stack.split("\n");
               var controlLines = control.stack.split("\n");
               var s = sampleLines.length - 1;
-              var c2 = controlLines.length - 1;
-              while (s >= 1 && c2 >= 0 && sampleLines[s] !== controlLines[c2]) {
-                c2--;
+              var c3 = controlLines.length - 1;
+              while (s >= 1 && c3 >= 0 && sampleLines[s] !== controlLines[c3]) {
+                c3--;
               }
-              for (; s >= 1 && c2 >= 0; s--, c2--) {
-                if (sampleLines[s] !== controlLines[c2]) {
-                  if (s !== 1 || c2 !== 1) {
+              for (; s >= 1 && c3 >= 0; s--, c3--) {
+                if (sampleLines[s] !== controlLines[c3]) {
+                  if (s !== 1 || c3 !== 1) {
                     do {
                       s--;
-                      c2--;
-                      if (c2 < 0 || sampleLines[s] !== controlLines[c2]) {
+                      c3--;
+                      if (c3 < 0 || sampleLines[s] !== controlLines[c3]) {
                         var _frame = "\n" + sampleLines[s].replace(" at new ", " at ");
                         if (fn.displayName && _frame.includes("<anonymous>")) {
                           _frame = _frame.replace("<anonymous>", fn.displayName);
@@ -1501,7 +1501,7 @@ var require_react_dom_development = __commonJS({
                         }
                         return _frame;
                       }
-                    } while (s >= 1 && c2 >= 0);
+                    } while (s >= 1 && c3 >= 0);
                   }
                   break;
                 }
@@ -3660,7 +3660,7 @@ var require_react_dom_development = __commonJS({
             passiveBrowserEventsSupported = false;
           }
         }
-        function invokeGuardedCallbackProd(name, func, context, a2, b2, c2, d2, e, f2) {
+        function invokeGuardedCallbackProd(name, func, context, a2, b2, c3, d2, e, f2) {
           var funcArgs = Array.prototype.slice.call(arguments, 3);
           try {
             func.apply(context, funcArgs);
@@ -3672,7 +3672,7 @@ var require_react_dom_development = __commonJS({
         {
           if (typeof window !== "undefined" && typeof window.dispatchEvent === "function" && typeof document !== "undefined" && typeof document.createEvent === "function") {
             var fakeNode = document.createElement("react");
-            invokeGuardedCallbackImpl = function invokeGuardedCallbackDev(name, func, context, a2, b2, c2, d2, e, f2) {
+            invokeGuardedCallbackImpl = function invokeGuardedCallbackDev(name, func, context, a2, b2, c3, d2, e, f2) {
               if (typeof document === "undefined" || document === null) {
                 throw new Error("The `document` global was defined when React was initialized, but is not defined anymore. This can happen in a test environment if a component schedules an update from an asynchronous callback, but the test has already finished running. To solve this, you can either unmount the component at the end of your test (and ensure that any asynchronous operations get canceled in `componentWillUnmount`), or you can change the test itself to be asynchronous.");
               }
@@ -3747,12 +3747,12 @@ var require_react_dom_development = __commonJS({
             caughtError = error2;
           }
         };
-        function invokeGuardedCallback(name, func, context, a2, b2, c2, d2, e, f2) {
+        function invokeGuardedCallback(name, func, context, a2, b2, c3, d2, e, f2) {
           hasError = false;
           caughtError = null;
           invokeGuardedCallbackImpl$1.apply(reporter, arguments);
         }
-        function invokeGuardedCallbackAndCatchFirstError(name, func, context, a2, b2, c2, d2, e, f2) {
+        function invokeGuardedCallbackAndCatchFirstError(name, func, context, a2, b2, c3, d2, e, f2) {
           invokeGuardedCallback.apply(this, arguments);
           if (hasError) {
             var error2 = clearCaughtError();
@@ -11914,11 +11914,11 @@ var require_react_dom_development = __commonJS({
         var contextStackCursor$1 = createCursor(NO_CONTEXT);
         var contextFiberStackCursor = createCursor(NO_CONTEXT);
         var rootInstanceStackCursor = createCursor(NO_CONTEXT);
-        function requiredContext(c2) {
-          if (c2 === NO_CONTEXT) {
+        function requiredContext(c3) {
+          if (c3 === NO_CONTEXT) {
             throw new Error("Expected host context to exist. This error is likely caused by a bug in React. Please file an issue.");
           }
-          return c2;
+          return c3;
         }
         function getRootHostContainer() {
           var rootInstance = requiredContext(rootInstanceStackCursor.current);
@@ -18936,13 +18936,13 @@ var require_react_dom_development = __commonJS({
             }
           }
         }
-        function discreteUpdates(fn, a2, b2, c2, d2) {
+        function discreteUpdates(fn, a2, b2, c3, d2) {
           var previousPriority = getCurrentUpdatePriority();
           var prevTransition = ReactCurrentBatchConfig$3.transition;
           try {
             ReactCurrentBatchConfig$3.transition = null;
             setCurrentUpdatePriority(DiscreteEventPriority);
-            return fn(a2, b2, c2, d2);
+            return fn(a2, b2, c3, d2);
           } finally {
             setCurrentUpdatePriority(previousPriority);
             ReactCurrentBatchConfig$3.transition = prevTransition;
@@ -21601,18 +21601,18 @@ var require_client = __commonJS({
       exports.hydrateRoot = m2.hydrateRoot;
     } else {
       i = m2.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
-      exports.createRoot = function(c2, o) {
+      exports.createRoot = function(c3, o) {
         i.usingClientEntryPoint = true;
         try {
-          return m2.createRoot(c2, o);
+          return m2.createRoot(c3, o);
         } finally {
           i.usingClientEntryPoint = false;
         }
       };
-      exports.hydrateRoot = function(c2, h2, o) {
+      exports.hydrateRoot = function(c3, h2, o) {
         i.usingClientEntryPoint = true;
         try {
-          return m2.hydrateRoot(c2, h2, o);
+          return m2.hydrateRoot(c3, h2, o);
         } finally {
           i.usingClientEntryPoint = false;
         }
@@ -21652,7 +21652,7 @@ var require_xterm = __commonJS({
           };
         };
         Object.defineProperty(t2, "__esModule", { value: true }), t2.AccessibilityManager = void 0;
-        const n = i2(9042), o = i2(6114), a2 = i2(9924), h2 = i2(844), c2 = i2(5596), l2 = i2(4725), d2 = i2(3656);
+        const n = i2(9042), o = i2(6114), a2 = i2(9924), h2 = i2(844), c3 = i2(5596), l = i2(4725), d2 = i2(3656);
         let _2 = t2.AccessibilityManager = class extends h2.Disposable {
           constructor(e3, t3) {
             super(), this._terminal = e3, this._renderService = t3, this._liveRegionLineCount = 0, this._charsToConsume = [], this._charsToAnnounce = "", this._accessibilityContainer = document.createElement("div"), this._accessibilityContainer.classList.add("xterm-accessibility"), this._rowContainer = document.createElement("div"), this._rowContainer.setAttribute("role", "list"), this._rowContainer.classList.add("xterm-accessibility-tree"), this._rowElements = [];
@@ -21660,7 +21660,7 @@ var require_xterm = __commonJS({
               this._rowElements[e4] = this._createAccessibilityTreeNode(), this._rowContainer.appendChild(this._rowElements[e4]);
             if (this._topBoundaryFocusListener = (e4) => this._handleBoundaryFocus(e4, 0), this._bottomBoundaryFocusListener = (e4) => this._handleBoundaryFocus(e4, 1), this._rowElements[0].addEventListener("focus", this._topBoundaryFocusListener), this._rowElements[this._rowElements.length - 1].addEventListener("focus", this._bottomBoundaryFocusListener), this._refreshRowsDimensions(), this._accessibilityContainer.appendChild(this._rowContainer), this._liveRegion = document.createElement("div"), this._liveRegion.classList.add("live-region"), this._liveRegion.setAttribute("aria-live", "assertive"), this._accessibilityContainer.appendChild(this._liveRegion), this._liveRegionDebouncer = this.register(new a2.TimeBasedDebouncer(this._renderRows.bind(this))), !this._terminal.element)
               throw new Error("Cannot enable accessibility before Terminal.open");
-            this._terminal.element.insertAdjacentElement("afterbegin", this._accessibilityContainer), this.register(this._terminal.onResize((e4) => this._handleResize(e4.rows))), this.register(this._terminal.onRender((e4) => this._refreshRows(e4.start, e4.end))), this.register(this._terminal.onScroll(() => this._refreshRows())), this.register(this._terminal.onA11yChar((e4) => this._handleChar(e4))), this.register(this._terminal.onLineFeed(() => this._handleChar("\n"))), this.register(this._terminal.onA11yTab((e4) => this._handleTab(e4))), this.register(this._terminal.onKey((e4) => this._handleKey(e4.key))), this.register(this._terminal.onBlur(() => this._clearLiveRegion())), this.register(this._renderService.onDimensionsChange(() => this._refreshRowsDimensions())), this._screenDprMonitor = new c2.ScreenDprMonitor(window), this.register(this._screenDprMonitor), this._screenDprMonitor.setListener(() => this._refreshRowsDimensions()), this.register((0, d2.addDisposableDomListener)(window, "resize", () => this._refreshRowsDimensions())), this._refreshRows(), this.register((0, h2.toDisposable)(() => {
+            this._terminal.element.insertAdjacentElement("afterbegin", this._accessibilityContainer), this.register(this._terminal.onResize((e4) => this._handleResize(e4.rows))), this.register(this._terminal.onRender((e4) => this._refreshRows(e4.start, e4.end))), this.register(this._terminal.onScroll(() => this._refreshRows())), this.register(this._terminal.onA11yChar((e4) => this._handleChar(e4))), this.register(this._terminal.onLineFeed(() => this._handleChar("\n"))), this.register(this._terminal.onA11yTab((e4) => this._handleTab(e4))), this.register(this._terminal.onKey((e4) => this._handleKey(e4.key))), this.register(this._terminal.onBlur(() => this._clearLiveRegion())), this.register(this._renderService.onDimensionsChange(() => this._refreshRowsDimensions())), this._screenDprMonitor = new c3.ScreenDprMonitor(window), this.register(this._screenDprMonitor), this._screenDprMonitor.setListener(() => this._refreshRowsDimensions()), this.register((0, d2.addDisposableDomListener)(window, "resize", () => this._refreshRowsDimensions())), this._refreshRows(), this.register((0, h2.toDisposable)(() => {
               this._accessibilityContainer.remove(), this._rowElements.length = 0;
             }));
           }
@@ -21732,7 +21732,7 @@ var require_xterm = __commonJS({
             e3.style.height = `${this._renderService.dimensions.css.cell.height}px`;
           }
         };
-        t2.AccessibilityManager = _2 = s2([r(1, l2.IRenderService)], _2);
+        t2.AccessibilityManager = _2 = s2([r(1, l.IRenderService)], _2);
       }, 3614: (e2, t2) => {
         function i2(e3) {
           return e3.replace(/\r?\n/g, "\r");
@@ -21801,7 +21801,7 @@ var require_xterm = __commonJS({
         };
         Object.defineProperty(t2, "__esModule", { value: true }), t2.Linkifier2 = void 0;
         const n = i2(3656), o = i2(8460), a2 = i2(844), h2 = i2(2585);
-        let c2 = t2.Linkifier2 = class extends a2.Disposable {
+        let c3 = t2.Linkifier2 = class extends a2.Disposable {
           get currentLink() {
             return this._currentLink;
           }
@@ -21964,7 +21964,7 @@ var require_xterm = __commonJS({
             return { x1: e3, y1: t3, x2: i3, y2: s3, cols: this._bufferService.cols, fg: r2 };
           }
         };
-        t2.Linkifier2 = c2 = s2([r(0, h2.IBufferService)], c2);
+        t2.Linkifier2 = c3 = s2([r(0, h2.IBufferService)], c3);
       }, 9042: (e2, t2) => {
         Object.defineProperty(t2, "__esModule", { value: true }), t2.tooMuchOutput = t2.promptLabel = void 0, t2.promptLabel = "Terminal input", t2.tooMuchOutput = "Too much output to announce, navigate to rows manually to read";
       }, 3730: function(e2, t2, i2) {
@@ -21992,22 +21992,22 @@ var require_xterm = __commonJS({
             const s3 = this._bufferService.buffer.lines.get(e3 - 1);
             if (!s3)
               return void t3(void 0);
-            const r2 = [], o2 = this._optionsService.rawOptions.linkHandler, a3 = new n.CellData(), c2 = s3.getTrimmedLength();
-            let l2 = -1, d2 = -1, _2 = false;
-            for (let t4 = 0; t4 < c2; t4++)
+            const r2 = [], o2 = this._optionsService.rawOptions.linkHandler, a3 = new n.CellData(), c3 = s3.getTrimmedLength();
+            let l = -1, d2 = -1, _2 = false;
+            for (let t4 = 0; t4 < c3; t4++)
               if (-1 !== d2 || s3.hasContent(t4)) {
                 if (s3.loadCell(t4, a3), a3.hasExtendedAttrs() && a3.extended.urlId) {
                   if (-1 === d2) {
-                    d2 = t4, l2 = a3.extended.urlId;
+                    d2 = t4, l = a3.extended.urlId;
                     continue;
                   }
-                  _2 = a3.extended.urlId !== l2;
+                  _2 = a3.extended.urlId !== l;
                 } else
                   -1 !== d2 && (_2 = true);
-                if (_2 || -1 !== d2 && t4 === c2 - 1) {
-                  const s4 = null === (i3 = this._oscLinkService.getLinkData(l2)) || void 0 === i3 ? void 0 : i3.uri;
+                if (_2 || -1 !== d2 && t4 === c3 - 1) {
+                  const s4 = null === (i3 = this._oscLinkService.getLinkData(l)) || void 0 === i3 ? void 0 : i3.uri;
                   if (s4) {
-                    const i4 = { start: { x: d2 + 1, y: e3 }, end: { x: t4 + (_2 || t4 !== c2 - 1 ? 0 : 1), y: e3 } };
+                    const i4 = { start: { x: d2 + 1, y: e3 }, end: { x: t4 + (_2 || t4 !== c3 - 1 ? 0 : 1), y: e3 } };
                     let n2 = false;
                     if (!(null == o2 ? void 0 : o2.allowNonHttpProtocols))
                       try {
@@ -22024,7 +22024,7 @@ var require_xterm = __commonJS({
                       return null === (s5 = null == o2 ? void 0 : o2.leave) || void 0 === s5 ? void 0 : s5.call(o2, e4, t5, i4);
                     } });
                   }
-                  _2 = false, a3.hasExtendedAttrs() && a3.extended.urlId ? (d2 = t4, l2 = a3.extended.urlId) : (d2 = -1, l2 = -1);
+                  _2 = false, a3.hasExtendedAttrs() && a3.extended.urlId ? (d2 = t4, l = a3.extended.urlId) : (d2 = -1, l = -1);
                 }
               }
             t3(r2);
@@ -22097,7 +22097,7 @@ WARNING: This link could potentially be dangerous`)) {
         t2.ScreenDprMonitor = r;
       }, 3236: (e2, t2, i2) => {
         Object.defineProperty(t2, "__esModule", { value: true }), t2.Terminal = void 0;
-        const s2 = i2(3614), r = i2(3656), n = i2(6465), o = i2(9042), a2 = i2(3730), h2 = i2(1680), c2 = i2(3107), l2 = i2(5744), d2 = i2(2950), _2 = i2(1296), u2 = i2(428), f2 = i2(4269), v3 = i2(5114), p2 = i2(8934), g3 = i2(3230), m2 = i2(9312), S2 = i2(4725), C2 = i2(6731), b2 = i2(8055), y2 = i2(8969), w3 = i2(8460), E3 = i2(844), k3 = i2(6114), L3 = i2(8437), D2 = i2(2584), R3 = i2(7399), x3 = i2(5941), A3 = i2(9074), B3 = i2(2585), T3 = i2(5435), M2 = i2(4567), O3 = "undefined" != typeof window ? window.document : null;
+        const s2 = i2(3614), r = i2(3656), n = i2(6465), o = i2(9042), a2 = i2(3730), h2 = i2(1680), c3 = i2(3107), l = i2(5744), d2 = i2(2950), _2 = i2(1296), u2 = i2(428), f2 = i2(4269), v3 = i2(5114), p2 = i2(8934), g3 = i2(3230), m2 = i2(9312), S2 = i2(4725), C2 = i2(6731), b2 = i2(8055), y2 = i2(8969), w3 = i2(8460), E3 = i2(844), k3 = i2(6114), L3 = i2(8437), D2 = i2(2584), R3 = i2(7399), x3 = i2(5941), A3 = i2(9074), B3 = i2(2585), T3 = i2(5435), M2 = i2(4567), O3 = "undefined" != typeof window ? window.document : null;
         class P3 extends y2.CoreTerminal {
           get onFocus() {
             return this._onFocus.event;
@@ -22219,8 +22219,8 @@ WARNING: This link could potentially be dangerous`)) {
               this.textarea.value = e4, this.textarea.focus(), this.textarea.select();
             })), this.register(this._onScroll.event((e4) => {
               this.viewport.syncScrollArea(), this._selectionService.refresh();
-            })), this.register((0, r.addDisposableDomListener)(this._viewportElement, "scroll", () => this._selectionService.refresh())), this.linkifier2.attachToDom(this.screenElement, this._mouseService, this._renderService), this.register(this._instantiationService.createInstance(c2.BufferDecorationRenderer, this.screenElement)), this.register((0, r.addDisposableDomListener)(this.element, "mousedown", (e4) => this._selectionService.handleMouseDown(e4))), this.coreMouseService.areMouseEventsActive ? (this._selectionService.disable(), this.element.classList.add("enable-mouse-events")) : this._selectionService.enable(), this.options.screenReaderMode && (this._accessibilityManager.value = this._instantiationService.createInstance(M2.AccessibilityManager, this)), this.register(this.optionsService.onSpecificOptionChange("screenReaderMode", (e4) => this._handleScreenReaderModeOptionChange(e4))), this.options.overviewRulerWidth && (this._overviewRulerRenderer = this.register(this._instantiationService.createInstance(l2.OverviewRulerRenderer, this._viewportElement, this.screenElement))), this.optionsService.onSpecificOptionChange("overviewRulerWidth", (e4) => {
-              !this._overviewRulerRenderer && e4 && this._viewportElement && this.screenElement && (this._overviewRulerRenderer = this.register(this._instantiationService.createInstance(l2.OverviewRulerRenderer, this._viewportElement, this.screenElement)));
+            })), this.register((0, r.addDisposableDomListener)(this._viewportElement, "scroll", () => this._selectionService.refresh())), this.linkifier2.attachToDom(this.screenElement, this._mouseService, this._renderService), this.register(this._instantiationService.createInstance(c3.BufferDecorationRenderer, this.screenElement)), this.register((0, r.addDisposableDomListener)(this.element, "mousedown", (e4) => this._selectionService.handleMouseDown(e4))), this.coreMouseService.areMouseEventsActive ? (this._selectionService.disable(), this.element.classList.add("enable-mouse-events")) : this._selectionService.enable(), this.options.screenReaderMode && (this._accessibilityManager.value = this._instantiationService.createInstance(M2.AccessibilityManager, this)), this.register(this.optionsService.onSpecificOptionChange("screenReaderMode", (e4) => this._handleScreenReaderModeOptionChange(e4))), this.options.overviewRulerWidth && (this._overviewRulerRenderer = this.register(this._instantiationService.createInstance(l.OverviewRulerRenderer, this._viewportElement, this.screenElement))), this.optionsService.onSpecificOptionChange("overviewRulerWidth", (e4) => {
+              !this._overviewRulerRenderer && e4 && this._viewportElement && this.screenElement && (this._overviewRulerRenderer = this.register(this._instantiationService.createInstance(l.OverviewRulerRenderer, this._viewportElement, this.screenElement)));
             }), this._charSizeService.measure(), this.refresh(0, this.rows - 1), this._initGlobal(), this.bindMouse();
           }
           _createRenderer() {
@@ -22494,10 +22494,10 @@ WARNING: This link could potentially be dangerous`)) {
           };
         };
         Object.defineProperty(t2, "__esModule", { value: true }), t2.Viewport = void 0;
-        const n = i2(3656), o = i2(4725), a2 = i2(8460), h2 = i2(844), c2 = i2(2585);
-        let l2 = t2.Viewport = class extends h2.Disposable {
-          constructor(e3, t3, i3, s3, r2, o2, h3, c3) {
-            super(), this._viewportElement = e3, this._scrollArea = t3, this._bufferService = i3, this._optionsService = s3, this._charSizeService = r2, this._renderService = o2, this._coreBrowserService = h3, this.scrollBarWidth = 0, this._currentRowHeight = 0, this._currentDeviceCellHeight = 0, this._lastRecordedBufferLength = 0, this._lastRecordedViewportHeight = 0, this._lastRecordedBufferHeight = 0, this._lastTouchY = 0, this._lastScrollTop = 0, this._wheelPartialScroll = 0, this._refreshAnimationFrame = null, this._ignoreNextScrollEvent = false, this._smoothScrollState = { startTime: 0, origin: -1, target: -1 }, this._onRequestScrollLines = this.register(new a2.EventEmitter()), this.onRequestScrollLines = this._onRequestScrollLines.event, this.scrollBarWidth = this._viewportElement.offsetWidth - this._scrollArea.offsetWidth || 15, this.register((0, n.addDisposableDomListener)(this._viewportElement, "scroll", this._handleScroll.bind(this))), this._activeBuffer = this._bufferService.buffer, this.register(this._bufferService.buffers.onBufferActivate((e4) => this._activeBuffer = e4.activeBuffer)), this._renderDimensions = this._renderService.dimensions, this.register(this._renderService.onDimensionsChange((e4) => this._renderDimensions = e4)), this._handleThemeChange(c3.colors), this.register(c3.onChangeColors((e4) => this._handleThemeChange(e4))), this.register(this._optionsService.onSpecificOptionChange("scrollback", () => this.syncScrollArea())), setTimeout(() => this.syncScrollArea());
+        const n = i2(3656), o = i2(4725), a2 = i2(8460), h2 = i2(844), c3 = i2(2585);
+        let l = t2.Viewport = class extends h2.Disposable {
+          constructor(e3, t3, i3, s3, r2, o2, h3, c4) {
+            super(), this._viewportElement = e3, this._scrollArea = t3, this._bufferService = i3, this._optionsService = s3, this._charSizeService = r2, this._renderService = o2, this._coreBrowserService = h3, this.scrollBarWidth = 0, this._currentRowHeight = 0, this._currentDeviceCellHeight = 0, this._lastRecordedBufferLength = 0, this._lastRecordedViewportHeight = 0, this._lastRecordedBufferHeight = 0, this._lastTouchY = 0, this._lastScrollTop = 0, this._wheelPartialScroll = 0, this._refreshAnimationFrame = null, this._ignoreNextScrollEvent = false, this._smoothScrollState = { startTime: 0, origin: -1, target: -1 }, this._onRequestScrollLines = this.register(new a2.EventEmitter()), this.onRequestScrollLines = this._onRequestScrollLines.event, this.scrollBarWidth = this._viewportElement.offsetWidth - this._scrollArea.offsetWidth || 15, this.register((0, n.addDisposableDomListener)(this._viewportElement, "scroll", this._handleScroll.bind(this))), this._activeBuffer = this._bufferService.buffer, this.register(this._bufferService.buffers.onBufferActivate((e4) => this._activeBuffer = e4.activeBuffer)), this._renderDimensions = this._renderService.dimensions, this.register(this._renderService.onDimensionsChange((e4) => this._renderDimensions = e4)), this._handleThemeChange(c4.colors), this.register(c4.onChangeColors((e4) => this._handleThemeChange(e4))), this.register(this._optionsService.onSpecificOptionChange("scrollback", () => this.syncScrollArea())), setTimeout(() => this.syncScrollArea());
           }
           _handleThemeChange(e3) {
             this._viewportElement.style.backgroundColor = e3.background.css;
@@ -22600,7 +22600,7 @@ WARNING: This link could potentially be dangerous`)) {
             return this._lastTouchY = e3.touches[0].pageY, 0 !== t3 && (this._viewportElement.scrollTop += t3, this._bubbleScroll(e3, t3));
           }
         };
-        t2.Viewport = l2 = s2([r(2, c2.IBufferService), r(3, c2.IOptionsService), r(4, o.ICharSizeService), r(5, o.IRenderService), r(6, o.ICoreBrowserService), r(7, o.IThemeService)], l2);
+        t2.Viewport = l = s2([r(2, c3.IBufferService), r(3, c3.IOptionsService), r(4, o.ICharSizeService), r(5, o.IRenderService), r(6, o.ICoreBrowserService), r(7, o.IThemeService)], l);
       }, 3107: function(e2, t2, i2) {
         var s2 = this && this.__decorate || function(e3, t3, i3, s3) {
           var r2, n2 = arguments.length, o2 = n2 < 3 ? t3 : null === s3 ? s3 = Object.getOwnPropertyDescriptor(t3, i3) : s3;
@@ -22617,7 +22617,7 @@ WARNING: This link could potentially be dangerous`)) {
         };
         Object.defineProperty(t2, "__esModule", { value: true }), t2.BufferDecorationRenderer = void 0;
         const n = i2(3656), o = i2(4725), a2 = i2(844), h2 = i2(2585);
-        let c2 = t2.BufferDecorationRenderer = class extends a2.Disposable {
+        let c3 = t2.BufferDecorationRenderer = class extends a2.Disposable {
           constructor(e3, t3, i3, s3) {
             super(), this._screenElement = e3, this._bufferService = t3, this._decorationService = i3, this._renderService = s3, this._decorationElements = /* @__PURE__ */ new Map(), this._altBufferIsActive = false, this._dimensionsChanged = false, this._container = document.createElement("div"), this._container.classList.add("xterm-decoration-container"), this._screenElement.appendChild(this._container), this.register(this._renderService.onRenderedViewportChange(() => this._doRefreshDecorations())), this.register(this._renderService.onDimensionsChange(() => {
               this._dimensionsChanged = true, this._queueRefresh();
@@ -22670,7 +22670,7 @@ WARNING: This link could potentially be dangerous`)) {
             null === (t3 = this._decorationElements.get(e3)) || void 0 === t3 || t3.remove(), this._decorationElements.delete(e3), e3.dispose();
           }
         };
-        t2.BufferDecorationRenderer = c2 = s2([r(1, h2.IBufferService), r(2, h2.IDecorationService), r(3, o.IRenderService)], c2);
+        t2.BufferDecorationRenderer = c3 = s2([r(1, h2.IBufferService), r(2, h2.IDecorationService), r(3, o.IRenderService)], c3);
       }, 5871: (e2, t2) => {
         Object.defineProperty(t2, "__esModule", { value: true }), t2.ColorZoneStore = void 0, t2.ColorZoneStore = class {
           constructor() {
@@ -22724,18 +22724,18 @@ WARNING: This link could potentially be dangerous`)) {
           };
         };
         Object.defineProperty(t2, "__esModule", { value: true }), t2.OverviewRulerRenderer = void 0;
-        const n = i2(5871), o = i2(3656), a2 = i2(4725), h2 = i2(844), c2 = i2(2585), l2 = { full: 0, left: 0, center: 0, right: 0 }, d2 = { full: 0, left: 0, center: 0, right: 0 }, _2 = { full: 0, left: 0, center: 0, right: 0 };
+        const n = i2(5871), o = i2(3656), a2 = i2(4725), h2 = i2(844), c3 = i2(2585), l = { full: 0, left: 0, center: 0, right: 0 }, d2 = { full: 0, left: 0, center: 0, right: 0 }, _2 = { full: 0, left: 0, center: 0, right: 0 };
         let u2 = t2.OverviewRulerRenderer = class extends h2.Disposable {
           get _width() {
             return this._optionsService.options.overviewRulerWidth || 0;
           }
           constructor(e3, t3, i3, s3, r2, o2, a3) {
-            var c3;
-            super(), this._viewportElement = e3, this._screenElement = t3, this._bufferService = i3, this._decorationService = s3, this._renderService = r2, this._optionsService = o2, this._coreBrowseService = a3, this._colorZoneStore = new n.ColorZoneStore(), this._shouldUpdateDimensions = true, this._shouldUpdateAnchor = true, this._lastKnownBufferLength = 0, this._canvas = document.createElement("canvas"), this._canvas.classList.add("xterm-decoration-overview-ruler"), this._refreshCanvasDimensions(), null === (c3 = this._viewportElement.parentElement) || void 0 === c3 || c3.insertBefore(this._canvas, this._viewportElement);
-            const l3 = this._canvas.getContext("2d");
-            if (!l3)
+            var c4;
+            super(), this._viewportElement = e3, this._screenElement = t3, this._bufferService = i3, this._decorationService = s3, this._renderService = r2, this._optionsService = o2, this._coreBrowseService = a3, this._colorZoneStore = new n.ColorZoneStore(), this._shouldUpdateDimensions = true, this._shouldUpdateAnchor = true, this._lastKnownBufferLength = 0, this._canvas = document.createElement("canvas"), this._canvas.classList.add("xterm-decoration-overview-ruler"), this._refreshCanvasDimensions(), null === (c4 = this._viewportElement.parentElement) || void 0 === c4 || c4.insertBefore(this._canvas, this._viewportElement);
+            const l2 = this._canvas.getContext("2d");
+            if (!l2)
               throw new Error("Ctx cannot be null");
-            this._ctx = l3, this._registerDecorationListeners(), this._registerBufferChangeListeners(), this._registerDimensionChangeListeners(), this.register((0, h2.toDisposable)(() => {
+            this._ctx = l2, this._registerDecorationListeners(), this._registerBufferChangeListeners(), this._registerDimensionChangeListeners(), this.register((0, h2.toDisposable)(() => {
               var e4;
               null === (e4 = this._canvas) || void 0 === e4 || e4.remove();
             }));
@@ -22760,12 +22760,12 @@ WARNING: This link could potentially be dangerous`)) {
             d2.full = this._canvas.width, d2.left = e3, d2.center = t3, d2.right = e3, this._refreshDrawHeightConstants(), _2.full = 0, _2.left = 0, _2.center = d2.left, _2.right = d2.left + d2.center;
           }
           _refreshDrawHeightConstants() {
-            l2.full = Math.round(2 * this._coreBrowseService.dpr);
+            l.full = Math.round(2 * this._coreBrowseService.dpr);
             const e3 = this._canvas.height / this._bufferService.buffer.lines.length, t3 = Math.round(Math.max(Math.min(e3, 12), 6) * this._coreBrowseService.dpr);
-            l2.left = t3, l2.center = t3, l2.right = t3;
+            l.left = t3, l.center = t3, l.right = t3;
           }
           _refreshColorZonePadding() {
-            this._colorZoneStore.setPadding({ full: Math.floor(this._bufferService.buffers.active.lines.length / (this._canvas.height - 1) * l2.full), left: Math.floor(this._bufferService.buffers.active.lines.length / (this._canvas.height - 1) * l2.left), center: Math.floor(this._bufferService.buffers.active.lines.length / (this._canvas.height - 1) * l2.center), right: Math.floor(this._bufferService.buffers.active.lines.length / (this._canvas.height - 1) * l2.right) }), this._lastKnownBufferLength = this._bufferService.buffers.normal.lines.length;
+            this._colorZoneStore.setPadding({ full: Math.floor(this._bufferService.buffers.active.lines.length / (this._canvas.height - 1) * l.full), left: Math.floor(this._bufferService.buffers.active.lines.length / (this._canvas.height - 1) * l.left), center: Math.floor(this._bufferService.buffers.active.lines.length / (this._canvas.height - 1) * l.center), right: Math.floor(this._bufferService.buffers.active.lines.length / (this._canvas.height - 1) * l.right) }), this._lastKnownBufferLength = this._bufferService.buffers.normal.lines.length;
           }
           _refreshCanvasDimensions() {
             this._canvas.style.width = `${this._width}px`, this._canvas.width = Math.round(this._width * this._coreBrowseService.dpr), this._canvas.style.height = `${this._screenElement.clientHeight}px`, this._canvas.height = Math.round(this._screenElement.clientHeight * this._coreBrowseService.dpr), this._refreshDrawConstants(), this._refreshColorZonePadding();
@@ -22783,7 +22783,7 @@ WARNING: This link could potentially be dangerous`)) {
             this._shouldUpdateDimensions = false, this._shouldUpdateAnchor = false;
           }
           _renderColorZone(e3) {
-            this._ctx.fillStyle = e3.color, this._ctx.fillRect(_2[e3.position || "full"], Math.round((this._canvas.height - 1) * (e3.startBufferLine / this._bufferService.buffers.active.lines.length) - l2[e3.position || "full"] / 2), d2[e3.position || "full"], Math.round((this._canvas.height - 1) * ((e3.endBufferLine - e3.startBufferLine) / this._bufferService.buffers.active.lines.length) + l2[e3.position || "full"]));
+            this._ctx.fillStyle = e3.color, this._ctx.fillRect(_2[e3.position || "full"], Math.round((this._canvas.height - 1) * (e3.startBufferLine / this._bufferService.buffers.active.lines.length) - l[e3.position || "full"] / 2), d2[e3.position || "full"], Math.round((this._canvas.height - 1) * ((e3.endBufferLine - e3.startBufferLine) / this._bufferService.buffers.active.lines.length) + l[e3.position || "full"]));
           }
           _queueRefresh(e3, t3) {
             this._shouldUpdateDimensions = e3 || this._shouldUpdateDimensions, this._shouldUpdateAnchor = t3 || this._shouldUpdateAnchor, void 0 === this._animationFrame && (this._animationFrame = this._coreBrowseService.window.requestAnimationFrame(() => {
@@ -22791,7 +22791,7 @@ WARNING: This link could potentially be dangerous`)) {
             }));
           }
         };
-        t2.OverviewRulerRenderer = u2 = s2([r(2, c2.IBufferService), r(3, c2.IDecorationService), r(4, a2.IRenderService), r(5, c2.IOptionsService), r(6, a2.ICoreBrowserService)], u2);
+        t2.OverviewRulerRenderer = u2 = s2([r(2, c3.IBufferService), r(3, c3.IDecorationService), r(4, a2.IRenderService), r(5, c3.IOptionsService), r(6, a2.ICoreBrowserService)], u2);
       }, 2950: function(e2, t2, i2) {
         var s2 = this && this.__decorate || function(e3, t3, i3, s3) {
           var r2, n2 = arguments.length, o2 = n2 < 3 ? t3 : null === s3 ? s3 = Object.getOwnPropertyDescriptor(t3, i3) : s3;
@@ -22878,17 +22878,17 @@ WARNING: This link could potentially be dangerous`)) {
           const s2 = i3.getBoundingClientRect(), r = e3.getComputedStyle(i3), n = parseInt(r.getPropertyValue("padding-left")), o = parseInt(r.getPropertyValue("padding-top"));
           return [t3.clientX - s2.left - n, t3.clientY - s2.top - o];
         }
-        Object.defineProperty(t2, "__esModule", { value: true }), t2.getCoords = t2.getCoordsRelativeToElement = void 0, t2.getCoordsRelativeToElement = i2, t2.getCoords = function(e3, t3, s2, r, n, o, a2, h2, c2) {
+        Object.defineProperty(t2, "__esModule", { value: true }), t2.getCoords = t2.getCoordsRelativeToElement = void 0, t2.getCoordsRelativeToElement = i2, t2.getCoords = function(e3, t3, s2, r, n, o, a2, h2, c3) {
           if (!o)
             return;
-          const l2 = i2(e3, t3, s2);
-          return l2 ? (l2[0] = Math.ceil((l2[0] + (c2 ? a2 / 2 : 0)) / a2), l2[1] = Math.ceil(l2[1] / h2), l2[0] = Math.min(Math.max(l2[0], 1), r + (c2 ? 1 : 0)), l2[1] = Math.min(Math.max(l2[1], 1), n), l2) : void 0;
+          const l = i2(e3, t3, s2);
+          return l ? (l[0] = Math.ceil((l[0] + (c3 ? a2 / 2 : 0)) / a2), l[1] = Math.ceil(l[1] / h2), l[0] = Math.min(Math.max(l[0], 1), r + (c3 ? 1 : 0)), l[1] = Math.min(Math.max(l[1], 1), n), l) : void 0;
         };
       }, 9504: (e2, t2, i2) => {
         Object.defineProperty(t2, "__esModule", { value: true }), t2.moveToCellSequence = void 0;
         const s2 = i2(2584);
         function r(e3, t3, i3, s3) {
-          const r2 = e3 - n(e3, i3), a3 = t3 - n(t3, i3), l2 = Math.abs(r2 - a3) - function(e4, t4, i4) {
+          const r2 = e3 - n(e3, i3), a3 = t3 - n(t3, i3), l = Math.abs(r2 - a3) - function(e4, t4, i4) {
             let s4 = 0;
             const r3 = e4 - n(e4, i4), a4 = t4 - n(t4, i4);
             for (let n2 = 0; n2 < Math.abs(r3 - a4); n2++) {
@@ -22897,7 +22897,7 @@ WARNING: This link could potentially be dangerous`)) {
             }
             return s4;
           }(e3, t3, i3);
-          return c2(l2, h2(o(e3, t3), s3));
+          return c3(l, h2(o(e3, t3), s3));
         }
         function n(e3, t3) {
           let i3 = 0, s3 = t3.buffer.lines.get(e3), r2 = null == s3 ? void 0 : s3.isWrapped;
@@ -22918,7 +22918,7 @@ WARNING: This link could potentially be dangerous`)) {
           const i3 = t3 ? "O" : "[";
           return s2.C0.ESC + i3 + e3;
         }
-        function c2(e3, t3) {
+        function c3(e3, t3) {
           e3 = Math.floor(e3);
           let i3 = "";
           for (let s3 = 0; s3 < e3; s3++)
@@ -22926,27 +22926,27 @@ WARNING: This link could potentially be dangerous`)) {
           return i3;
         }
         t2.moveToCellSequence = function(e3, t3, i3, s3) {
-          const o2 = i3.buffer.x, l2 = i3.buffer.y;
+          const o2 = i3.buffer.x, l = i3.buffer.y;
           if (!i3.buffer.hasScrollback)
-            return function(e4, t4, i4, s4, o3, l3) {
-              return 0 === r(t4, s4, o3, l3).length ? "" : c2(a2(e4, t4, e4, t4 - n(t4, o3), false, o3).length, h2("D", l3));
-            }(o2, l2, 0, t3, i3, s3) + r(l2, t3, i3, s3) + function(e4, t4, i4, s4, o3, l3) {
+            return function(e4, t4, i4, s4, o3, l2) {
+              return 0 === r(t4, s4, o3, l2).length ? "" : c3(a2(e4, t4, e4, t4 - n(t4, o3), false, o3).length, h2("D", l2));
+            }(o2, l, 0, t3, i3, s3) + r(l, t3, i3, s3) + function(e4, t4, i4, s4, o3, l2) {
               let d3;
-              d3 = r(t4, s4, o3, l3).length > 0 ? s4 - n(s4, o3) : t4;
+              d3 = r(t4, s4, o3, l2).length > 0 ? s4 - n(s4, o3) : t4;
               const _3 = s4, u2 = function(e5, t5, i5, s5, o4, a3) {
                 let h3;
                 return h3 = r(i5, s5, o4, a3).length > 0 ? s5 - n(s5, o4) : t5, e5 < i5 && h3 <= s5 || e5 >= i5 && h3 < s5 ? "C" : "D";
-              }(e4, t4, i4, s4, o3, l3);
-              return c2(a2(e4, d3, i4, _3, "C" === u2, o3).length, h2(u2, l3));
-            }(o2, l2, e3, t3, i3, s3);
+              }(e4, t4, i4, s4, o3, l2);
+              return c3(a2(e4, d3, i4, _3, "C" === u2, o3).length, h2(u2, l2));
+            }(o2, l, e3, t3, i3, s3);
           let d2;
-          if (l2 === t3)
-            return d2 = o2 > e3 ? "D" : "C", c2(Math.abs(o2 - e3), h2(d2, s3));
-          d2 = l2 > t3 ? "D" : "C";
-          const _2 = Math.abs(l2 - t3);
-          return c2(function(e4, t4) {
+          if (l === t3)
+            return d2 = o2 > e3 ? "D" : "C", c3(Math.abs(o2 - e3), h2(d2, s3));
+          d2 = l > t3 ? "D" : "C";
+          const _2 = Math.abs(l - t3);
+          return c3(function(e4, t4) {
             return t4.cols - e4;
-          }(l2 > t3 ? e3 : o2, i3) + (_2 - 1) * i3.cols + 1 + ((l2 > t3 ? o2 : e3) - 1), h2(d2, s3));
+          }(l > t3 ? e3 : o2, i3) + (_2 - 1) * i3.cols + 1 + ((l > t3 ? o2 : e3) - 1), h2(d2, s3));
         };
       }, 1296: function(e2, t2, i2) {
         var s2 = this && this.__decorate || function(e3, t3, i3, s3) {
@@ -22963,10 +22963,10 @@ WARNING: This link could potentially be dangerous`)) {
           };
         };
         Object.defineProperty(t2, "__esModule", { value: true }), t2.DomRenderer = void 0;
-        const n = i2(3787), o = i2(2550), a2 = i2(2223), h2 = i2(6171), c2 = i2(4725), l2 = i2(8055), d2 = i2(8460), _2 = i2(844), u2 = i2(2585), f2 = "xterm-dom-renderer-owner-", v3 = "xterm-rows", p2 = "xterm-fg-", g3 = "xterm-bg-", m2 = "xterm-focus", S2 = "xterm-selection";
+        const n = i2(3787), o = i2(2550), a2 = i2(2223), h2 = i2(6171), c3 = i2(4725), l = i2(8055), d2 = i2(8460), _2 = i2(844), u2 = i2(2585), f2 = "xterm-dom-renderer-owner-", v3 = "xterm-rows", p2 = "xterm-fg-", g3 = "xterm-bg-", m2 = "xterm-focus", S2 = "xterm-selection";
         let C2 = 1, b2 = t2.DomRenderer = class extends _2.Disposable {
-          constructor(e3, t3, i3, s3, r2, a3, c3, l3, u3, p3) {
-            super(), this._element = e3, this._screenElement = t3, this._viewportElement = i3, this._linkifier2 = s3, this._charSizeService = a3, this._optionsService = c3, this._bufferService = l3, this._coreBrowserService = u3, this._themeService = p3, this._terminalClass = C2++, this._rowElements = [], this.onRequestRedraw = this.register(new d2.EventEmitter()).event, this._rowContainer = document.createElement("div"), this._rowContainer.classList.add(v3), this._rowContainer.style.lineHeight = "normal", this._rowContainer.setAttribute("aria-hidden", "true"), this._refreshRowElements(this._bufferService.cols, this._bufferService.rows), this._selectionContainer = document.createElement("div"), this._selectionContainer.classList.add(S2), this._selectionContainer.setAttribute("aria-hidden", "true"), this.dimensions = (0, h2.createRenderDimensions)(), this._updateDimensions(), this.register(this._optionsService.onOptionChange(() => this._handleOptionsChanged())), this.register(this._themeService.onChangeColors((e4) => this._injectCss(e4))), this._injectCss(this._themeService.colors), this._rowFactory = r2.createInstance(n.DomRendererRowFactory, document), this._element.classList.add(f2 + this._terminalClass), this._screenElement.appendChild(this._rowContainer), this._screenElement.appendChild(this._selectionContainer), this.register(this._linkifier2.onShowLinkUnderline((e4) => this._handleLinkHover(e4))), this.register(this._linkifier2.onHideLinkUnderline((e4) => this._handleLinkLeave(e4))), this.register((0, _2.toDisposable)(() => {
+          constructor(e3, t3, i3, s3, r2, a3, c4, l2, u3, p3) {
+            super(), this._element = e3, this._screenElement = t3, this._viewportElement = i3, this._linkifier2 = s3, this._charSizeService = a3, this._optionsService = c4, this._bufferService = l2, this._coreBrowserService = u3, this._themeService = p3, this._terminalClass = C2++, this._rowElements = [], this.onRequestRedraw = this.register(new d2.EventEmitter()).event, this._rowContainer = document.createElement("div"), this._rowContainer.classList.add(v3), this._rowContainer.style.lineHeight = "normal", this._rowContainer.setAttribute("aria-hidden", "true"), this._refreshRowElements(this._bufferService.cols, this._bufferService.rows), this._selectionContainer = document.createElement("div"), this._selectionContainer.classList.add(S2), this._selectionContainer.setAttribute("aria-hidden", "true"), this.dimensions = (0, h2.createRenderDimensions)(), this._updateDimensions(), this.register(this._optionsService.onOptionChange(() => this._handleOptionsChanged())), this.register(this._themeService.onChangeColors((e4) => this._injectCss(e4))), this._injectCss(this._themeService.colors), this._rowFactory = r2.createInstance(n.DomRendererRowFactory, document), this._element.classList.add(f2 + this._terminalClass), this._screenElement.appendChild(this._rowContainer), this._screenElement.appendChild(this._selectionContainer), this.register(this._linkifier2.onShowLinkUnderline((e4) => this._handleLinkHover(e4))), this.register(this._linkifier2.onHideLinkUnderline((e4) => this._handleLinkLeave(e4))), this.register((0, _2.toDisposable)(() => {
               this._element.classList.remove(f2 + this._terminalClass), this._rowContainer.remove(), this._selectionContainer.remove(), this._widthCache.dispose(), this._themeStyleElement.remove(), this._dimensionsStyleElement.remove();
             })), this._widthCache = new o.WidthCache(document), this._widthCache.setFont(this._optionsService.rawOptions.fontFamily, this._optionsService.rawOptions.fontSize, this._optionsService.rawOptions.fontWeight, this._optionsService.rawOptions.fontWeightBold), this._setDefaultSpacing();
           }
@@ -22982,10 +22982,10 @@ WARNING: This link could potentially be dangerous`)) {
           _injectCss(e3) {
             this._themeStyleElement || (this._themeStyleElement = document.createElement("style"), this._screenElement.appendChild(this._themeStyleElement));
             let t3 = `${this._terminalSelector} .${v3} { color: ${e3.foreground.css}; font-family: ${this._optionsService.rawOptions.fontFamily}; font-size: ${this._optionsService.rawOptions.fontSize}px; font-kerning: none; white-space: pre}`;
-            t3 += `${this._terminalSelector} .${v3} .xterm-dim { color: ${l2.color.multiplyOpacity(e3.foreground, 0.5).css};}`, t3 += `${this._terminalSelector} span:not(.xterm-bold) { font-weight: ${this._optionsService.rawOptions.fontWeight};}${this._terminalSelector} span.xterm-bold { font-weight: ${this._optionsService.rawOptions.fontWeightBold};}${this._terminalSelector} span.xterm-italic { font-style: italic;}`, t3 += "@keyframes blink_box_shadow_" + this._terminalClass + " { 50% {  border-bottom-style: hidden; }}", t3 += "@keyframes blink_block_" + this._terminalClass + ` { 0% {  background-color: ${e3.cursor.css};  color: ${e3.cursorAccent.css}; } 50% {  background-color: inherit;  color: ${e3.cursor.css}; }}`, t3 += `${this._terminalSelector} .${v3}.${m2} .xterm-cursor.xterm-cursor-blink:not(.xterm-cursor-block) { animation: blink_box_shadow_` + this._terminalClass + ` 1s step-end infinite;}${this._terminalSelector} .${v3}.${m2} .xterm-cursor.xterm-cursor-blink.xterm-cursor-block { animation: blink_block_` + this._terminalClass + ` 1s step-end infinite;}${this._terminalSelector} .${v3} .xterm-cursor.xterm-cursor-block { background-color: ${e3.cursor.css}; color: ${e3.cursorAccent.css};}${this._terminalSelector} .${v3} .xterm-cursor.xterm-cursor-outline { outline: 1px solid ${e3.cursor.css}; outline-offset: -1px;}${this._terminalSelector} .${v3} .xterm-cursor.xterm-cursor-bar { box-shadow: ${this._optionsService.rawOptions.cursorWidth}px 0 0 ${e3.cursor.css} inset;}${this._terminalSelector} .${v3} .xterm-cursor.xterm-cursor-underline { border-bottom: 1px ${e3.cursor.css}; border-bottom-style: solid; height: calc(100% - 1px);}`, t3 += `${this._terminalSelector} .${S2} { position: absolute; top: 0; left: 0; z-index: 1; pointer-events: none;}${this._terminalSelector}.focus .${S2} div { position: absolute; background-color: ${e3.selectionBackgroundOpaque.css};}${this._terminalSelector} .${S2} div { position: absolute; background-color: ${e3.selectionInactiveBackgroundOpaque.css};}`;
+            t3 += `${this._terminalSelector} .${v3} .xterm-dim { color: ${l.color.multiplyOpacity(e3.foreground, 0.5).css};}`, t3 += `${this._terminalSelector} span:not(.xterm-bold) { font-weight: ${this._optionsService.rawOptions.fontWeight};}${this._terminalSelector} span.xterm-bold { font-weight: ${this._optionsService.rawOptions.fontWeightBold};}${this._terminalSelector} span.xterm-italic { font-style: italic;}`, t3 += "@keyframes blink_box_shadow_" + this._terminalClass + " { 50% {  border-bottom-style: hidden; }}", t3 += "@keyframes blink_block_" + this._terminalClass + ` { 0% {  background-color: ${e3.cursor.css};  color: ${e3.cursorAccent.css}; } 50% {  background-color: inherit;  color: ${e3.cursor.css}; }}`, t3 += `${this._terminalSelector} .${v3}.${m2} .xterm-cursor.xterm-cursor-blink:not(.xterm-cursor-block) { animation: blink_box_shadow_` + this._terminalClass + ` 1s step-end infinite;}${this._terminalSelector} .${v3}.${m2} .xterm-cursor.xterm-cursor-blink.xterm-cursor-block { animation: blink_block_` + this._terminalClass + ` 1s step-end infinite;}${this._terminalSelector} .${v3} .xterm-cursor.xterm-cursor-block { background-color: ${e3.cursor.css}; color: ${e3.cursorAccent.css};}${this._terminalSelector} .${v3} .xterm-cursor.xterm-cursor-outline { outline: 1px solid ${e3.cursor.css}; outline-offset: -1px;}${this._terminalSelector} .${v3} .xterm-cursor.xterm-cursor-bar { box-shadow: ${this._optionsService.rawOptions.cursorWidth}px 0 0 ${e3.cursor.css} inset;}${this._terminalSelector} .${v3} .xterm-cursor.xterm-cursor-underline { border-bottom: 1px ${e3.cursor.css}; border-bottom-style: solid; height: calc(100% - 1px);}`, t3 += `${this._terminalSelector} .${S2} { position: absolute; top: 0; left: 0; z-index: 1; pointer-events: none;}${this._terminalSelector}.focus .${S2} div { position: absolute; background-color: ${e3.selectionBackgroundOpaque.css};}${this._terminalSelector} .${S2} div { position: absolute; background-color: ${e3.selectionInactiveBackgroundOpaque.css};}`;
             for (const [i3, s3] of e3.ansi.entries())
-              t3 += `${this._terminalSelector} .${p2}${i3} { color: ${s3.css}; }${this._terminalSelector} .${p2}${i3}.xterm-dim { color: ${l2.color.multiplyOpacity(s3, 0.5).css}; }${this._terminalSelector} .${g3}${i3} { background-color: ${s3.css}; }`;
-            t3 += `${this._terminalSelector} .${p2}${a2.INVERTED_DEFAULT_COLOR} { color: ${l2.color.opaque(e3.background).css}; }${this._terminalSelector} .${p2}${a2.INVERTED_DEFAULT_COLOR}.xterm-dim { color: ${l2.color.multiplyOpacity(l2.color.opaque(e3.background), 0.5).css}; }${this._terminalSelector} .${g3}${a2.INVERTED_DEFAULT_COLOR} { background-color: ${e3.foreground.css}; }`, this._themeStyleElement.textContent = t3;
+              t3 += `${this._terminalSelector} .${p2}${i3} { color: ${s3.css}; }${this._terminalSelector} .${p2}${i3}.xterm-dim { color: ${l.color.multiplyOpacity(s3, 0.5).css}; }${this._terminalSelector} .${g3}${i3} { background-color: ${s3.css}; }`;
+            t3 += `${this._terminalSelector} .${p2}${a2.INVERTED_DEFAULT_COLOR} { color: ${l.color.opaque(e3.background).css}; }${this._terminalSelector} .${p2}${a2.INVERTED_DEFAULT_COLOR}.xterm-dim { color: ${l.color.multiplyOpacity(l.color.opaque(e3.background), 0.5).css}; }${this._terminalSelector} .${g3}${a2.INVERTED_DEFAULT_COLOR} { background-color: ${e3.foreground.css}; }`, this._themeStyleElement.textContent = t3;
           }
           _setDefaultSpacing() {
             const e3 = this.dimensions.css.cell.width - this._widthCache.get("W", false, false);
@@ -23027,8 +23027,8 @@ WARNING: This link could potentially be dangerous`)) {
             } else {
               const i4 = s3 === n2 ? e3[0] : 0, h3 = n2 === r2 ? t3[0] : this._bufferService.cols;
               a3.appendChild(this._createSelectionElement(n2, i4, h3));
-              const c3 = o2 - n2 - 1;
-              if (a3.appendChild(this._createSelectionElement(n2 + 1, 0, this._bufferService.cols, c3)), n2 !== o2) {
+              const c4 = o2 - n2 - 1;
+              if (a3.appendChild(this._createSelectionElement(n2 + 1, 0, this._bufferService.cols, c4)), n2 !== o2) {
                 const e4 = r2 === o2 ? t3[0] : this._bufferService.cols;
                 a3.appendChild(this._createSelectionElement(o2, 0, e4));
               }
@@ -23051,10 +23051,10 @@ WARNING: This link could potentially be dangerous`)) {
           renderRows(e3, t3) {
             const i3 = this._bufferService.buffer, s3 = i3.ybase + i3.y, r2 = Math.min(i3.x, this._bufferService.cols - 1), n2 = this._optionsService.rawOptions.cursorBlink, o2 = this._optionsService.rawOptions.cursorStyle, a3 = this._optionsService.rawOptions.cursorInactiveStyle;
             for (let h3 = e3; h3 <= t3; h3++) {
-              const e4 = h3 + i3.ydisp, t4 = this._rowElements[h3], c3 = i3.lines.get(e4);
-              if (!t4 || !c3)
+              const e4 = h3 + i3.ydisp, t4 = this._rowElements[h3], c4 = i3.lines.get(e4);
+              if (!t4 || !c4)
                 break;
-              t4.replaceChildren(...this._rowFactory.createRow(c3, e4, e4 === s3, o2, a3, r2, n2, this.dimensions.css.cell.width, this._widthCache, -1, -1));
+              t4.replaceChildren(...this._rowFactory.createRow(c4, e4, e4 === s3, o2, a3, r2, n2, this.dimensions.css.cell.width, this._widthCache, -1, -1));
             }
           }
           get _terminalSelector() {
@@ -23070,16 +23070,16 @@ WARNING: This link could potentially be dangerous`)) {
             i3 < 0 && (e3 = 0), s3 < 0 && (t3 = 0);
             const o2 = this._bufferService.rows - 1;
             i3 = Math.max(Math.min(i3, o2), 0), s3 = Math.max(Math.min(s3, o2), 0), r2 = Math.min(r2, this._bufferService.cols);
-            const a3 = this._bufferService.buffer, h3 = a3.ybase + a3.y, c3 = Math.min(a3.x, r2 - 1), l3 = this._optionsService.rawOptions.cursorBlink, d3 = this._optionsService.rawOptions.cursorStyle, _3 = this._optionsService.rawOptions.cursorInactiveStyle;
+            const a3 = this._bufferService.buffer, h3 = a3.ybase + a3.y, c4 = Math.min(a3.x, r2 - 1), l2 = this._optionsService.rawOptions.cursorBlink, d3 = this._optionsService.rawOptions.cursorStyle, _3 = this._optionsService.rawOptions.cursorInactiveStyle;
             for (let o3 = i3; o3 <= s3; ++o3) {
               const u3 = o3 + a3.ydisp, f3 = this._rowElements[o3], v4 = a3.lines.get(u3);
               if (!f3 || !v4)
                 break;
-              f3.replaceChildren(...this._rowFactory.createRow(v4, u3, u3 === h3, d3, _3, c3, l3, this.dimensions.css.cell.width, this._widthCache, n2 ? o3 === i3 ? e3 : 0 : -1, n2 ? (o3 === s3 ? t3 : r2) - 1 : -1));
+              f3.replaceChildren(...this._rowFactory.createRow(v4, u3, u3 === h3, d3, _3, c4, l2, this.dimensions.css.cell.width, this._widthCache, n2 ? o3 === i3 ? e3 : 0 : -1, n2 ? (o3 === s3 ? t3 : r2) - 1 : -1));
             }
           }
         };
-        t2.DomRenderer = b2 = s2([r(4, u2.IInstantiationService), r(5, c2.ICharSizeService), r(6, u2.IOptionsService), r(7, u2.IBufferService), r(8, c2.ICoreBrowserService), r(9, c2.IThemeService)], b2);
+        t2.DomRenderer = b2 = s2([r(4, u2.IInstantiationService), r(5, c3.ICharSizeService), r(6, u2.IOptionsService), r(7, u2.IBufferService), r(8, c3.ICoreBrowserService), r(9, c3.IThemeService)], b2);
       }, 3787: function(e2, t2, i2) {
         var s2 = this && this.__decorate || function(e3, t3, i3, s3) {
           var r2, n2 = arguments.length, o2 = n2 < 3 ? t3 : null === s3 ? s3 = Object.getOwnPropertyDescriptor(t3, i3) : s3;
@@ -23095,7 +23095,7 @@ WARNING: This link could potentially be dangerous`)) {
           };
         };
         Object.defineProperty(t2, "__esModule", { value: true }), t2.DomRendererRowFactory = void 0;
-        const n = i2(2223), o = i2(643), a2 = i2(511), h2 = i2(2585), c2 = i2(8055), l2 = i2(4725), d2 = i2(4269), _2 = i2(6171), u2 = i2(3734);
+        const n = i2(2223), o = i2(643), a2 = i2(511), h2 = i2(2585), c3 = i2(8055), l = i2(4725), d2 = i2(4269), _2 = i2(6171), u2 = i2(3734);
         let f2 = t2.DomRendererRowFactory = class {
           constructor(e3, t3, i3, s3, r2, n2, o2) {
             this._document = e3, this._characterJoinerService = t3, this._optionsService = i3, this._coreBrowserService = s3, this._coreService = r2, this._decorationService = n2, this._themeService = o2, this._workCell = new a2.CellData(), this._columnSelectMode = false, this.defaultSpacing = 0;
@@ -23103,7 +23103,7 @@ WARNING: This link could potentially be dangerous`)) {
           handleSelectionChanged(e3, t3, i3) {
             this._selectionStart = e3, this._selectionEnd = t3, this._columnSelectMode = i3;
           }
-          createRow(e3, t3, i3, s3, r2, a3, h3, l3, _3, f3, p2) {
+          createRow(e3, t3, i3, s3, r2, a3, h3, l2, _3, f3, p2) {
             const g3 = [], m2 = this._characterJoinerService.getJoinedCharacters(t3), S2 = this._themeService.colors;
             let C2, b2 = e3.getNoBgTrimmedLength();
             i3 && b2 < a3 + 1 && (b2 = a3 + 1);
@@ -23126,7 +23126,7 @@ WARNING: This link could potentially be dangerous`)) {
                 U3 = true;
               });
               let N3 = I3.getChars() || o.WHITESPACE_CELL_CHAR;
-              if (" " === N3 && (I3.isUnderline() || I3.isOverline()) && (N3 = "\xA0"), A3 = b3 * l3 - _3.get(N3, I3.isBold(), I3.isItalic()), C2) {
+              if (" " === N3 && (I3.isUnderline() || I3.isOverline()) && (N3 = "\xA0"), A3 = b3 * l2 - _3.get(N3, I3.isBold(), I3.isItalic()), C2) {
                 if (y2 && (H2 && x3 || !H2 && !x3 && I3.bg === E3) && (H2 && x3 && S2.selectionForeground || I3.fg === k3) && I3.extended.ext === L3 && W3 === D2 && A3 === R3 && !F3 && !O3 && !U3) {
                   w3 += N3, y2++;
                   continue;
@@ -23177,18 +23177,18 @@ WARNING: This link could potentially be dangerous`)) {
                   X2 = S2.ansi[z2], B3.push(`xterm-bg-${z2}`);
                   break;
                 case 50331648:
-                  X2 = c2.rgba.toColor(z2 >> 16, z2 >> 8 & 255, 255 & z2), this._addStyle(C2, `background-color:#${v3((z2 >>> 0).toString(16), "0", 6)}`);
+                  X2 = c3.rgba.toColor(z2 >> 16, z2 >> 8 & 255, 255 & z2), this._addStyle(C2, `background-color:#${v3((z2 >>> 0).toString(16), "0", 6)}`);
                   break;
                 default:
                   q3 ? (X2 = S2.foreground, B3.push(`xterm-bg-${n.INVERTED_DEFAULT_COLOR}`)) : X2 = S2.background;
               }
-              switch (V3 || I3.isDim() && (V3 = c2.color.multiplyOpacity(X2, 0.5)), j2) {
+              switch (V3 || I3.isDim() && (V3 = c3.color.multiplyOpacity(X2, 0.5)), j2) {
                 case 16777216:
                 case 33554432:
                   I3.isBold() && $3 < 8 && this._optionsService.rawOptions.drawBoldTextInBrightColors && ($3 += 8), this._applyMinimumContrast(C2, X2, S2.ansi[$3], I3, V3, void 0) || B3.push(`xterm-fg-${$3}`);
                   break;
                 case 50331648:
-                  const e4 = c2.rgba.toColor($3 >> 16 & 255, $3 >> 8 & 255, 255 & $3);
+                  const e4 = c3.rgba.toColor($3 >> 16 & 255, $3 >> 8 & 255, 255 & $3);
                   this._applyMinimumContrast(C2, X2, e4, I3, V3, G3) || this._addStyle(C2, `color:#${v3($3.toString(16), "0", 6)}`);
                   break;
                 default:
@@ -23205,7 +23205,7 @@ WARNING: This link could potentially be dangerous`)) {
             let a3;
             if (r2 || n2 || (a3 = o2.getColor(t3.rgba, i3.rgba)), void 0 === a3) {
               const e4 = this._optionsService.rawOptions.minimumContrastRatio / (s3.isDim() ? 2 : 1);
-              a3 = c2.color.ensureContrastRatio(r2 || t3, n2 || i3, e4), o2.setColor((r2 || t3).rgba, (n2 || i3).rgba, null != a3 ? a3 : null);
+              a3 = c3.color.ensureContrastRatio(r2 || t3, n2 || i3, e4), o2.setColor((r2 || t3).rgba, (n2 || i3).rgba, null != a3 ? a3 : null);
             }
             return !!a3 && (this._addStyle(e3, `color:${a3.css}`), true);
           }
@@ -23225,7 +23225,7 @@ WARNING: This link could potentially be dangerous`)) {
             e3 = t3 + e3;
           return e3;
         }
-        t2.DomRendererRowFactory = f2 = s2([r(1, l2.ICharacterJoinerService), r(2, h2.IOptionsService), r(3, l2.ICoreBrowserService), r(4, h2.ICoreService), r(5, h2.IDecorationService), r(6, l2.IThemeService)], f2);
+        t2.DomRendererRowFactory = f2 = s2([r(1, l.ICharacterJoinerService), r(2, h2.IOptionsService), r(3, l.ICoreBrowserService), r(4, h2.ICoreService), r(5, h2.IDecorationService), r(6, l.IThemeService)], f2);
       }, 2550: (e2, t2) => {
         Object.defineProperty(t2, "__esModule", { value: true }), t2.WidthCache = void 0, t2.WidthCache = class {
           constructor(e3) {
@@ -23340,7 +23340,7 @@ WARNING: This link could potentially be dangerous`)) {
             return this.width > 0 && this.height > 0;
           }
           constructor(e3, t3, i3) {
-            super(), this._optionsService = i3, this.width = 0, this.height = 0, this._onCharSizeChange = this.register(new o.EventEmitter()), this.onCharSizeChange = this._onCharSizeChange.event, this._measureStrategy = new c2(e3, t3, this._optionsService), this.register(this._optionsService.onMultipleOptionChange(["fontFamily", "fontSize"], () => this.measure()));
+            super(), this._optionsService = i3, this.width = 0, this.height = 0, this._onCharSizeChange = this.register(new o.EventEmitter()), this.onCharSizeChange = this._onCharSizeChange.event, this._measureStrategy = new c3(e3, t3, this._optionsService), this.register(this._optionsService.onMultipleOptionChange(["fontFamily", "fontSize"], () => this.measure()));
           }
           measure() {
             const e3 = this._measureStrategy.measure();
@@ -23348,7 +23348,7 @@ WARNING: This link could potentially be dangerous`)) {
           }
         };
         t2.CharSizeService = h2 = s2([r(2, n.IOptionsService)], h2);
-        class c2 {
+        class c3 {
           constructor(e3, t3, i3) {
             this._document = e3, this._parentElement = t3, this._optionsService = i3, this._result = { width: 0, height: 0 }, this._measureElement = this._document.createElement("span"), this._measureElement.classList.add("xterm-char-measure-element"), this._measureElement.textContent = "W".repeat(32), this._measureElement.setAttribute("aria-hidden", "true"), this._measureElement.style.whiteSpace = "pre", this._measureElement.style.fontKerning = "none", this._parentElement.appendChild(this._measureElement);
           }
@@ -23374,7 +23374,7 @@ WARNING: This link could potentially be dangerous`)) {
         };
         Object.defineProperty(t2, "__esModule", { value: true }), t2.CharacterJoinerService = t2.JoinedCellData = void 0;
         const n = i2(3734), o = i2(643), a2 = i2(511), h2 = i2(2585);
-        class c2 extends n.AttributeData {
+        class c3 extends n.AttributeData {
           constructor(e3, t3, i3) {
             super(), this.content = 0, this.combinedData = "", this.fg = e3.fg, this.bg = e3.bg, this.combinedData = t3, this._width = i3;
           }
@@ -23397,8 +23397,8 @@ WARNING: This link could potentially be dangerous`)) {
             return [this.fg, this.getChars(), this.getWidth(), this.getCode()];
           }
         }
-        t2.JoinedCellData = c2;
-        let l2 = t2.CharacterJoinerService = class e3 {
+        t2.JoinedCellData = c3;
+        let l = t2.CharacterJoinerService = class e3 {
           constructor(e4) {
             this._bufferService = e4, this._characterJoiners = [], this._nextCharacterJoinerId = 0, this._workCell = new a2.CellData();
           }
@@ -23419,16 +23419,16 @@ WARNING: This link could potentially be dangerous`)) {
             if (!t3 || 0 === t3.length)
               return [];
             const i3 = [], s3 = t3.translateToString(true);
-            let r2 = 0, n2 = 0, a3 = 0, h3 = t3.getFg(0), c3 = t3.getBg(0);
+            let r2 = 0, n2 = 0, a3 = 0, h3 = t3.getFg(0), c4 = t3.getBg(0);
             for (let e5 = 0; e5 < t3.getTrimmedLength(); e5++)
               if (t3.loadCell(e5, this._workCell), 0 !== this._workCell.getWidth()) {
-                if (this._workCell.fg !== h3 || this._workCell.bg !== c3) {
+                if (this._workCell.fg !== h3 || this._workCell.bg !== c4) {
                   if (e5 - r2 > 1) {
                     const e6 = this._getJoinedRanges(s3, a3, n2, t3, r2);
                     for (let t4 = 0; t4 < e6.length; t4++)
                       i3.push(e6[t4]);
                   }
-                  r2 = e5, a3 = n2, h3 = this._workCell.fg, c3 = this._workCell.bg;
+                  r2 = e5, a3 = n2, h3 = this._workCell.fg, c4 = this._workCell.bg;
                 }
                 n2 += this._workCell.getChars().length || o.WHITESPACE_CELL_CHAR.length;
               }
@@ -23461,14 +23461,14 @@ WARNING: This link could potentially be dangerous`)) {
             let s3 = 0, r2 = false, n2 = 0, a3 = e4[s3];
             if (a3) {
               for (let h3 = i3; h3 < this._bufferService.cols; h3++) {
-                const i4 = t3.getWidth(h3), c3 = t3.getString(h3).length || o.WHITESPACE_CELL_CHAR.length;
+                const i4 = t3.getWidth(h3), c4 = t3.getString(h3).length || o.WHITESPACE_CELL_CHAR.length;
                 if (0 !== i4) {
                   if (!r2 && a3[0] <= n2 && (a3[0] = h3, r2 = true), a3[1] <= n2) {
                     if (a3[1] = h3, a3 = e4[++s3], !a3)
                       break;
                     a3[0] <= n2 ? (a3[0] = h3, r2 = true) : r2 = false;
                   }
-                  n2 += c3;
+                  n2 += c4;
                 }
               }
               a3 && (a3[1] = this._bufferService.cols);
@@ -23495,7 +23495,7 @@ WARNING: This link could potentially be dangerous`)) {
             return i3 ? e4[e4.length - 1][1] = t3[1] : e4.push(t3), e4;
           }
         };
-        t2.CharacterJoinerService = l2 = s2([r(0, h2.IBufferService)], l2);
+        t2.CharacterJoinerService = l = s2([r(0, h2.IBufferService)], l);
       }, 5114: (e2, t2) => {
         Object.defineProperty(t2, "__esModule", { value: true }), t2.CoreBrowserService = void 0, t2.CoreBrowserService = class {
           constructor(e3, t3) {
@@ -23553,13 +23553,13 @@ WARNING: This link could potentially be dangerous`)) {
           };
         };
         Object.defineProperty(t2, "__esModule", { value: true }), t2.RenderService = void 0;
-        const n = i2(3656), o = i2(6193), a2 = i2(5596), h2 = i2(4725), c2 = i2(8460), l2 = i2(844), d2 = i2(7226), _2 = i2(2585);
-        let u2 = t2.RenderService = class extends l2.Disposable {
+        const n = i2(3656), o = i2(6193), a2 = i2(5596), h2 = i2(4725), c3 = i2(8460), l = i2(844), d2 = i2(7226), _2 = i2(2585);
+        let u2 = t2.RenderService = class extends l.Disposable {
           get dimensions() {
             return this._renderer.value.dimensions;
           }
           constructor(e3, t3, i3, s3, r2, h3, _3, u3) {
-            if (super(), this._rowCount = e3, this._charSizeService = s3, this._renderer = this.register(new l2.MutableDisposable()), this._pausedResizeTask = new d2.DebouncedIdleTask(), this._isPaused = false, this._needsFullRefresh = false, this._isNextRenderRedrawOnly = true, this._needsSelectionRefresh = false, this._canvasWidth = 0, this._canvasHeight = 0, this._selectionState = { start: void 0, end: void 0, columnSelectMode: false }, this._onDimensionsChange = this.register(new c2.EventEmitter()), this.onDimensionsChange = this._onDimensionsChange.event, this._onRenderedViewportChange = this.register(new c2.EventEmitter()), this.onRenderedViewportChange = this._onRenderedViewportChange.event, this._onRender = this.register(new c2.EventEmitter()), this.onRender = this._onRender.event, this._onRefreshRequest = this.register(new c2.EventEmitter()), this.onRefreshRequest = this._onRefreshRequest.event, this._renderDebouncer = new o.RenderDebouncer(_3.window, (e4, t4) => this._renderRows(e4, t4)), this.register(this._renderDebouncer), this._screenDprMonitor = new a2.ScreenDprMonitor(_3.window), this._screenDprMonitor.setListener(() => this.handleDevicePixelRatioChange()), this.register(this._screenDprMonitor), this.register(h3.onResize(() => this._fullRefresh())), this.register(h3.buffers.onBufferActivate(() => {
+            if (super(), this._rowCount = e3, this._charSizeService = s3, this._renderer = this.register(new l.MutableDisposable()), this._pausedResizeTask = new d2.DebouncedIdleTask(), this._isPaused = false, this._needsFullRefresh = false, this._isNextRenderRedrawOnly = true, this._needsSelectionRefresh = false, this._canvasWidth = 0, this._canvasHeight = 0, this._selectionState = { start: void 0, end: void 0, columnSelectMode: false }, this._onDimensionsChange = this.register(new c3.EventEmitter()), this.onDimensionsChange = this._onDimensionsChange.event, this._onRenderedViewportChange = this.register(new c3.EventEmitter()), this.onRenderedViewportChange = this._onRenderedViewportChange.event, this._onRender = this.register(new c3.EventEmitter()), this.onRender = this._onRender.event, this._onRefreshRequest = this.register(new c3.EventEmitter()), this.onRefreshRequest = this._onRefreshRequest.event, this._renderDebouncer = new o.RenderDebouncer(_3.window, (e4, t4) => this._renderRows(e4, t4)), this.register(this._renderDebouncer), this._screenDprMonitor = new a2.ScreenDprMonitor(_3.window), this._screenDprMonitor.setListener(() => this.handleDevicePixelRatioChange()), this.register(this._screenDprMonitor), this.register(h3.onResize(() => this._fullRefresh())), this.register(h3.buffers.onBufferActivate(() => {
               var e4;
               return null === (e4 = this._renderer.value) || void 0 === e4 ? void 0 : e4.clear();
             })), this.register(i3.onOptionChange(() => this._handleOptionsChanged())), this.register(this._charSizeService.onCharSizeChange(() => this.handleCharSizeChanged())), this.register(r2.onDecorationRegistered(() => this._fullRefresh())), this.register(r2.onDecorationRemoved(() => this._fullRefresh())), this.register(i3.onMultipleOptionChange(["customGlyphs", "drawBoldTextInBrightColors", "letterSpacing", "lineHeight", "fontFamily", "fontSize", "fontWeight", "fontWeightBold", "minimumContrastRatio"], () => {
@@ -23650,12 +23650,12 @@ WARNING: This link could potentially be dangerous`)) {
           };
         };
         Object.defineProperty(t2, "__esModule", { value: true }), t2.SelectionService = void 0;
-        const n = i2(9806), o = i2(9504), a2 = i2(456), h2 = i2(4725), c2 = i2(8460), l2 = i2(844), d2 = i2(6114), _2 = i2(4841), u2 = i2(511), f2 = i2(2585), v3 = String.fromCharCode(160), p2 = new RegExp(v3, "g");
-        let g3 = t2.SelectionService = class extends l2.Disposable {
+        const n = i2(9806), o = i2(9504), a2 = i2(456), h2 = i2(4725), c3 = i2(8460), l = i2(844), d2 = i2(6114), _2 = i2(4841), u2 = i2(511), f2 = i2(2585), v3 = String.fromCharCode(160), p2 = new RegExp(v3, "g");
+        let g3 = t2.SelectionService = class extends l.Disposable {
           constructor(e3, t3, i3, s3, r2, n2, o2, h3, d3) {
-            super(), this._element = e3, this._screenElement = t3, this._linkifier = i3, this._bufferService = s3, this._coreService = r2, this._mouseService = n2, this._optionsService = o2, this._renderService = h3, this._coreBrowserService = d3, this._dragScrollAmount = 0, this._enabled = true, this._workCell = new u2.CellData(), this._mouseDownTimeStamp = 0, this._oldHasSelection = false, this._oldSelectionStart = void 0, this._oldSelectionEnd = void 0, this._onLinuxMouseSelection = this.register(new c2.EventEmitter()), this.onLinuxMouseSelection = this._onLinuxMouseSelection.event, this._onRedrawRequest = this.register(new c2.EventEmitter()), this.onRequestRedraw = this._onRedrawRequest.event, this._onSelectionChange = this.register(new c2.EventEmitter()), this.onSelectionChange = this._onSelectionChange.event, this._onRequestScrollLines = this.register(new c2.EventEmitter()), this.onRequestScrollLines = this._onRequestScrollLines.event, this._mouseMoveListener = (e4) => this._handleMouseMove(e4), this._mouseUpListener = (e4) => this._handleMouseUp(e4), this._coreService.onUserInput(() => {
+            super(), this._element = e3, this._screenElement = t3, this._linkifier = i3, this._bufferService = s3, this._coreService = r2, this._mouseService = n2, this._optionsService = o2, this._renderService = h3, this._coreBrowserService = d3, this._dragScrollAmount = 0, this._enabled = true, this._workCell = new u2.CellData(), this._mouseDownTimeStamp = 0, this._oldHasSelection = false, this._oldSelectionStart = void 0, this._oldSelectionEnd = void 0, this._onLinuxMouseSelection = this.register(new c3.EventEmitter()), this.onLinuxMouseSelection = this._onLinuxMouseSelection.event, this._onRedrawRequest = this.register(new c3.EventEmitter()), this.onRequestRedraw = this._onRedrawRequest.event, this._onSelectionChange = this.register(new c3.EventEmitter()), this.onSelectionChange = this._onSelectionChange.event, this._onRequestScrollLines = this.register(new c3.EventEmitter()), this.onRequestScrollLines = this._onRequestScrollLines.event, this._mouseMoveListener = (e4) => this._handleMouseMove(e4), this._mouseUpListener = (e4) => this._handleMouseUp(e4), this._coreService.onUserInput(() => {
               this.hasSelection && this.clearSelection();
-            }), this._trimListener = this._bufferService.buffer.lines.onTrim((e4) => this._handleTrim(e4)), this.register(this._bufferService.buffers.onBufferActivate((e4) => this._handleBufferActivate(e4))), this.enable(), this._model = new a2.SelectionModel(this._bufferService), this._activeSelectionMode = 0, this.register((0, l2.toDisposable)(() => {
+            }), this._trimListener = this._bufferService.buffer.lines.onTrim((e4) => this._handleTrim(e4)), this.register(this._bufferService.buffers.onBufferActivate((e4) => this._handleBufferActivate(e4))), this.enable(), this._model = new a2.SelectionModel(this._bufferService), this._activeSelectionMode = 0, this.register((0, l.toDisposable)(() => {
               this._removeMouseDownListeners();
             }));
           }
@@ -23857,8 +23857,8 @@ WARNING: This link could potentially be dangerous`)) {
               return;
             const o2 = r2.translateBufferLineToString(e3[1], false);
             let a3 = this._convertViewportColToCharacterIndex(n2, e3[0]), h3 = a3;
-            const c3 = e3[0] - a3;
-            let l3 = 0, d3 = 0, _3 = 0, u3 = 0;
+            const c4 = e3[0] - a3;
+            let l2 = 0, d3 = 0, _3 = 0, u3 = 0;
             if (" " === o2.charAt(a3)) {
               for (; a3 > 0 && " " === o2.charAt(a3 - 1); )
                 a3--;
@@ -23866,12 +23866,12 @@ WARNING: This link could potentially be dangerous`)) {
                 h3++;
             } else {
               let t4 = e3[0], i4 = e3[0];
-              0 === n2.getWidth(t4) && (l3++, t4--), 2 === n2.getWidth(i4) && (d3++, i4++);
+              0 === n2.getWidth(t4) && (l2++, t4--), 2 === n2.getWidth(i4) && (d3++, i4++);
               const s4 = n2.getString(i4).length;
               for (s4 > 1 && (u3 += s4 - 1, h3 += s4 - 1); t4 > 0 && a3 > 0 && !this._isCharWordSeparator(n2.loadCell(t4 - 1, this._workCell)); ) {
                 n2.loadCell(t4 - 1, this._workCell);
                 const e4 = this._workCell.getChars().length;
-                0 === this._workCell.getWidth() ? (l3++, t4--) : e4 > 1 && (_3 += e4 - 1, a3 -= e4 - 1), a3--, t4--;
+                0 === this._workCell.getWidth() ? (l2++, t4--) : e4 > 1 && (_3 += e4 - 1, a3 -= e4 - 1), a3--, t4--;
               }
               for (; i4 < n2.length && h3 + 1 < o2.length && !this._isCharWordSeparator(n2.loadCell(i4 + 1, this._workCell)); ) {
                 n2.loadCell(i4 + 1, this._workCell);
@@ -23880,7 +23880,7 @@ WARNING: This link could potentially be dangerous`)) {
               }
             }
             h3++;
-            let f3 = a3 + c3 - l3 + _3, v4 = Math.min(this._bufferService.cols, h3 - a3 + l3 + d3 - _3 - u3);
+            let f3 = a3 + c4 - l2 + _3, v4 = Math.min(this._bufferService.cols, h3 - a3 + l2 + d3 - _3 - u3);
             if (t3 || "" !== o2.slice(a3, h3).trim()) {
               if (i3 && 0 === f3 && 32 !== n2.getCodePoint(0)) {
                 const t4 = r2.lines.get(e3[1] - 1);
@@ -23950,7 +23950,7 @@ WARNING: This link could potentially be dangerous`)) {
           };
         };
         Object.defineProperty(t2, "__esModule", { value: true }), t2.ThemeService = t2.DEFAULT_ANSI_COLORS = void 0;
-        const n = i2(7239), o = i2(8055), a2 = i2(8460), h2 = i2(844), c2 = i2(2585), l2 = o.css.toColor("#ffffff"), d2 = o.css.toColor("#000000"), _2 = o.css.toColor("#ffffff"), u2 = o.css.toColor("#000000"), f2 = { css: "rgba(255, 255, 255, 0.3)", rgba: 4294967117 };
+        const n = i2(7239), o = i2(8055), a2 = i2(8460), h2 = i2(844), c3 = i2(2585), l = o.css.toColor("#ffffff"), d2 = o.css.toColor("#000000"), _2 = o.css.toColor("#ffffff"), u2 = o.css.toColor("#000000"), f2 = { css: "rgba(255, 255, 255, 0.3)", rgba: 4294967117 };
         t2.DEFAULT_ANSI_COLORS = Object.freeze((() => {
           const e3 = [o.css.toColor("#2e3436"), o.css.toColor("#cc0000"), o.css.toColor("#4e9a06"), o.css.toColor("#c4a000"), o.css.toColor("#3465a4"), o.css.toColor("#75507b"), o.css.toColor("#06989a"), o.css.toColor("#d3d7cf"), o.css.toColor("#555753"), o.css.toColor("#ef2929"), o.css.toColor("#8ae234"), o.css.toColor("#fce94f"), o.css.toColor("#729fcf"), o.css.toColor("#ad7fa8"), o.css.toColor("#34e2e2"), o.css.toColor("#eeeeec")], t3 = [0, 95, 135, 175, 215, 255];
           for (let i3 = 0; i3 < 216; i3++) {
@@ -23968,11 +23968,11 @@ WARNING: This link could potentially be dangerous`)) {
             return this._colors;
           }
           constructor(e3) {
-            super(), this._optionsService = e3, this._contrastCache = new n.ColorContrastCache(), this._halfContrastCache = new n.ColorContrastCache(), this._onChangeColors = this.register(new a2.EventEmitter()), this.onChangeColors = this._onChangeColors.event, this._colors = { foreground: l2, background: d2, cursor: _2, cursorAccent: u2, selectionForeground: void 0, selectionBackgroundTransparent: f2, selectionBackgroundOpaque: o.color.blend(d2, f2), selectionInactiveBackgroundTransparent: f2, selectionInactiveBackgroundOpaque: o.color.blend(d2, f2), ansi: t2.DEFAULT_ANSI_COLORS.slice(), contrastCache: this._contrastCache, halfContrastCache: this._halfContrastCache }, this._updateRestoreColors(), this._setTheme(this._optionsService.rawOptions.theme), this.register(this._optionsService.onSpecificOptionChange("minimumContrastRatio", () => this._contrastCache.clear())), this.register(this._optionsService.onSpecificOptionChange("theme", () => this._setTheme(this._optionsService.rawOptions.theme)));
+            super(), this._optionsService = e3, this._contrastCache = new n.ColorContrastCache(), this._halfContrastCache = new n.ColorContrastCache(), this._onChangeColors = this.register(new a2.EventEmitter()), this.onChangeColors = this._onChangeColors.event, this._colors = { foreground: l, background: d2, cursor: _2, cursorAccent: u2, selectionForeground: void 0, selectionBackgroundTransparent: f2, selectionBackgroundOpaque: o.color.blend(d2, f2), selectionInactiveBackgroundTransparent: f2, selectionInactiveBackgroundOpaque: o.color.blend(d2, f2), ansi: t2.DEFAULT_ANSI_COLORS.slice(), contrastCache: this._contrastCache, halfContrastCache: this._halfContrastCache }, this._updateRestoreColors(), this._setTheme(this._optionsService.rawOptions.theme), this.register(this._optionsService.onSpecificOptionChange("minimumContrastRatio", () => this._contrastCache.clear())), this.register(this._optionsService.onSpecificOptionChange("theme", () => this._setTheme(this._optionsService.rawOptions.theme)));
           }
           _setTheme(e3 = {}) {
             const i3 = this._colors;
-            if (i3.foreground = p2(e3.foreground, l2), i3.background = p2(e3.background, d2), i3.cursor = p2(e3.cursor, _2), i3.cursorAccent = p2(e3.cursorAccent, u2), i3.selectionBackgroundTransparent = p2(e3.selectionBackground, f2), i3.selectionBackgroundOpaque = o.color.blend(i3.background, i3.selectionBackgroundTransparent), i3.selectionInactiveBackgroundTransparent = p2(e3.selectionInactiveBackground, i3.selectionBackgroundTransparent), i3.selectionInactiveBackgroundOpaque = o.color.blend(i3.background, i3.selectionInactiveBackgroundTransparent), i3.selectionForeground = e3.selectionForeground ? p2(e3.selectionForeground, o.NULL_COLOR) : void 0, i3.selectionForeground === o.NULL_COLOR && (i3.selectionForeground = void 0), o.color.isOpaque(i3.selectionBackgroundTransparent)) {
+            if (i3.foreground = p2(e3.foreground, l), i3.background = p2(e3.background, d2), i3.cursor = p2(e3.cursor, _2), i3.cursorAccent = p2(e3.cursorAccent, u2), i3.selectionBackgroundTransparent = p2(e3.selectionBackground, f2), i3.selectionBackgroundOpaque = o.color.blend(i3.background, i3.selectionBackgroundTransparent), i3.selectionInactiveBackgroundTransparent = p2(e3.selectionInactiveBackground, i3.selectionBackgroundTransparent), i3.selectionInactiveBackgroundOpaque = o.color.blend(i3.background, i3.selectionInactiveBackgroundTransparent), i3.selectionForeground = e3.selectionForeground ? p2(e3.selectionForeground, o.NULL_COLOR) : void 0, i3.selectionForeground === o.NULL_COLOR && (i3.selectionForeground = void 0), o.color.isOpaque(i3.selectionBackgroundTransparent)) {
               const e4 = 0.3;
               i3.selectionBackgroundTransparent = o.color.opacity(i3.selectionBackgroundTransparent, e4);
             }
@@ -24024,7 +24024,7 @@ WARNING: This link could potentially be dangerous`)) {
             }
           return t3;
         }
-        t2.ThemeService = v3 = s2([r(0, c2.IOptionsService)], v3);
+        t2.ThemeService = v3 = s2([r(0, c3.IOptionsService)], v3);
       }, 6349: (e2, t2, i2) => {
         Object.defineProperty(t2, "__esModule", { value: true }), t2.CircularList = void 0;
         const s2 = i2(8460), r = i2(844);
@@ -24127,7 +24127,7 @@ WARNING: This link could potentially be dangerous`)) {
         Object.defineProperty(t2, "__esModule", { value: true }), t2.contrastRatio = t2.toPaddedHex = t2.rgba = t2.rgb = t2.css = t2.color = t2.channels = t2.NULL_COLOR = void 0;
         const s2 = i2(6114);
         let r = 0, n = 0, o = 0, a2 = 0;
-        var h2, c2, l2, d2, _2;
+        var h2, c3, l, d2, _2;
         function u2(e3) {
           const t3 = e3.toString(16);
           return t3.length < 2 ? "0" + t3 : t3;
@@ -24148,8 +24148,8 @@ WARNING: This link could potentially be dangerous`)) {
           e3.blend = function(e4, t4) {
             if (a2 = (255 & t4.rgba) / 255, 1 === a2)
               return { css: t4.css, rgba: t4.rgba };
-            const i3 = t4.rgba >> 24 & 255, s3 = t4.rgba >> 16 & 255, c3 = t4.rgba >> 8 & 255, l3 = e4.rgba >> 24 & 255, d3 = e4.rgba >> 16 & 255, _3 = e4.rgba >> 8 & 255;
-            return r = l3 + Math.round((i3 - l3) * a2), n = d3 + Math.round((s3 - d3) * a2), o = _3 + Math.round((c3 - _3) * a2), { css: h2.toCss(r, n, o), rgba: h2.toRgba(r, n, o) };
+            const i3 = t4.rgba >> 24 & 255, s3 = t4.rgba >> 16 & 255, c4 = t4.rgba >> 8 & 255, l2 = e4.rgba >> 24 & 255, d3 = e4.rgba >> 16 & 255, _3 = e4.rgba >> 8 & 255;
+            return r = l2 + Math.round((i3 - l2) * a2), n = d3 + Math.round((s3 - d3) * a2), o = _3 + Math.round((c4 - _3) * a2), { css: h2.toCss(r, n, o), rgba: h2.toRgba(r, n, o) };
           }, e3.isOpaque = function(e4) {
             return 255 == (255 & e4.rgba);
           }, e3.ensureContrastRatio = function(e4, t4, i3) {
@@ -24164,7 +24164,7 @@ WARNING: This link could potentially be dangerous`)) {
           }, e3.toColorRGB = function(e4) {
             return [e4.rgba >> 24 & 255, e4.rgba >> 16 & 255, e4.rgba >> 8 & 255];
           };
-        }(c2 || (t2.color = c2 = {})), function(e3) {
+        }(c3 || (t2.color = c3 = {})), function(e3) {
           let t3, i3;
           if (!s2.isNode) {
             const e4 = document.createElement("canvas");
@@ -24195,7 +24195,7 @@ WARNING: This link could potentially be dangerous`)) {
               throw new Error("css.toColor: Unsupported css format");
             return { rgba: h2.toRgba(r, n, o, a2), css: e4 };
           };
-        }(l2 || (t2.css = l2 = {})), function(e3) {
+        }(l || (t2.css = l = {})), function(e3) {
           function t3(e4, t4, i3) {
             const s3 = e4 / 255, r2 = t4 / 255, n2 = i3 / 255;
             return 0.2126 * (s3 <= 0.03928 ? s3 / 12.92 : Math.pow((s3 + 0.055) / 1.055, 2.4)) + 0.7152 * (r2 <= 0.03928 ? r2 / 12.92 : Math.pow((r2 + 0.055) / 1.055, 2.4)) + 0.0722 * (n2 <= 0.03928 ? n2 / 12.92 : Math.pow((n2 + 0.055) / 1.055, 2.4));
@@ -24206,16 +24206,16 @@ WARNING: This link could potentially be dangerous`)) {
         }(d2 || (t2.rgb = d2 = {})), function(e3) {
           function t3(e4, t4, i4) {
             const s3 = e4 >> 24 & 255, r2 = e4 >> 16 & 255, n2 = e4 >> 8 & 255;
-            let o2 = t4 >> 24 & 255, a3 = t4 >> 16 & 255, h3 = t4 >> 8 & 255, c3 = f2(d2.relativeLuminance2(o2, a3, h3), d2.relativeLuminance2(s3, r2, n2));
-            for (; c3 < i4 && (o2 > 0 || a3 > 0 || h3 > 0); )
-              o2 -= Math.max(0, Math.ceil(0.1 * o2)), a3 -= Math.max(0, Math.ceil(0.1 * a3)), h3 -= Math.max(0, Math.ceil(0.1 * h3)), c3 = f2(d2.relativeLuminance2(o2, a3, h3), d2.relativeLuminance2(s3, r2, n2));
+            let o2 = t4 >> 24 & 255, a3 = t4 >> 16 & 255, h3 = t4 >> 8 & 255, c4 = f2(d2.relativeLuminance2(o2, a3, h3), d2.relativeLuminance2(s3, r2, n2));
+            for (; c4 < i4 && (o2 > 0 || a3 > 0 || h3 > 0); )
+              o2 -= Math.max(0, Math.ceil(0.1 * o2)), a3 -= Math.max(0, Math.ceil(0.1 * a3)), h3 -= Math.max(0, Math.ceil(0.1 * h3)), c4 = f2(d2.relativeLuminance2(o2, a3, h3), d2.relativeLuminance2(s3, r2, n2));
             return (o2 << 24 | a3 << 16 | h3 << 8 | 255) >>> 0;
           }
           function i3(e4, t4, i4) {
             const s3 = e4 >> 24 & 255, r2 = e4 >> 16 & 255, n2 = e4 >> 8 & 255;
-            let o2 = t4 >> 24 & 255, a3 = t4 >> 16 & 255, h3 = t4 >> 8 & 255, c3 = f2(d2.relativeLuminance2(o2, a3, h3), d2.relativeLuminance2(s3, r2, n2));
-            for (; c3 < i4 && (o2 < 255 || a3 < 255 || h3 < 255); )
-              o2 = Math.min(255, o2 + Math.ceil(0.1 * (255 - o2))), a3 = Math.min(255, a3 + Math.ceil(0.1 * (255 - a3))), h3 = Math.min(255, h3 + Math.ceil(0.1 * (255 - h3))), c3 = f2(d2.relativeLuminance2(o2, a3, h3), d2.relativeLuminance2(s3, r2, n2));
+            let o2 = t4 >> 24 & 255, a3 = t4 >> 16 & 255, h3 = t4 >> 8 & 255, c4 = f2(d2.relativeLuminance2(o2, a3, h3), d2.relativeLuminance2(s3, r2, n2));
+            for (; c4 < i4 && (o2 < 255 || a3 < 255 || h3 < 255); )
+              o2 = Math.min(255, o2 + Math.ceil(0.1 * (255 - o2))), a3 = Math.min(255, a3 + Math.ceil(0.1 * (255 - a3))), h3 = Math.min(255, h3 + Math.ceil(0.1 * (255 - h3))), c4 = f2(d2.relativeLuminance2(o2, a3, h3), d2.relativeLuminance2(s3, r2, n2));
             return (o2 << 24 | a3 << 16 | h3 << 8 | 255) >>> 0;
           }
           e3.ensureContrastRatio = function(e4, s3, r2) {
@@ -24244,11 +24244,11 @@ WARNING: This link could potentially be dangerous`)) {
         }(_2 || (t2.rgba = _2 = {})), t2.toPaddedHex = u2, t2.contrastRatio = f2;
       }, 8969: (e2, t2, i2) => {
         Object.defineProperty(t2, "__esModule", { value: true }), t2.CoreTerminal = void 0;
-        const s2 = i2(844), r = i2(2585), n = i2(4348), o = i2(7866), a2 = i2(744), h2 = i2(7302), c2 = i2(6975), l2 = i2(8460), d2 = i2(1753), _2 = i2(1480), u2 = i2(7994), f2 = i2(9282), v3 = i2(5435), p2 = i2(5981), g3 = i2(2660);
+        const s2 = i2(844), r = i2(2585), n = i2(4348), o = i2(7866), a2 = i2(744), h2 = i2(7302), c3 = i2(6975), l = i2(8460), d2 = i2(1753), _2 = i2(1480), u2 = i2(7994), f2 = i2(9282), v3 = i2(5435), p2 = i2(5981), g3 = i2(2660);
         let m2 = false;
         class S2 extends s2.Disposable {
           get onScroll() {
-            return this._onScrollApi || (this._onScrollApi = this.register(new l2.EventEmitter()), this._onScroll.event((e3) => {
+            return this._onScrollApi || (this._onScrollApi = this.register(new l.EventEmitter()), this._onScroll.event((e3) => {
               var t3;
               null === (t3 = this._onScrollApi) || void 0 === t3 || t3.fire(e3.position);
             })), this._onScrollApi.event;
@@ -24270,11 +24270,11 @@ WARNING: This link could potentially be dangerous`)) {
               this.optionsService.options[t3] = e3[t3];
           }
           constructor(e3) {
-            super(), this._windowsWrappingHeuristics = this.register(new s2.MutableDisposable()), this._onBinary = this.register(new l2.EventEmitter()), this.onBinary = this._onBinary.event, this._onData = this.register(new l2.EventEmitter()), this.onData = this._onData.event, this._onLineFeed = this.register(new l2.EventEmitter()), this.onLineFeed = this._onLineFeed.event, this._onResize = this.register(new l2.EventEmitter()), this.onResize = this._onResize.event, this._onWriteParsed = this.register(new l2.EventEmitter()), this.onWriteParsed = this._onWriteParsed.event, this._onScroll = this.register(new l2.EventEmitter()), this._instantiationService = new n.InstantiationService(), this.optionsService = this.register(new h2.OptionsService(e3)), this._instantiationService.setService(r.IOptionsService, this.optionsService), this._bufferService = this.register(this._instantiationService.createInstance(a2.BufferService)), this._instantiationService.setService(r.IBufferService, this._bufferService), this._logService = this.register(this._instantiationService.createInstance(o.LogService)), this._instantiationService.setService(r.ILogService, this._logService), this.coreService = this.register(this._instantiationService.createInstance(c2.CoreService)), this._instantiationService.setService(r.ICoreService, this.coreService), this.coreMouseService = this.register(this._instantiationService.createInstance(d2.CoreMouseService)), this._instantiationService.setService(r.ICoreMouseService, this.coreMouseService), this.unicodeService = this.register(this._instantiationService.createInstance(_2.UnicodeService)), this._instantiationService.setService(r.IUnicodeService, this.unicodeService), this._charsetService = this._instantiationService.createInstance(u2.CharsetService), this._instantiationService.setService(r.ICharsetService, this._charsetService), this._oscLinkService = this._instantiationService.createInstance(g3.OscLinkService), this._instantiationService.setService(r.IOscLinkService, this._oscLinkService), this._inputHandler = this.register(new v3.InputHandler(this._bufferService, this._charsetService, this.coreService, this._logService, this.optionsService, this._oscLinkService, this.coreMouseService, this.unicodeService)), this.register((0, l2.forwardEvent)(this._inputHandler.onLineFeed, this._onLineFeed)), this.register(this._inputHandler), this.register((0, l2.forwardEvent)(this._bufferService.onResize, this._onResize)), this.register((0, l2.forwardEvent)(this.coreService.onData, this._onData)), this.register((0, l2.forwardEvent)(this.coreService.onBinary, this._onBinary)), this.register(this.coreService.onRequestScrollToBottom(() => this.scrollToBottom())), this.register(this.coreService.onUserInput(() => this._writeBuffer.handleUserInput())), this.register(this.optionsService.onMultipleOptionChange(["windowsMode", "windowsPty"], () => this._handleWindowsPtyOptionChange())), this.register(this._bufferService.onScroll((e4) => {
+            super(), this._windowsWrappingHeuristics = this.register(new s2.MutableDisposable()), this._onBinary = this.register(new l.EventEmitter()), this.onBinary = this._onBinary.event, this._onData = this.register(new l.EventEmitter()), this.onData = this._onData.event, this._onLineFeed = this.register(new l.EventEmitter()), this.onLineFeed = this._onLineFeed.event, this._onResize = this.register(new l.EventEmitter()), this.onResize = this._onResize.event, this._onWriteParsed = this.register(new l.EventEmitter()), this.onWriteParsed = this._onWriteParsed.event, this._onScroll = this.register(new l.EventEmitter()), this._instantiationService = new n.InstantiationService(), this.optionsService = this.register(new h2.OptionsService(e3)), this._instantiationService.setService(r.IOptionsService, this.optionsService), this._bufferService = this.register(this._instantiationService.createInstance(a2.BufferService)), this._instantiationService.setService(r.IBufferService, this._bufferService), this._logService = this.register(this._instantiationService.createInstance(o.LogService)), this._instantiationService.setService(r.ILogService, this._logService), this.coreService = this.register(this._instantiationService.createInstance(c3.CoreService)), this._instantiationService.setService(r.ICoreService, this.coreService), this.coreMouseService = this.register(this._instantiationService.createInstance(d2.CoreMouseService)), this._instantiationService.setService(r.ICoreMouseService, this.coreMouseService), this.unicodeService = this.register(this._instantiationService.createInstance(_2.UnicodeService)), this._instantiationService.setService(r.IUnicodeService, this.unicodeService), this._charsetService = this._instantiationService.createInstance(u2.CharsetService), this._instantiationService.setService(r.ICharsetService, this._charsetService), this._oscLinkService = this._instantiationService.createInstance(g3.OscLinkService), this._instantiationService.setService(r.IOscLinkService, this._oscLinkService), this._inputHandler = this.register(new v3.InputHandler(this._bufferService, this._charsetService, this.coreService, this._logService, this.optionsService, this._oscLinkService, this.coreMouseService, this.unicodeService)), this.register((0, l.forwardEvent)(this._inputHandler.onLineFeed, this._onLineFeed)), this.register(this._inputHandler), this.register((0, l.forwardEvent)(this._bufferService.onResize, this._onResize)), this.register((0, l.forwardEvent)(this.coreService.onData, this._onData)), this.register((0, l.forwardEvent)(this.coreService.onBinary, this._onBinary)), this.register(this.coreService.onRequestScrollToBottom(() => this.scrollToBottom())), this.register(this.coreService.onUserInput(() => this._writeBuffer.handleUserInput())), this.register(this.optionsService.onMultipleOptionChange(["windowsMode", "windowsPty"], () => this._handleWindowsPtyOptionChange())), this.register(this._bufferService.onScroll((e4) => {
               this._onScroll.fire({ position: this._bufferService.buffer.ydisp, source: 0 }), this._inputHandler.markRangeDirty(this._bufferService.buffer.scrollTop, this._bufferService.buffer.scrollBottom);
             })), this.register(this._inputHandler.onScroll((e4) => {
               this._onScroll.fire({ position: this._bufferService.buffer.ydisp, source: 0 }), this._inputHandler.markRangeDirty(this._bufferService.buffer.scrollTop, this._bufferService.buffer.scrollBottom);
-            })), this._writeBuffer = this.register(new p2.WriteBuffer((e4, t3) => this._inputHandler.parse(e4, t3))), this.register((0, l2.forwardEvent)(this._writeBuffer.onWriteParsed, this._onWriteParsed));
+            })), this._writeBuffer = this.register(new p2.WriteBuffer((e4, t3) => this._inputHandler.parse(e4, t3))), this.register((0, l.forwardEvent)(this._writeBuffer.onWriteParsed, this._onWriteParsed));
           }
           write(e3, t3) {
             this._writeBuffer.write(e3, t3);
@@ -24383,7 +24383,7 @@ WARNING: This link could potentially be dangerous`)) {
           };
         };
         Object.defineProperty(t2, "__esModule", { value: true }), t2.InputHandler = t2.WindowsOptionsReportType = void 0;
-        const n = i2(2584), o = i2(7116), a2 = i2(2015), h2 = i2(844), c2 = i2(482), l2 = i2(8437), d2 = i2(8460), _2 = i2(643), u2 = i2(511), f2 = i2(3734), v3 = i2(2585), p2 = i2(6242), g3 = i2(6351), m2 = i2(5941), S2 = { "(": 0, ")": 1, "*": 2, "+": 3, "-": 1, ".": 2 }, C2 = 131072;
+        const n = i2(2584), o = i2(7116), a2 = i2(2015), h2 = i2(844), c3 = i2(482), l = i2(8437), d2 = i2(8460), _2 = i2(643), u2 = i2(511), f2 = i2(3734), v3 = i2(2585), p2 = i2(6242), g3 = i2(6351), m2 = i2(5941), S2 = { "(": 0, ")": 1, "*": 2, "+": 3, "-": 1, ".": 2 }, C2 = 131072;
         function b2(e3, t3) {
           if (e3 > 24)
             return t3.setWinLines || false;
@@ -24445,7 +24445,7 @@ WARNING: This link could potentially be dangerous`)) {
             return this._curAttrData;
           }
           constructor(e3, t3, i3, s3, r2, h3, _3, f3, v4 = new a2.EscapeSequenceParser()) {
-            super(), this._bufferService = e3, this._charsetService = t3, this._coreService = i3, this._logService = s3, this._optionsService = r2, this._oscLinkService = h3, this._coreMouseService = _3, this._unicodeService = f3, this._parser = v4, this._parseBuffer = new Uint32Array(4096), this._stringDecoder = new c2.StringToUtf32(), this._utf8Decoder = new c2.Utf8ToUtf32(), this._workCell = new u2.CellData(), this._windowTitle = "", this._iconName = "", this._windowTitleStack = [], this._iconNameStack = [], this._curAttrData = l2.DEFAULT_ATTR_DATA.clone(), this._eraseAttrDataInternal = l2.DEFAULT_ATTR_DATA.clone(), this._onRequestBell = this.register(new d2.EventEmitter()), this.onRequestBell = this._onRequestBell.event, this._onRequestRefreshRows = this.register(new d2.EventEmitter()), this.onRequestRefreshRows = this._onRequestRefreshRows.event, this._onRequestReset = this.register(new d2.EventEmitter()), this.onRequestReset = this._onRequestReset.event, this._onRequestSendFocus = this.register(new d2.EventEmitter()), this.onRequestSendFocus = this._onRequestSendFocus.event, this._onRequestSyncScrollBar = this.register(new d2.EventEmitter()), this.onRequestSyncScrollBar = this._onRequestSyncScrollBar.event, this._onRequestWindowsOptionsReport = this.register(new d2.EventEmitter()), this.onRequestWindowsOptionsReport = this._onRequestWindowsOptionsReport.event, this._onA11yChar = this.register(new d2.EventEmitter()), this.onA11yChar = this._onA11yChar.event, this._onA11yTab = this.register(new d2.EventEmitter()), this.onA11yTab = this._onA11yTab.event, this._onCursorMove = this.register(new d2.EventEmitter()), this.onCursorMove = this._onCursorMove.event, this._onLineFeed = this.register(new d2.EventEmitter()), this.onLineFeed = this._onLineFeed.event, this._onScroll = this.register(new d2.EventEmitter()), this.onScroll = this._onScroll.event, this._onTitleChange = this.register(new d2.EventEmitter()), this.onTitleChange = this._onTitleChange.event, this._onColor = this.register(new d2.EventEmitter()), this.onColor = this._onColor.event, this._parseStack = { paused: false, cursorStartX: 0, cursorStartY: 0, decodedLength: 0, position: 0 }, this._specialColors = [256, 257, 258], this.register(this._parser), this._dirtyRowTracker = new k3(this._bufferService), this._activeBuffer = this._bufferService.buffer, this.register(this._bufferService.buffers.onBufferActivate((e4) => this._activeBuffer = e4.activeBuffer)), this._parser.setCsiHandlerFallback((e4, t4) => {
+            super(), this._bufferService = e3, this._charsetService = t3, this._coreService = i3, this._logService = s3, this._optionsService = r2, this._oscLinkService = h3, this._coreMouseService = _3, this._unicodeService = f3, this._parser = v4, this._parseBuffer = new Uint32Array(4096), this._stringDecoder = new c3.StringToUtf32(), this._utf8Decoder = new c3.Utf8ToUtf32(), this._workCell = new u2.CellData(), this._windowTitle = "", this._iconName = "", this._windowTitleStack = [], this._iconNameStack = [], this._curAttrData = l.DEFAULT_ATTR_DATA.clone(), this._eraseAttrDataInternal = l.DEFAULT_ATTR_DATA.clone(), this._onRequestBell = this.register(new d2.EventEmitter()), this.onRequestBell = this._onRequestBell.event, this._onRequestRefreshRows = this.register(new d2.EventEmitter()), this.onRequestRefreshRows = this._onRequestRefreshRows.event, this._onRequestReset = this.register(new d2.EventEmitter()), this.onRequestReset = this._onRequestReset.event, this._onRequestSendFocus = this.register(new d2.EventEmitter()), this.onRequestSendFocus = this._onRequestSendFocus.event, this._onRequestSyncScrollBar = this.register(new d2.EventEmitter()), this.onRequestSyncScrollBar = this._onRequestSyncScrollBar.event, this._onRequestWindowsOptionsReport = this.register(new d2.EventEmitter()), this.onRequestWindowsOptionsReport = this._onRequestWindowsOptionsReport.event, this._onA11yChar = this.register(new d2.EventEmitter()), this.onA11yChar = this._onA11yChar.event, this._onA11yTab = this.register(new d2.EventEmitter()), this.onA11yTab = this._onA11yTab.event, this._onCursorMove = this.register(new d2.EventEmitter()), this.onCursorMove = this._onCursorMove.event, this._onLineFeed = this.register(new d2.EventEmitter()), this.onLineFeed = this._onLineFeed.event, this._onScroll = this.register(new d2.EventEmitter()), this.onScroll = this._onScroll.event, this._onTitleChange = this.register(new d2.EventEmitter()), this.onTitleChange = this._onTitleChange.event, this._onColor = this.register(new d2.EventEmitter()), this.onColor = this._onColor.event, this._parseStack = { paused: false, cursorStartX: 0, cursorStartY: 0, decodedLength: 0, position: 0 }, this._specialColors = [256, 257, 258], this.register(this._parser), this._dirtyRowTracker = new k3(this._bufferService), this._activeBuffer = this._bufferService.buffer, this.register(this._bufferService.buffers.onBufferActivate((e4) => this._activeBuffer = e4.activeBuffer)), this._parser.setCsiHandlerFallback((e4, t4) => {
               this._logService.debug("Unknown CSI code: ", { identifier: this._parser.identToString(e4), params: t4.toArray() });
             }), this._parser.setEscHandlerFallback((e4) => {
               this._logService.debug("Unknown ESC code: ", { identifier: this._parser.identToString(e4) });
@@ -24496,7 +24496,7 @@ WARNING: This link could potentially be dangerous`)) {
           }
           print(e3, t3, i3) {
             let s3, r2;
-            const n2 = this._charsetService.charset, o2 = this._optionsService.rawOptions.screenReaderMode, a3 = this._bufferService.cols, h3 = this._coreService.decPrivateModes.wraparound, l3 = this._coreService.modes.insertMode, d3 = this._curAttrData;
+            const n2 = this._charsetService.charset, o2 = this._optionsService.rawOptions.screenReaderMode, a3 = this._bufferService.cols, h3 = this._coreService.decPrivateModes.wraparound, l2 = this._coreService.modes.insertMode, d3 = this._curAttrData;
             let u3 = this._activeBuffer.lines.get(this._activeBuffer.ybase + this._activeBuffer.y);
             this._dirtyRowTracker.markDirty(this._activeBuffer.y), this._activeBuffer.x && i3 - t3 > 0 && 2 === u3.getWidth(this._activeBuffer.x - 1) && u3.setCellFromCodePoint(this._activeBuffer.x - 1, 0, 1, d3.fg, d3.bg, d3.extended);
             for (let f3 = t3; f3 < i3; ++f3) {
@@ -24504,7 +24504,7 @@ WARNING: This link could potentially be dangerous`)) {
                 const e4 = n2[String.fromCharCode(s3)];
                 e4 && (s3 = e4.charCodeAt(0));
               }
-              if (o2 && this._onA11yChar.fire((0, c2.stringFromCodePoint)(s3)), this._getCurrentLinkId() && this._oscLinkService.addLineToLink(this._getCurrentLinkId(), this._activeBuffer.ybase + this._activeBuffer.y), r2 || !this._activeBuffer.x) {
+              if (o2 && this._onA11yChar.fire((0, c3.stringFromCodePoint)(s3)), this._getCurrentLinkId() && this._oscLinkService.addLineToLink(this._getCurrentLinkId(), this._activeBuffer.ybase + this._activeBuffer.y), r2 || !this._activeBuffer.x) {
                 if (this._activeBuffer.x + r2 - 1 >= a3) {
                   if (h3) {
                     for (; this._activeBuffer.x < a3; )
@@ -24513,7 +24513,7 @@ WARNING: This link could potentially be dangerous`)) {
                   } else if (this._activeBuffer.x = a3 - 1, 2 === r2)
                     continue;
                 }
-                if (l3 && (u3.insertCells(this._activeBuffer.x, r2, this._activeBuffer.getNullCell(d3), d3), 2 === u3.getWidth(a3 - 1) && u3.setCellFromCodePoint(a3 - 1, _2.NULL_CELL_CODE, _2.NULL_CELL_WIDTH, d3.fg, d3.bg, d3.extended)), u3.setCellFromCodePoint(this._activeBuffer.x++, s3, r2, d3.fg, d3.bg, d3.extended), r2 > 0)
+                if (l2 && (u3.insertCells(this._activeBuffer.x, r2, this._activeBuffer.getNullCell(d3), d3), 2 === u3.getWidth(a3 - 1) && u3.setCellFromCodePoint(a3 - 1, _2.NULL_CELL_CODE, _2.NULL_CELL_WIDTH, d3.fg, d3.bg, d3.extended)), u3.setCellFromCodePoint(this._activeBuffer.x++, s3, r2, d3.fg, d3.bg, d3.extended), r2 > 0)
                   for (; --r2; )
                     u3.setCellFromCodePoint(this._activeBuffer.x++, 0, 0, d3.fg, d3.bg, d3.extended);
               } else
@@ -24726,7 +24726,7 @@ WARNING: This link could potentially be dangerous`)) {
           scrollDown(e3) {
             let t3 = e3.params[0] || 1;
             for (; t3--; )
-              this._activeBuffer.lines.splice(this._activeBuffer.ybase + this._activeBuffer.scrollBottom, 1), this._activeBuffer.lines.splice(this._activeBuffer.ybase + this._activeBuffer.scrollTop, 0, this._activeBuffer.getBlankLine(l2.DEFAULT_ATTR_DATA));
+              this._activeBuffer.lines.splice(this._activeBuffer.ybase + this._activeBuffer.scrollBottom, 1), this._activeBuffer.lines.splice(this._activeBuffer.ybase + this._activeBuffer.scrollTop, 0, this._activeBuffer.getBlankLine(l.DEFAULT_ATTR_DATA));
             return this._dirtyRowTracker.markRangeDirty(this._activeBuffer.scrollTop, this._activeBuffer.scrollBottom), true;
           }
           scrollLeft(e3) {
@@ -24944,8 +24944,8 @@ WARNING: This link could potentially be dangerous`)) {
             return true;
           }
           requestMode(e3, t3) {
-            const i3 = this._coreService.decPrivateModes, { activeProtocol: s3, activeEncoding: r2 } = this._coreMouseService, o2 = this._coreService, { buffers: a3, cols: h3 } = this._bufferService, { active: c3, alt: l3 } = a3, d3 = this._optionsService.rawOptions, _3 = (e4) => e4 ? 1 : 2, u3 = e3.params[0];
-            return f3 = u3, v4 = t3 ? 2 === u3 ? 4 : 4 === u3 ? _3(o2.modes.insertMode) : 12 === u3 ? 3 : 20 === u3 ? _3(d3.convertEol) : 0 : 1 === u3 ? _3(i3.applicationCursorKeys) : 3 === u3 ? d3.windowOptions.setWinLines ? 80 === h3 ? 2 : 132 === h3 ? 1 : 0 : 0 : 6 === u3 ? _3(i3.origin) : 7 === u3 ? _3(i3.wraparound) : 8 === u3 ? 3 : 9 === u3 ? _3("X10" === s3) : 12 === u3 ? _3(d3.cursorBlink) : 25 === u3 ? _3(!o2.isCursorHidden) : 45 === u3 ? _3(i3.reverseWraparound) : 66 === u3 ? _3(i3.applicationKeypad) : 67 === u3 ? 4 : 1e3 === u3 ? _3("VT200" === s3) : 1002 === u3 ? _3("DRAG" === s3) : 1003 === u3 ? _3("ANY" === s3) : 1004 === u3 ? _3(i3.sendFocus) : 1005 === u3 ? 4 : 1006 === u3 ? _3("SGR" === r2) : 1015 === u3 ? 4 : 1016 === u3 ? _3("SGR_PIXELS" === r2) : 1048 === u3 ? 1 : 47 === u3 || 1047 === u3 || 1049 === u3 ? _3(c3 === l3) : 2004 === u3 ? _3(i3.bracketedPasteMode) : 0, o2.triggerDataEvent(`${n.C0.ESC}[${t3 ? "" : "?"}${f3};${v4}$y`), true;
+            const i3 = this._coreService.decPrivateModes, { activeProtocol: s3, activeEncoding: r2 } = this._coreMouseService, o2 = this._coreService, { buffers: a3, cols: h3 } = this._bufferService, { active: c4, alt: l2 } = a3, d3 = this._optionsService.rawOptions, _3 = (e4) => e4 ? 1 : 2, u3 = e3.params[0];
+            return f3 = u3, v4 = t3 ? 2 === u3 ? 4 : 4 === u3 ? _3(o2.modes.insertMode) : 12 === u3 ? 3 : 20 === u3 ? _3(d3.convertEol) : 0 : 1 === u3 ? _3(i3.applicationCursorKeys) : 3 === u3 ? d3.windowOptions.setWinLines ? 80 === h3 ? 2 : 132 === h3 ? 1 : 0 : 0 : 6 === u3 ? _3(i3.origin) : 7 === u3 ? _3(i3.wraparound) : 8 === u3 ? 3 : 9 === u3 ? _3("X10" === s3) : 12 === u3 ? _3(d3.cursorBlink) : 25 === u3 ? _3(!o2.isCursorHidden) : 45 === u3 ? _3(i3.reverseWraparound) : 66 === u3 ? _3(i3.applicationKeypad) : 67 === u3 ? 4 : 1e3 === u3 ? _3("VT200" === s3) : 1002 === u3 ? _3("DRAG" === s3) : 1003 === u3 ? _3("ANY" === s3) : 1004 === u3 ? _3(i3.sendFocus) : 1005 === u3 ? 4 : 1006 === u3 ? _3("SGR" === r2) : 1015 === u3 ? 4 : 1016 === u3 ? _3("SGR_PIXELS" === r2) : 1048 === u3 ? 1 : 47 === u3 || 1047 === u3 || 1049 === u3 ? _3(c4 === l2) : 2004 === u3 ? _3(i3.bracketedPasteMode) : 0, o2.triggerDataEvent(`${n.C0.ESC}[${t3 ? "" : "?"}${f3};${v4}$y`), true;
             var f3, v4;
           }
           _updateAttrColor(e3, t3, i3, s3, r2) {
@@ -24985,7 +24985,7 @@ WARNING: This link could potentially be dangerous`)) {
             t3.extended = t3.extended.clone(), (!~e3 || e3 > 5) && (e3 = 1), t3.extended.underlineStyle = e3, t3.fg |= 268435456, 0 === e3 && (t3.fg &= -268435457), t3.updateExtended();
           }
           _processSGR0(e3) {
-            e3.fg = l2.DEFAULT_ATTR_DATA.fg, e3.bg = l2.DEFAULT_ATTR_DATA.bg, e3.extended = e3.extended.clone(), e3.extended.underlineStyle = 0, e3.extended.underlineColor &= -67108864, e3.updateExtended();
+            e3.fg = l.DEFAULT_ATTR_DATA.fg, e3.bg = l.DEFAULT_ATTR_DATA.bg, e3.extended = e3.extended.clone(), e3.extended.underlineStyle = 0, e3.extended.underlineColor &= -67108864, e3.updateExtended();
           }
           charAttributes(e3) {
             if (1 === e3.length && 0 === e3.params[0])
@@ -24994,7 +24994,7 @@ WARNING: This link could potentially be dangerous`)) {
             let i3;
             const s3 = this._curAttrData;
             for (let r2 = 0; r2 < t3; r2++)
-              i3 = e3.params[r2], i3 >= 30 && i3 <= 37 ? (s3.fg &= -50331904, s3.fg |= 16777216 | i3 - 30) : i3 >= 40 && i3 <= 47 ? (s3.bg &= -50331904, s3.bg |= 16777216 | i3 - 40) : i3 >= 90 && i3 <= 97 ? (s3.fg &= -50331904, s3.fg |= 16777224 | i3 - 90) : i3 >= 100 && i3 <= 107 ? (s3.bg &= -50331904, s3.bg |= 16777224 | i3 - 100) : 0 === i3 ? this._processSGR0(s3) : 1 === i3 ? s3.fg |= 134217728 : 3 === i3 ? s3.bg |= 67108864 : 4 === i3 ? (s3.fg |= 268435456, this._processUnderline(e3.hasSubParams(r2) ? e3.getSubParams(r2)[0] : 1, s3)) : 5 === i3 ? s3.fg |= 536870912 : 7 === i3 ? s3.fg |= 67108864 : 8 === i3 ? s3.fg |= 1073741824 : 9 === i3 ? s3.fg |= 2147483648 : 2 === i3 ? s3.bg |= 134217728 : 21 === i3 ? this._processUnderline(2, s3) : 22 === i3 ? (s3.fg &= -134217729, s3.bg &= -134217729) : 23 === i3 ? s3.bg &= -67108865 : 24 === i3 ? (s3.fg &= -268435457, this._processUnderline(0, s3)) : 25 === i3 ? s3.fg &= -536870913 : 27 === i3 ? s3.fg &= -67108865 : 28 === i3 ? s3.fg &= -1073741825 : 29 === i3 ? s3.fg &= 2147483647 : 39 === i3 ? (s3.fg &= -67108864, s3.fg |= 16777215 & l2.DEFAULT_ATTR_DATA.fg) : 49 === i3 ? (s3.bg &= -67108864, s3.bg |= 16777215 & l2.DEFAULT_ATTR_DATA.bg) : 38 === i3 || 48 === i3 || 58 === i3 ? r2 += this._extractColor(e3, r2, s3) : 53 === i3 ? s3.bg |= 1073741824 : 55 === i3 ? s3.bg &= -1073741825 : 59 === i3 ? (s3.extended = s3.extended.clone(), s3.extended.underlineColor = -1, s3.updateExtended()) : 100 === i3 ? (s3.fg &= -67108864, s3.fg |= 16777215 & l2.DEFAULT_ATTR_DATA.fg, s3.bg &= -67108864, s3.bg |= 16777215 & l2.DEFAULT_ATTR_DATA.bg) : this._logService.debug("Unknown SGR attribute: %d.", i3);
+              i3 = e3.params[r2], i3 >= 30 && i3 <= 37 ? (s3.fg &= -50331904, s3.fg |= 16777216 | i3 - 30) : i3 >= 40 && i3 <= 47 ? (s3.bg &= -50331904, s3.bg |= 16777216 | i3 - 40) : i3 >= 90 && i3 <= 97 ? (s3.fg &= -50331904, s3.fg |= 16777224 | i3 - 90) : i3 >= 100 && i3 <= 107 ? (s3.bg &= -50331904, s3.bg |= 16777224 | i3 - 100) : 0 === i3 ? this._processSGR0(s3) : 1 === i3 ? s3.fg |= 134217728 : 3 === i3 ? s3.bg |= 67108864 : 4 === i3 ? (s3.fg |= 268435456, this._processUnderline(e3.hasSubParams(r2) ? e3.getSubParams(r2)[0] : 1, s3)) : 5 === i3 ? s3.fg |= 536870912 : 7 === i3 ? s3.fg |= 67108864 : 8 === i3 ? s3.fg |= 1073741824 : 9 === i3 ? s3.fg |= 2147483648 : 2 === i3 ? s3.bg |= 134217728 : 21 === i3 ? this._processUnderline(2, s3) : 22 === i3 ? (s3.fg &= -134217729, s3.bg &= -134217729) : 23 === i3 ? s3.bg &= -67108865 : 24 === i3 ? (s3.fg &= -268435457, this._processUnderline(0, s3)) : 25 === i3 ? s3.fg &= -536870913 : 27 === i3 ? s3.fg &= -67108865 : 28 === i3 ? s3.fg &= -1073741825 : 29 === i3 ? s3.fg &= 2147483647 : 39 === i3 ? (s3.fg &= -67108864, s3.fg |= 16777215 & l.DEFAULT_ATTR_DATA.fg) : 49 === i3 ? (s3.bg &= -67108864, s3.bg |= 16777215 & l.DEFAULT_ATTR_DATA.bg) : 38 === i3 || 48 === i3 || 58 === i3 ? r2 += this._extractColor(e3, r2, s3) : 53 === i3 ? s3.bg |= 1073741824 : 55 === i3 ? s3.bg &= -1073741825 : 59 === i3 ? (s3.extended = s3.extended.clone(), s3.extended.underlineColor = -1, s3.updateExtended()) : 100 === i3 ? (s3.fg &= -67108864, s3.fg |= 16777215 & l.DEFAULT_ATTR_DATA.fg, s3.bg &= -67108864, s3.bg |= 16777215 & l.DEFAULT_ATTR_DATA.bg) : this._logService.debug("Unknown SGR attribute: %d.", i3);
             return true;
           }
           deviceStatus(e3) {
@@ -25016,7 +25016,7 @@ WARNING: This link could potentially be dangerous`)) {
             return true;
           }
           softReset(e3) {
-            return this._coreService.isCursorHidden = false, this._onRequestSyncScrollBar.fire(), this._activeBuffer.scrollTop = 0, this._activeBuffer.scrollBottom = this._bufferService.rows - 1, this._curAttrData = l2.DEFAULT_ATTR_DATA.clone(), this._coreService.reset(), this._charsetService.reset(), this._activeBuffer.savedX = 0, this._activeBuffer.savedY = this._activeBuffer.ybase, this._activeBuffer.savedCurAttrData.fg = this._curAttrData.fg, this._activeBuffer.savedCurAttrData.bg = this._curAttrData.bg, this._activeBuffer.savedCharset = this._charsetService.charset, this._coreService.decPrivateModes.origin = false, true;
+            return this._coreService.isCursorHidden = false, this._onRequestSyncScrollBar.fire(), this._activeBuffer.scrollTop = 0, this._activeBuffer.scrollBottom = this._bufferService.rows - 1, this._curAttrData = l.DEFAULT_ATTR_DATA.clone(), this._coreService.reset(), this._charsetService.reset(), this._activeBuffer.savedX = 0, this._activeBuffer.savedY = this._activeBuffer.ybase, this._activeBuffer.savedCurAttrData.fg = this._curAttrData.fg, this._activeBuffer.savedCurAttrData.bg = this._curAttrData.bg, this._activeBuffer.savedCharset = this._charsetService.charset, this._coreService.decPrivateModes.origin = false, true;
           }
           setCursorStyle(e3) {
             const t3 = e3.params[0] || 1;
@@ -25179,7 +25179,7 @@ WARNING: This link could potentially be dangerous`)) {
             return this._parser.reset(), this._onRequestReset.fire(), true;
           }
           reset() {
-            this._curAttrData = l2.DEFAULT_ATTR_DATA.clone(), this._eraseAttrDataInternal = l2.DEFAULT_ATTR_DATA.clone();
+            this._curAttrData = l.DEFAULT_ATTR_DATA.clone(), this._eraseAttrDataInternal = l.DEFAULT_ATTR_DATA.clone();
           }
           _eraseAttrData() {
             return this._eraseAttrDataInternal.bg &= -67108864, this._eraseAttrDataInternal.bg |= 67108863 & this._curAttrData.bg, this._eraseAttrDataInternal;
@@ -25613,10 +25613,10 @@ WARNING: This link could potentially be dangerous`)) {
         t2.ExtendedAttrs = s2;
       }, 9092: (e2, t2, i2) => {
         Object.defineProperty(t2, "__esModule", { value: true }), t2.Buffer = t2.MAX_BUFFER_SIZE = void 0;
-        const s2 = i2(6349), r = i2(7226), n = i2(3734), o = i2(8437), a2 = i2(4634), h2 = i2(511), c2 = i2(643), l2 = i2(4863), d2 = i2(7116);
+        const s2 = i2(6349), r = i2(7226), n = i2(3734), o = i2(8437), a2 = i2(4634), h2 = i2(511), c3 = i2(643), l = i2(4863), d2 = i2(7116);
         t2.MAX_BUFFER_SIZE = 4294967295, t2.Buffer = class {
           constructor(e3, t3, i3) {
-            this._hasScrollback = e3, this._optionsService = t3, this._bufferService = i3, this.ydisp = 0, this.ybase = 0, this.y = 0, this.x = 0, this.tabs = {}, this.savedY = 0, this.savedX = 0, this.savedCurAttrData = o.DEFAULT_ATTR_DATA.clone(), this.savedCharset = d2.DEFAULT_CHARSET, this.markers = [], this._nullCell = h2.CellData.fromCharData([0, c2.NULL_CELL_CHAR, c2.NULL_CELL_WIDTH, c2.NULL_CELL_CODE]), this._whitespaceCell = h2.CellData.fromCharData([0, c2.WHITESPACE_CELL_CHAR, c2.WHITESPACE_CELL_WIDTH, c2.WHITESPACE_CELL_CODE]), this._isClearing = false, this._memoryCleanupQueue = new r.IdleTaskQueue(), this._memoryCleanupPosition = 0, this._cols = this._bufferService.cols, this._rows = this._bufferService.rows, this.lines = new s2.CircularList(this._getCorrectBufferLength(this._rows)), this.scrollTop = 0, this.scrollBottom = this._rows - 1, this.setupTabStops();
+            this._hasScrollback = e3, this._optionsService = t3, this._bufferService = i3, this.ydisp = 0, this.ybase = 0, this.y = 0, this.x = 0, this.tabs = {}, this.savedY = 0, this.savedX = 0, this.savedCurAttrData = o.DEFAULT_ATTR_DATA.clone(), this.savedCharset = d2.DEFAULT_CHARSET, this.markers = [], this._nullCell = h2.CellData.fromCharData([0, c3.NULL_CELL_CHAR, c3.NULL_CELL_WIDTH, c3.NULL_CELL_CODE]), this._whitespaceCell = h2.CellData.fromCharData([0, c3.WHITESPACE_CELL_CHAR, c3.WHITESPACE_CELL_WIDTH, c3.WHITESPACE_CELL_CODE]), this._isClearing = false, this._memoryCleanupQueue = new r.IdleTaskQueue(), this._memoryCleanupPosition = 0, this._cols = this._bufferService.cols, this._rows = this._bufferService.rows, this.lines = new s2.CircularList(this._getCorrectBufferLength(this._rows)), this.scrollTop = 0, this.scrollBottom = this._rows - 1, this.setupTabStops();
           }
           getNullCell(e3) {
             return e3 ? (this._nullCell.fg = e3.fg, this._nullCell.bg = e3.bg, this._nullCell.extended = e3.extended) : (this._nullCell.fg = 0, this._nullCell.bg = 0, this._nullCell.extended = new n.ExtendedAttrs()), this._nullCell;
@@ -25714,13 +25714,13 @@ WARNING: This link could potentially be dangerous`)) {
               let h3 = this.lines.get(n2);
               if (!h3 || !h3.isWrapped && h3.getTrimmedLength() <= e3)
                 continue;
-              const c3 = [h3];
+              const c4 = [h3];
               for (; h3.isWrapped && n2 > 0; )
-                h3 = this.lines.get(--n2), c3.unshift(h3);
-              const l3 = this.ybase + this.y;
-              if (l3 >= n2 && l3 < n2 + c3.length)
+                h3 = this.lines.get(--n2), c4.unshift(h3);
+              const l2 = this.ybase + this.y;
+              if (l2 >= n2 && l2 < n2 + c4.length)
                 continue;
-              const d3 = c3[c3.length - 1].getTrimmedLength(), _2 = (0, a2.reflowSmallerGetNewLineLengths)(c3, this._cols, e3), u2 = _2.length - c3.length;
+              const d3 = c4[c4.length - 1].getTrimmedLength(), _2 = (0, a2.reflowSmallerGetNewLineLengths)(c4, this._cols, e3), u2 = _2.length - c4.length;
               let f2;
               f2 = 0 === this.ybase && this.y !== this.lines.length - 1 ? Math.max(0, this.y - this.lines.maxLength + u2) : Math.max(0, this.lines.length - this.lines.maxLength + u2);
               const v3 = [];
@@ -25728,22 +25728,22 @@ WARNING: This link could potentially be dangerous`)) {
                 const e5 = this.getBlankLine(o.DEFAULT_ATTR_DATA, true);
                 v3.push(e5);
               }
-              v3.length > 0 && (s3.push({ start: n2 + c3.length + r2, newLines: v3 }), r2 += v3.length), c3.push(...v3);
+              v3.length > 0 && (s3.push({ start: n2 + c4.length + r2, newLines: v3 }), r2 += v3.length), c4.push(...v3);
               let p2 = _2.length - 1, g3 = _2[p2];
               0 === g3 && (p2--, g3 = _2[p2]);
-              let m2 = c3.length - u2 - 1, S2 = d3;
+              let m2 = c4.length - u2 - 1, S2 = d3;
               for (; m2 >= 0; ) {
                 const e4 = Math.min(S2, g3);
-                if (void 0 === c3[p2])
+                if (void 0 === c4[p2])
                   break;
-                if (c3[p2].copyCellsFrom(c3[m2], S2 - e4, g3 - e4, e4, true), g3 -= e4, 0 === g3 && (p2--, g3 = _2[p2]), S2 -= e4, 0 === S2) {
+                if (c4[p2].copyCellsFrom(c4[m2], S2 - e4, g3 - e4, e4, true), g3 -= e4, 0 === g3 && (p2--, g3 = _2[p2]), S2 -= e4, 0 === S2) {
                   m2--;
                   const e5 = Math.max(m2, 0);
-                  S2 = (0, a2.getWrappedLineTrimmedLength)(c3, e5, this._cols);
+                  S2 = (0, a2.getWrappedLineTrimmedLength)(c4, e5, this._cols);
                 }
               }
-              for (let t4 = 0; t4 < c3.length; t4++)
-                _2[t4] < e3 && c3[t4].setCell(_2[t4], i3);
+              for (let t4 = 0; t4 < c4.length; t4++)
+                _2[t4] < e3 && c4[t4].setCell(_2[t4], i3);
               let C2 = u2 - f2;
               for (; C2-- > 0; )
                 0 === this.ybase ? this.y < t3 - 1 ? (this.y++, this.lines.pop()) : (this.ybase++, this.ydisp++) : this.ybase < Math.min(this.lines.maxLength, this.lines.length + r2) - t3 && (this.ybase === this.ydisp && this.ydisp++, this.ybase++);
@@ -25757,18 +25757,18 @@ WARNING: This link could potentially be dangerous`)) {
               let n2 = i4 - 1, o2 = 0, a3 = s3[o2];
               this.lines.length = Math.min(this.lines.maxLength, this.lines.length + r2);
               let h3 = 0;
-              for (let c4 = Math.min(this.lines.maxLength - 1, i4 + r2 - 1); c4 >= 0; c4--)
+              for (let c5 = Math.min(this.lines.maxLength - 1, i4 + r2 - 1); c5 >= 0; c5--)
                 if (a3 && a3.start > n2 + h3) {
                   for (let e5 = a3.newLines.length - 1; e5 >= 0; e5--)
-                    this.lines.set(c4--, a3.newLines[e5]);
-                  c4++, e4.push({ index: n2 + 1, amount: a3.newLines.length }), h3 += a3.newLines.length, a3 = s3[++o2];
+                    this.lines.set(c5--, a3.newLines[e5]);
+                  c5++, e4.push({ index: n2 + 1, amount: a3.newLines.length }), h3 += a3.newLines.length, a3 = s3[++o2];
                 } else
-                  this.lines.set(c4, t4[n2--]);
-              let c3 = 0;
+                  this.lines.set(c5, t4[n2--]);
+              let c4 = 0;
               for (let t5 = e4.length - 1; t5 >= 0; t5--)
-                e4[t5].index += c3, this.lines.onInsertEmitter.fire(e4[t5]), c3 += e4[t5].amount;
-              const l3 = Math.max(0, i4 + r2 - this.lines.maxLength);
-              l3 > 0 && this.lines.onTrimEmitter.fire(l3);
+                e4[t5].index += c4, this.lines.onInsertEmitter.fire(e4[t5]), c4 += e4[t5].amount;
+              const l2 = Math.max(0, i4 + r2 - this.lines.maxLength);
+              l2 > 0 && this.lines.onTrimEmitter.fire(l2);
             }
           }
           translateBufferLineToString(e3, t3, i3 = 0, s3) {
@@ -25810,7 +25810,7 @@ WARNING: This link could potentially be dangerous`)) {
             this._isClearing = false;
           }
           addMarker(e3) {
-            const t3 = new l2.Marker(e3);
+            const t3 = new l.Marker(e3);
             return this.markers.push(t3), t3.register(this.lines.onTrim((e4) => {
               t3.line -= e4, t3.line < 0 && t3.dispose();
             })), t3.register(this.lines.onInsert((e4) => {
@@ -26039,26 +26039,26 @@ WARNING: This link could potentially be dangerous`)) {
         Object.defineProperty(t2, "__esModule", { value: true }), t2.getWrappedLineTrimmedLength = t2.reflowSmallerGetNewLineLengths = t2.reflowLargerApplyNewLayout = t2.reflowLargerCreateNewLayout = t2.reflowLargerGetLinesToRemove = void 0, t2.reflowLargerGetLinesToRemove = function(e3, t3, s2, r, n) {
           const o = [];
           for (let a2 = 0; a2 < e3.length - 1; a2++) {
-            let h2 = a2, c2 = e3.get(++h2);
-            if (!c2.isWrapped)
+            let h2 = a2, c3 = e3.get(++h2);
+            if (!c3.isWrapped)
               continue;
-            const l2 = [e3.get(a2)];
-            for (; h2 < e3.length && c2.isWrapped; )
-              l2.push(c2), c2 = e3.get(++h2);
+            const l = [e3.get(a2)];
+            for (; h2 < e3.length && c3.isWrapped; )
+              l.push(c3), c3 = e3.get(++h2);
             if (r >= a2 && r < h2) {
-              a2 += l2.length - 1;
+              a2 += l.length - 1;
               continue;
             }
-            let d2 = 0, _2 = i2(l2, d2, t3), u2 = 1, f2 = 0;
-            for (; u2 < l2.length; ) {
-              const e4 = i2(l2, u2, t3), r2 = e4 - f2, o2 = s2 - _2, a3 = Math.min(r2, o2);
-              l2[d2].copyCellsFrom(l2[u2], f2, _2, a3, false), _2 += a3, _2 === s2 && (d2++, _2 = 0), f2 += a3, f2 === e4 && (u2++, f2 = 0), 0 === _2 && 0 !== d2 && 2 === l2[d2 - 1].getWidth(s2 - 1) && (l2[d2].copyCellsFrom(l2[d2 - 1], s2 - 1, _2++, 1, false), l2[d2 - 1].setCell(s2 - 1, n));
+            let d2 = 0, _2 = i2(l, d2, t3), u2 = 1, f2 = 0;
+            for (; u2 < l.length; ) {
+              const e4 = i2(l, u2, t3), r2 = e4 - f2, o2 = s2 - _2, a3 = Math.min(r2, o2);
+              l[d2].copyCellsFrom(l[u2], f2, _2, a3, false), _2 += a3, _2 === s2 && (d2++, _2 = 0), f2 += a3, f2 === e4 && (u2++, f2 = 0), 0 === _2 && 0 !== d2 && 2 === l[d2 - 1].getWidth(s2 - 1) && (l[d2].copyCellsFrom(l[d2 - 1], s2 - 1, _2++, 1, false), l[d2 - 1].setCell(s2 - 1, n));
             }
-            l2[d2].replaceCells(_2, s2, n);
+            l[d2].replaceCells(_2, s2, n);
             let v3 = 0;
-            for (let e4 = l2.length - 1; e4 > 0 && (e4 > d2 || 0 === l2[e4].getTrimmedLength()); e4--)
+            for (let e4 = l.length - 1; e4 > 0 && (e4 > d2 || 0 === l[e4].getTrimmedLength()); e4--)
               v3++;
-            v3 > 0 && (o.push(a2 + l2.length - v3), o.push(v3)), a2 += l2.length - 1;
+            v3 > 0 && (o.push(a2 + l.length - v3), o.push(v3)), a2 += l.length - 1;
           }
           return o;
         }, t2.reflowLargerCreateNewLayout = function(e3, t3) {
@@ -26087,11 +26087,11 @@ WARNING: This link could potentially be dangerous`)) {
               break;
             }
             o += s2;
-            const c2 = i2(e3, a2, t3);
-            o > c2 && (o -= c2, a2++);
-            const l2 = 2 === e3[a2].getWidth(o - 1);
-            l2 && o--;
-            const d2 = l2 ? s2 - 1 : s2;
+            const c3 = i2(e3, a2, t3);
+            o > c3 && (o -= c3, a2++);
+            const l = 2 === e3[a2].getWidth(o - 1);
+            l && o--;
+            const d2 = l ? s2 - 1 : s2;
             r.push(d2), h2 += d2;
           }
           return r;
@@ -26380,29 +26380,29 @@ WARNING: This link could potentially be dangerous`)) {
             const i2 = e3.length;
             if (!i2)
               return 0;
-            let s2, r, n, o, a2 = 0, h2 = 0, c2 = 0;
+            let s2, r, n, o, a2 = 0, h2 = 0, c3 = 0;
             if (this.interim[0]) {
               let s3 = false, r2 = this.interim[0];
               r2 &= 192 == (224 & r2) ? 31 : 224 == (240 & r2) ? 15 : 7;
               let n2, o2 = 0;
               for (; (n2 = 63 & this.interim[++o2]) && o2 < 4; )
                 r2 <<= 6, r2 |= n2;
-              const h3 = 192 == (224 & this.interim[0]) ? 2 : 224 == (240 & this.interim[0]) ? 3 : 4, l3 = h3 - o2;
-              for (; c2 < l3; ) {
-                if (c2 >= i2)
+              const h3 = 192 == (224 & this.interim[0]) ? 2 : 224 == (240 & this.interim[0]) ? 3 : 4, l2 = h3 - o2;
+              for (; c3 < l2; ) {
+                if (c3 >= i2)
                   return 0;
-                if (n2 = e3[c2++], 128 != (192 & n2)) {
-                  c2--, s3 = true;
+                if (n2 = e3[c3++], 128 != (192 & n2)) {
+                  c3--, s3 = true;
                   break;
                 }
                 this.interim[o2++] = n2, r2 <<= 6, r2 |= 63 & n2;
               }
-              s3 || (2 === h3 ? r2 < 128 ? c2-- : t3[a2++] = r2 : 3 === h3 ? r2 < 2048 || r2 >= 55296 && r2 <= 57343 || 65279 === r2 || (t3[a2++] = r2) : r2 < 65536 || r2 > 1114111 || (t3[a2++] = r2)), this.interim.fill(0);
+              s3 || (2 === h3 ? r2 < 128 ? c3-- : t3[a2++] = r2 : 3 === h3 ? r2 < 2048 || r2 >= 55296 && r2 <= 57343 || 65279 === r2 || (t3[a2++] = r2) : r2 < 65536 || r2 > 1114111 || (t3[a2++] = r2)), this.interim.fill(0);
             }
-            const l2 = i2 - 4;
-            let d2 = c2;
+            const l = i2 - 4;
+            let d2 = c3;
             for (; d2 < i2; ) {
-              for (; !(!(d2 < l2) || 128 & (s2 = e3[d2]) || 128 & (r = e3[d2 + 1]) || 128 & (n = e3[d2 + 2]) || 128 & (o = e3[d2 + 3])); )
+              for (; !(!(d2 < l) || 128 & (s2 = e3[d2]) || 128 & (r = e3[d2 + 1]) || 128 & (n = e3[d2 + 2]) || 128 & (o = e3[d2 + 3])); )
                 t3[a2++] = s2, t3[a2++] = r, t3[a2++] = n, t3[a2++] = o, d2 += 4;
               if (s2 = e3[d2++], s2 < 128)
                 t3[a2++] = s2;
@@ -26694,7 +26694,7 @@ WARNING: This link could potentially be dangerous`)) {
             e3.addMany([24, 26, 153, 154], o2, 3, 0), e3.addMany(i3(128, 144), o2, 3, 0), e3.addMany(i3(144, 152), o2, 3, 0), e3.add(156, o2, 0, 0), e3.add(27, o2, 11, 1), e3.add(157, o2, 4, 8), e3.addMany([152, 158, 159], o2, 0, 7), e3.add(155, o2, 11, 3), e3.add(144, o2, 11, 9);
           return e3.addMany(r2, 0, 3, 0), e3.addMany(r2, 1, 3, 1), e3.add(127, 1, 0, 1), e3.addMany(r2, 8, 0, 8), e3.addMany(r2, 3, 3, 3), e3.add(127, 3, 0, 3), e3.addMany(r2, 4, 3, 4), e3.add(127, 4, 0, 4), e3.addMany(r2, 6, 3, 6), e3.addMany(r2, 5, 3, 5), e3.add(127, 5, 0, 5), e3.addMany(r2, 2, 3, 2), e3.add(127, 2, 0, 2), e3.add(93, 1, 4, 8), e3.addMany(s3, 8, 5, 8), e3.add(127, 8, 5, 8), e3.addMany([156, 27, 24, 26, 7], 8, 6, 0), e3.addMany(i3(28, 32), 8, 0, 8), e3.addMany([88, 94, 95], 1, 0, 7), e3.addMany(s3, 7, 0, 7), e3.addMany(r2, 7, 0, 7), e3.add(156, 7, 0, 0), e3.add(127, 7, 0, 7), e3.add(91, 1, 11, 3), e3.addMany(i3(64, 127), 3, 7, 0), e3.addMany(i3(48, 60), 3, 8, 4), e3.addMany([60, 61, 62, 63], 3, 9, 4), e3.addMany(i3(48, 60), 4, 8, 4), e3.addMany(i3(64, 127), 4, 7, 0), e3.addMany([60, 61, 62, 63], 4, 0, 6), e3.addMany(i3(32, 64), 6, 0, 6), e3.add(127, 6, 0, 6), e3.addMany(i3(64, 127), 6, 0, 0), e3.addMany(i3(32, 48), 3, 9, 5), e3.addMany(i3(32, 48), 5, 9, 5), e3.addMany(i3(48, 64), 5, 0, 6), e3.addMany(i3(64, 127), 5, 7, 0), e3.addMany(i3(32, 48), 4, 9, 5), e3.addMany(i3(32, 48), 1, 9, 2), e3.addMany(i3(32, 48), 2, 9, 2), e3.addMany(i3(48, 127), 2, 10, 0), e3.addMany(i3(48, 80), 1, 10, 0), e3.addMany(i3(81, 88), 1, 10, 0), e3.addMany([89, 90, 92], 1, 10, 0), e3.addMany(i3(96, 127), 1, 10, 0), e3.add(80, 1, 11, 9), e3.addMany(r2, 9, 0, 9), e3.add(127, 9, 0, 9), e3.addMany(i3(28, 32), 9, 0, 9), e3.addMany(i3(32, 48), 9, 9, 12), e3.addMany(i3(48, 60), 9, 8, 10), e3.addMany([60, 61, 62, 63], 9, 9, 10), e3.addMany(r2, 11, 0, 11), e3.addMany(i3(32, 128), 11, 0, 11), e3.addMany(i3(28, 32), 11, 0, 11), e3.addMany(r2, 10, 0, 10), e3.add(127, 10, 0, 10), e3.addMany(i3(28, 32), 10, 0, 10), e3.addMany(i3(48, 60), 10, 8, 10), e3.addMany([60, 61, 62, 63], 10, 0, 11), e3.addMany(i3(32, 48), 10, 9, 12), e3.addMany(r2, 12, 0, 12), e3.add(127, 12, 0, 12), e3.addMany(i3(28, 32), 12, 0, 12), e3.addMany(i3(32, 48), 12, 9, 12), e3.addMany(i3(48, 64), 12, 0, 11), e3.addMany(i3(64, 127), 12, 12, 13), e3.addMany(i3(64, 127), 10, 12, 13), e3.addMany(i3(64, 127), 9, 12, 13), e3.addMany(r2, 13, 13, 13), e3.addMany(s3, 13, 13, 13), e3.add(127, 13, 0, 13), e3.addMany([27, 156, 24, 26], 13, 14, 0), e3.add(h2, 0, 2, 0), e3.add(h2, 8, 5, 8), e3.add(h2, 6, 0, 6), e3.add(h2, 11, 0, 11), e3.add(h2, 13, 13, 13), e3;
         }();
-        class c2 extends s2.Disposable {
+        class c3 extends s2.Disposable {
           constructor(e3 = t2.VT500_TRANSITION_TABLE) {
             super(), this._transitions = e3, this._parseStack = { state: 0, handlers: [], handlerPos: 0, transition: 0, chunkPos: 0 }, this.initialState = 0, this.currentState = this.initialState, this._params = new r.Params(), this._params.addParam(0), this._collect = 0, this.precedingCodepoint = 0, this._printHandlerFb = (e4, t3, i3) => {
             }, this._executeHandlerFb = (e4) => {
@@ -26907,12 +26907,12 @@ WARNING: This link could potentially be dangerous`)) {
                   this._collect <<= 8, this._collect |= r2;
                   break;
                 case 10:
-                  const c3 = this._escHandlers[this._collect << 8 | r2];
-                  let l2 = c3 ? c3.length - 1 : -1;
-                  for (; l2 >= 0 && (s3 = c3[l2](), true !== s3); l2--)
+                  const c4 = this._escHandlers[this._collect << 8 | r2];
+                  let l = c4 ? c4.length - 1 : -1;
+                  for (; l >= 0 && (s3 = c4[l](), true !== s3); l--)
                     if (s3 instanceof Promise)
-                      return this._preserveStack(4, c3, l2, n2, i4), s3;
-                  l2 < 0 && this._escHandlerFb(this._collect << 8 | r2), this.precedingCodepoint = 0;
+                      return this._preserveStack(4, c4, l, n2, i4), s3;
+                  l < 0 && this._escHandlerFb(this._collect << 8 | r2), this.precedingCodepoint = 0;
                   break;
                 case 11:
                   this._params.reset(), this._params.addParam(0), this._collect = 0;
@@ -26951,7 +26951,7 @@ WARNING: This link could potentially be dangerous`)) {
             }
           }
         }
-        t2.EscapeSequenceParser = c2;
+        t2.EscapeSequenceParser = c3;
       }, 6242: (e2, t2, i2) => {
         Object.defineProperty(t2, "__esModule", { value: true }), t2.OscHandler = t2.OscParser = void 0;
         const s2 = i2(5770), r = i2(482), n = [];
@@ -27306,7 +27306,7 @@ WARNING: This link could potentially be dangerous`)) {
         Object.defineProperty(t2, "__esModule", { value: true }), t2.BufferService = t2.MINIMUM_ROWS = t2.MINIMUM_COLS = void 0;
         const n = i2(8460), o = i2(844), a2 = i2(5295), h2 = i2(2585);
         t2.MINIMUM_COLS = 2, t2.MINIMUM_ROWS = 1;
-        let c2 = t2.BufferService = class extends o.Disposable {
+        let c3 = t2.BufferService = class extends o.Disposable {
           get buffer() {
             return this.buffers.active;
           }
@@ -27345,7 +27345,7 @@ WARNING: This link could potentially be dangerous`)) {
             s3.ydisp = Math.max(Math.min(s3.ydisp + e3, s3.ybase), 0), r2 !== s3.ydisp && (t3 || this._onScroll.fire(s3.ydisp));
           }
         };
-        t2.BufferService = c2 = s2([r(0, h2.IOptionsService)], c2);
+        t2.BufferService = c3 = s2([r(0, h2.IOptionsService)], c3);
       }, 7994: (e2, t2) => {
         Object.defineProperty(t2, "__esModule", { value: true }), t2.CharsetService = void 0, t2.CharsetService = class {
           constructor() {
@@ -27377,19 +27377,19 @@ WARNING: This link could potentially be dangerous`)) {
         };
         Object.defineProperty(t2, "__esModule", { value: true }), t2.CoreMouseService = void 0;
         const n = i2(2585), o = i2(8460), a2 = i2(844), h2 = { NONE: { events: 0, restrict: () => false }, X10: { events: 1, restrict: (e3) => 4 !== e3.button && 1 === e3.action && (e3.ctrl = false, e3.alt = false, e3.shift = false, true) }, VT200: { events: 19, restrict: (e3) => 32 !== e3.action }, DRAG: { events: 23, restrict: (e3) => 32 !== e3.action || 3 !== e3.button }, ANY: { events: 31, restrict: (e3) => true } };
-        function c2(e3, t3) {
+        function c3(e3, t3) {
           let i3 = (e3.ctrl ? 16 : 0) | (e3.shift ? 4 : 0) | (e3.alt ? 8 : 0);
           return 4 === e3.button ? (i3 |= 64, i3 |= e3.action) : (i3 |= 3 & e3.button, 4 & e3.button && (i3 |= 64), 8 & e3.button && (i3 |= 128), 32 === e3.action ? i3 |= 32 : 0 !== e3.action || t3 || (i3 |= 3)), i3;
         }
-        const l2 = String.fromCharCode, d2 = { DEFAULT: (e3) => {
-          const t3 = [c2(e3, false) + 32, e3.col + 32, e3.row + 32];
-          return t3[0] > 255 || t3[1] > 255 || t3[2] > 255 ? "" : `\x1B[M${l2(t3[0])}${l2(t3[1])}${l2(t3[2])}`;
+        const l = String.fromCharCode, d2 = { DEFAULT: (e3) => {
+          const t3 = [c3(e3, false) + 32, e3.col + 32, e3.row + 32];
+          return t3[0] > 255 || t3[1] > 255 || t3[2] > 255 ? "" : `\x1B[M${l(t3[0])}${l(t3[1])}${l(t3[2])}`;
         }, SGR: (e3) => {
           const t3 = 0 === e3.action && 4 !== e3.button ? "m" : "M";
-          return `\x1B[<${c2(e3, true)};${e3.col};${e3.row}${t3}`;
+          return `\x1B[<${c3(e3, true)};${e3.col};${e3.row}${t3}`;
         }, SGR_PIXELS: (e3) => {
           const t3 = 0 === e3.action && 4 !== e3.button ? "m" : "M";
-          return `\x1B[<${c2(e3, true)};${e3.x};${e3.y}${t3}`;
+          return `\x1B[<${c3(e3, true)};${e3.x};${e3.y}${t3}`;
         } };
         let _2 = t2.CoreMouseService = class extends a2.Disposable {
           constructor(e3, t3) {
@@ -27478,13 +27478,13 @@ WARNING: This link could potentially be dangerous`)) {
           };
         };
         Object.defineProperty(t2, "__esModule", { value: true }), t2.CoreService = void 0;
-        const n = i2(1439), o = i2(8460), a2 = i2(844), h2 = i2(2585), c2 = Object.freeze({ insertMode: false }), l2 = Object.freeze({ applicationCursorKeys: false, applicationKeypad: false, bracketedPasteMode: false, origin: false, reverseWraparound: false, sendFocus: false, wraparound: true });
+        const n = i2(1439), o = i2(8460), a2 = i2(844), h2 = i2(2585), c3 = Object.freeze({ insertMode: false }), l = Object.freeze({ applicationCursorKeys: false, applicationKeypad: false, bracketedPasteMode: false, origin: false, reverseWraparound: false, sendFocus: false, wraparound: true });
         let d2 = t2.CoreService = class extends a2.Disposable {
           constructor(e3, t3, i3) {
-            super(), this._bufferService = e3, this._logService = t3, this._optionsService = i3, this.isCursorInitialized = false, this.isCursorHidden = false, this._onData = this.register(new o.EventEmitter()), this.onData = this._onData.event, this._onUserInput = this.register(new o.EventEmitter()), this.onUserInput = this._onUserInput.event, this._onBinary = this.register(new o.EventEmitter()), this.onBinary = this._onBinary.event, this._onRequestScrollToBottom = this.register(new o.EventEmitter()), this.onRequestScrollToBottom = this._onRequestScrollToBottom.event, this.modes = (0, n.clone)(c2), this.decPrivateModes = (0, n.clone)(l2);
+            super(), this._bufferService = e3, this._logService = t3, this._optionsService = i3, this.isCursorInitialized = false, this.isCursorHidden = false, this._onData = this.register(new o.EventEmitter()), this.onData = this._onData.event, this._onUserInput = this.register(new o.EventEmitter()), this.onUserInput = this._onUserInput.event, this._onBinary = this.register(new o.EventEmitter()), this.onBinary = this._onBinary.event, this._onRequestScrollToBottom = this.register(new o.EventEmitter()), this.onRequestScrollToBottom = this._onRequestScrollToBottom.event, this.modes = (0, n.clone)(c3), this.decPrivateModes = (0, n.clone)(l);
           }
           reset() {
-            this.modes = (0, n.clone)(c2), this.decPrivateModes = (0, n.clone)(l2);
+            this.modes = (0, n.clone)(c3), this.decPrivateModes = (0, n.clone)(l);
           }
           triggerDataEvent(e3, t3 = false) {
             if (this._optionsService.rawOptions.disableStdin)
@@ -27501,7 +27501,7 @@ WARNING: This link could potentially be dangerous`)) {
         Object.defineProperty(t2, "__esModule", { value: true }), t2.DecorationService = void 0;
         const s2 = i2(8055), r = i2(8460), n = i2(844), o = i2(6106);
         let a2 = 0, h2 = 0;
-        class c2 extends n.Disposable {
+        class c3 extends n.Disposable {
           get decorations() {
             return this._decorations.values();
           }
@@ -27511,7 +27511,7 @@ WARNING: This link could potentially be dangerous`)) {
           registerDecoration(e3) {
             if (e3.marker.isDisposed)
               return;
-            const t3 = new l2(e3);
+            const t3 = new l(e3);
             if (t3) {
               const e4 = t3.marker.onDispose(() => t3.dispose());
               t3.onDispose(() => {
@@ -27538,8 +27538,8 @@ WARNING: This link could potentially be dangerous`)) {
             });
           }
         }
-        t2.DecorationService = c2;
-        class l2 extends n.Disposable {
+        t2.DecorationService = c3;
+        class l extends n.Disposable {
           get isDisposed() {
             return this._isDisposed;
           }
@@ -27620,7 +27620,7 @@ WARNING: This link could potentially be dangerous`)) {
         };
         Object.defineProperty(t2, "__esModule", { value: true }), t2.traceCall = t2.setTraceLogger = t2.LogService = void 0;
         const n = i2(844), o = i2(2585), a2 = { trace: o.LogLevelEnum.TRACE, debug: o.LogLevelEnum.DEBUG, info: o.LogLevelEnum.INFO, warn: o.LogLevelEnum.WARN, error: o.LogLevelEnum.ERROR, off: o.LogLevelEnum.OFF };
-        let h2, c2 = t2.LogService = class extends n.Disposable {
+        let h2, c3 = t2.LogService = class extends n.Disposable {
           get logLevel() {
             return this._logLevel;
           }
@@ -27658,7 +27658,7 @@ WARNING: This link could potentially be dangerous`)) {
             this._logLevel <= o.LogLevelEnum.ERROR && this._log(null !== (s3 = null === (i3 = this._optionsService.options.logger) || void 0 === i3 ? void 0 : i3.error.bind(this._optionsService.options.logger)) && void 0 !== s3 ? s3 : console.error, e3, t3);
           }
         };
-        t2.LogService = c2 = s2([r(0, o.IOptionsService)], c2), t2.setTraceLogger = function(e3) {
+        t2.LogService = c3 = s2([r(0, o.IOptionsService)], c3), t2.setTraceLogger = function(e3) {
           h2 = e3;
         }, t2.traceCall = function(e3, t3, i3) {
           if ("function" != typeof i3.value)
@@ -27897,7 +27897,7 @@ WARNING: This link could potentially be dangerous`)) {
       return (() => {
         var e2 = s;
         Object.defineProperty(e2, "__esModule", { value: true }), e2.Terminal = void 0;
-        const t2 = i(9042), r = i(3236), n = i(844), o = i(5741), a2 = i(8285), h2 = i(7975), c2 = i(7090), l2 = ["cols", "rows"];
+        const t2 = i(9042), r = i(3236), n = i(844), o = i(5741), a2 = i(8285), h2 = i(7975), c3 = i(7090), l = ["cols", "rows"];
         class d2 extends n.Disposable {
           constructor(e3) {
             super(), this._core = this.register(new r.Terminal(e3)), this._addonManager = this.register(new o.AddonManager()), this._publicOptions = Object.assign({}, this._core.options);
@@ -27910,7 +27910,7 @@ WARNING: This link could potentially be dangerous`)) {
             }
           }
           _checkReadonlyOptions(e3) {
-            if (l2.includes(e3))
+            if (l.includes(e3))
               throw new Error(`Option "${e3}" can only be set in the constructor`);
           }
           _checkProposedApi() {
@@ -27960,7 +27960,7 @@ WARNING: This link could potentially be dangerous`)) {
             return this._parser || (this._parser = new h2.ParserApi(this._core)), this._parser;
           }
           get unicode() {
-            return this._checkProposedApi(), new c2.UnicodeApi(this._core);
+            return this._checkProposedApi(), new c3.UnicodeApi(this._core);
           }
           get textarea() {
             return this._core.textarea;
@@ -28150,8 +28150,8 @@ var require_xterm_addon_fit = __commonJS({
               const e2 = this._terminal._core, t2 = e2._renderService.dimensions;
               if (0 === t2.css.cell.width || 0 === t2.css.cell.height)
                 return;
-              const r = 0 === this._terminal.options.scrollback ? 0 : e2.viewport.scrollBarWidth, i = window.getComputedStyle(this._terminal.element.parentElement), o = parseInt(i.getPropertyValue("height")), s = Math.max(0, parseInt(i.getPropertyValue("width"))), n = window.getComputedStyle(this._terminal.element), l2 = o - (parseInt(n.getPropertyValue("padding-top")) + parseInt(n.getPropertyValue("padding-bottom"))), a2 = s - (parseInt(n.getPropertyValue("padding-right")) + parseInt(n.getPropertyValue("padding-left"))) - r;
-              return { cols: Math.max(2, Math.floor(a2 / t2.css.cell.width)), rows: Math.max(1, Math.floor(l2 / t2.css.cell.height)) };
+              const r = 0 === this._terminal.options.scrollback ? 0 : e2.viewport.scrollBarWidth, i = window.getComputedStyle(this._terminal.element.parentElement), o = parseInt(i.getPropertyValue("height")), s = Math.max(0, parseInt(i.getPropertyValue("width"))), n = window.getComputedStyle(this._terminal.element), l = o - (parseInt(n.getPropertyValue("padding-top")) + parseInt(n.getPropertyValue("padding-bottom"))), a2 = s - (parseInt(n.getPropertyValue("padding-right")) + parseInt(n.getPropertyValue("padding-left"))) - r;
+              return { cols: Math.max(2, Math.floor(a2 / t2.css.cell.width)), rows: Math.max(1, Math.floor(l / t2.css.cell.height)) };
             }
           };
         })(), e;
@@ -28200,12 +28200,12 @@ var require_keymap = __commonJS({
       let text = [];
       const it2 = data[Symbol.iterator]();
       for (let next = it2.next(); !next.done; next = it2.next()) {
-        const c2 = next.value;
-        if (c2.length > 1) {
-          text.push(c2);
+        const c3 = next.value;
+        if (c3.length > 1) {
+          text.push(c3);
           continue;
         }
-        const val = c2.charCodeAt(0);
+        const val = c3.charCodeAt(0);
         if (text.length > 0 && (val < 32 || val === 127)) {
           yield {
             inputType: InputType.Text,
@@ -28326,11 +28326,11 @@ var require_keymap = __commonJS({
           }
           yield {
             inputType,
-            data: [c2]
+            data: [c3]
           };
           continue;
         }
-        text.push(c2);
+        text.push(c3);
       }
       if (text.length > 0) {
         yield {
@@ -28461,7 +28461,7 @@ var require_line = __commonJS({
         const slice = [...this.buf.slice(destStart, destEnd)].slice(0, column);
         let gIdx = off;
         if (slice.length > 0) {
-          gIdx = slice.map((c2) => c2.length).reduce((acc, m2) => acc + m2, 0);
+          gIdx = slice.map((c3) => c3.length).reduce((acc, m2) => acc + m2, 0);
           gIdx = destStart + gIdx;
         }
         this.pos = gIdx;
@@ -28500,7 +28500,7 @@ var require_line = __commonJS({
         }
         const slice = [...this.buf.slice(destStart, destEnd)];
         if (column < slice.length) {
-          this.pos = slice.slice(0, column).map((c2) => c2.length).reduce((acc, m2) => acc + m2, 0) + destStart;
+          this.pos = slice.slice(0, column).map((c3) => c3.length).reduce((acc, m2) => acc + m2, 0) + destStart;
         } else {
           this.pos = destEnd;
         }
@@ -28517,7 +28517,7 @@ var require_line = __commonJS({
           return void 0;
         }
         const buf = this.buf.slice(0, this.pos);
-        return this.pos - [...buf].slice(-n).map((c2) => c2.length).reduce((acc, m2) => acc + m2, 0);
+        return this.pos - [...buf].slice(-n).map((c3) => c3.length).reduce((acc, m2) => acc + m2, 0);
       }
       // Return the position of the character following the
       // current pos
@@ -28526,7 +28526,7 @@ var require_line = __commonJS({
           return void 0;
         }
         const buf = this.buf.slice(this.pos);
-        return this.pos + [...buf].slice(0, n).map((c2) => c2.length).reduce((acc, m2) => acc + m2, 0);
+        return this.pos + [...buf].slice(0, n).map((c3) => c3.length).reduce((acc, m2) => acc + m2, 0);
       }
       backspace(n) {
         const newPos = this.prevPos(n);
@@ -28962,18 +28962,18 @@ var require_tty = __commonJS({
       calculatePosition(text, orig) {
         const pos = Object.assign({}, orig);
         let escSeq = 0;
-        [...text].forEach((c2) => {
-          if (c2 === "\n") {
+        [...text].forEach((c3) => {
+          if (c3 === "\n") {
             pos.row += 1;
             pos.col = 0;
             return;
           }
           let cw = 0;
-          if (c2 === "	") {
+          if (c3 === "	") {
             cw = this.tabWidth - pos.col % this.tabWidth;
           } else {
             let size;
-            [size, escSeq] = width(c2, escSeq);
+            [size, escSeq] = width(c3, escSeq);
             cw = size;
           }
           pos.col += cw;
@@ -29510,25 +29510,25 @@ var AwaitableQueue = class {
 };
 
 // node_modules/webr/dist/webr.mjs
-var rn = Object.create;
+var sn = Object.create;
 var Zr = Object.defineProperty;
-var sn = Object.getOwnPropertyDescriptor;
-var nn = Object.getOwnPropertyNames;
-var on = Object.getPrototypeOf;
-var an = Object.prototype.hasOwnProperty;
+var nn = Object.getOwnPropertyDescriptor;
+var on = Object.getOwnPropertyNames;
+var an = Object.getPrototypeOf;
+var ln = Object.prototype.hasOwnProperty;
 var B = ((s) => typeof __require < "u" ? __require : typeof Proxy < "u" ? new Proxy(s, { get: (e, t) => (typeof __require < "u" ? __require : e)[t] }) : s)(function(s) {
   if (typeof __require < "u")
     return __require.apply(this, arguments);
   throw new Error('Dynamic require of "' + s + '" is not supported');
 });
 var S = (s, e) => () => (e || s((e = { exports: {} }).exports, e), e.exports);
-var ln = (s, e, t, r) => {
+var cn = (s, e, t, r) => {
   if (e && typeof e == "object" || typeof e == "function")
-    for (let n of nn(e))
-      !an.call(s, n) && n !== t && Zr(s, n, { get: () => e[n], enumerable: !(r = sn(e, n)) || r.enumerable });
+    for (let n of on(e))
+      !ln.call(s, n) && n !== t && Zr(s, n, { get: () => e[n], enumerable: !(r = nn(e, n)) || r.enumerable });
   return s;
 };
-var oe = (s, e, t) => (t = s != null ? rn(on(s)) : {}, ln(e || !s || !s.__esModule ? Zr(t, "default", { value: s, enumerable: true }) : t, s));
+var oe = (s, e, t) => (t = s != null ? sn(an(s)) : {}, cn(e || !s || !s.__esModule ? Zr(t, "default", { value: s, enumerable: true }) : t, s));
 var fr = (s, e, t) => {
   if (!e.has(s))
     throw TypeError("Cannot " + t);
@@ -29541,7 +29541,7 @@ var u = (s, e, t) => {
 };
 var d = (s, e, t, r) => (fr(s, e, "write to private field"), r ? r.call(s, t) : e.set(s, t), t);
 var E = (s, e, t) => (fr(s, e, "access private method"), t);
-var Je = S((C2) => {
+var He = S((C2) => {
   "use strict";
   Object.defineProperty(C2, "__esModule", { value: true });
   C2.getUint64 = C2.getInt64 = C2.setInt64 = C2.setUint64 = C2.UINT32_MAX = void 0;
@@ -29567,12 +29567,12 @@ var Je = S((C2) => {
   }
   C2.getUint64 = gn;
 });
-var At = S((M2) => {
+var Ot = S((M2) => {
   "use strict";
   var _r, Sr, kr;
   Object.defineProperty(M2, "__esModule", { value: true });
   M2.utf8DecodeTD = M2.TEXT_DECODER_THRESHOLD = M2.utf8DecodeJs = M2.utf8EncodeTE = M2.TEXT_ENCODER_THRESHOLD = M2.utf8EncodeJs = M2.utf8Count = void 0;
-  var us = Je(), Ot = (typeof process > "u" || ((_r = process == null ? void 0 : process.env) === null || _r === void 0 ? void 0 : _r.TEXT_ENCODING) !== "never") && typeof TextEncoder < "u" && typeof TextDecoder < "u";
+  var ps = He(), At = (typeof process > "u" || ((_r = process == null ? void 0 : process.env) === null || _r === void 0 ? void 0 : _r.TEXT_ENCODING) !== "never") && typeof TextEncoder < "u" && typeof TextDecoder < "u";
   function bn(s) {
     let e = s.length, t = 0, r = 0;
     for (; r < e; ) {
@@ -29604,8 +29604,8 @@ var At = S((M2) => {
           e[n++] = i >> 6 & 31 | 192;
         else {
           if (i >= 55296 && i <= 56319 && o < r) {
-            let c2 = s.charCodeAt(o);
-            (c2 & 64512) === 56320 && (++o, i = ((i & 1023) << 10) + (c2 & 1023) + 65536);
+            let l = s.charCodeAt(o);
+            (l & 64512) === 56320 && (++o, i = ((i & 1023) << 10) + (l & 1023) + 65536);
           }
           i & 4294901760 ? (e[n++] = i >> 18 & 7 | 240, e[n++] = i >> 12 & 63 | 128, e[n++] = i >> 6 & 63 | 128) : (e[n++] = i >> 12 & 15 | 224, e[n++] = i >> 6 & 63 | 128);
         }
@@ -29617,43 +29617,43 @@ var At = S((M2) => {
     }
   }
   M2.utf8EncodeJs = wn;
-  var He = Ot ? new TextEncoder() : void 0;
-  M2.TEXT_ENCODER_THRESHOLD = Ot ? typeof process < "u" && ((Sr = process == null ? void 0 : process.env) === null || Sr === void 0 ? void 0 : Sr.TEXT_ENCODING) !== "force" ? 200 : 0 : us.UINT32_MAX;
+  var ze = At ? new TextEncoder() : void 0;
+  M2.TEXT_ENCODER_THRESHOLD = At ? typeof process < "u" && ((Sr = process == null ? void 0 : process.env) === null || Sr === void 0 ? void 0 : Sr.TEXT_ENCODING) !== "force" ? 200 : 0 : ps.UINT32_MAX;
   function xn(s, e, t) {
-    e.set(He.encode(s), t);
+    e.set(ze.encode(s), t);
   }
   function vn(s, e, t) {
-    He.encodeInto(s, e.subarray(t));
+    ze.encodeInto(s, e.subarray(t));
   }
-  M2.utf8EncodeTE = He != null && He.encodeInto ? vn : xn;
+  M2.utf8EncodeTE = ze != null && ze.encodeInto ? vn : xn;
   var En = 4096;
-  function Tn(s, e, t) {
+  function Pn(s, e, t) {
     let r = e, n = r + t, o = [], i = "";
     for (; r < n; ) {
-      let c2 = s[r++];
-      if (!(c2 & 128))
-        o.push(c2);
-      else if ((c2 & 224) === 192) {
+      let l = s[r++];
+      if (!(l & 128))
+        o.push(l);
+      else if ((l & 224) === 192) {
         let p2 = s[r++] & 63;
-        o.push((c2 & 31) << 6 | p2);
-      } else if ((c2 & 240) === 224) {
+        o.push((l & 31) << 6 | p2);
+      } else if ((l & 240) === 224) {
         let p2 = s[r++] & 63, D2 = s[r++] & 63;
-        o.push((c2 & 31) << 12 | p2 << 6 | D2);
-      } else if ((c2 & 248) === 240) {
-        let p2 = s[r++] & 63, D2 = s[r++] & 63, b2 = s[r++] & 63, j2 = (c2 & 7) << 18 | p2 << 12 | D2 << 6 | b2;
+        o.push((l & 31) << 12 | p2 << 6 | D2);
+      } else if ((l & 248) === 240) {
+        let p2 = s[r++] & 63, D2 = s[r++] & 63, b2 = s[r++] & 63, j2 = (l & 7) << 18 | p2 << 12 | D2 << 6 | b2;
         j2 > 65535 && (j2 -= 65536, o.push(j2 >>> 10 & 1023 | 55296), j2 = 56320 | j2 & 1023), o.push(j2);
       } else
-        o.push(c2);
+        o.push(l);
       o.length >= En && (i += String.fromCharCode(...o), o.length = 0);
     }
     return o.length > 0 && (i += String.fromCharCode(...o)), i;
   }
-  M2.utf8DecodeJs = Tn;
-  var Pn = Ot ? new TextDecoder() : null;
-  M2.TEXT_DECODER_THRESHOLD = Ot ? typeof process < "u" && ((kr = process == null ? void 0 : process.env) === null || kr === void 0 ? void 0 : kr.TEXT_DECODER) !== "force" ? 200 : 0 : us.UINT32_MAX;
+  M2.utf8DecodeJs = Pn;
+  var Tn = At ? new TextDecoder() : null;
+  M2.TEXT_DECODER_THRESHOLD = At ? typeof process < "u" && ((kr = process == null ? void 0 : process.env) === null || kr === void 0 ? void 0 : kr.TEXT_DECODER) !== "force" ? 200 : 0 : ps.UINT32_MAX;
   function _n(s, e, t) {
     let r = s.subarray(e, e + t);
-    return Pn.decode(r);
+    return Tn.decode(r);
   }
   M2.utf8DecodeTD = _n;
 });
@@ -29685,10 +29685,10 @@ var Wr = S((_2) => {
   "use strict";
   Object.defineProperty(_2, "__esModule", { value: true });
   _2.timestampExtension = _2.decodeTimestampExtension = _2.decodeTimestampToTimeSpec = _2.encodeTimestampExtension = _2.encodeDateToTimeSpec = _2.encodeTimeSpecToTimestamp = _2.EXT_TIMESTAMP = void 0;
-  var Sn = Ct(), ps = Je();
+  var Sn = Ct(), ds = He();
   _2.EXT_TIMESTAMP = -1;
   var kn = 4294967296 - 1, Mn = 17179869184 - 1;
-  function ds({ sec: s, nsec: e }) {
+  function hs({ sec: s, nsec: e }) {
     if (s >= 0 && e >= 0 && s <= Mn)
       if (e === 0 && s <= kn) {
         let t = new Uint8Array(4);
@@ -29699,24 +29699,24 @@ var Wr = S((_2) => {
       }
     else {
       let t = new Uint8Array(12), r = new DataView(t.buffer);
-      return r.setUint32(0, e), (0, ps.setInt64)(r, 4, s), t;
+      return r.setUint32(0, e), (0, ds.setInt64)(r, 4, s), t;
     }
   }
-  _2.encodeTimeSpecToTimestamp = ds;
-  function hs(s) {
+  _2.encodeTimeSpecToTimestamp = hs;
+  function ys(s) {
     let e = s.getTime(), t = Math.floor(e / 1e3), r = (e - t * 1e3) * 1e6, n = Math.floor(r / 1e9);
     return { sec: t + n, nsec: r - n * 1e9 };
   }
-  _2.encodeDateToTimeSpec = hs;
-  function ys(s) {
+  _2.encodeDateToTimeSpec = ys;
+  function fs(s) {
     if (s instanceof Date) {
-      let e = hs(s);
-      return ds(e);
+      let e = ys(s);
+      return hs(e);
     } else
       return null;
   }
-  _2.encodeTimestampExtension = ys;
-  function fs(s) {
+  _2.encodeTimestampExtension = fs;
+  function Rs(s) {
     let e = new DataView(s.buffer, s.byteOffset, s.byteLength);
     switch (s.byteLength) {
       case 4:
@@ -29726,26 +29726,26 @@ var Wr = S((_2) => {
         return { sec: n, nsec: o };
       }
       case 12: {
-        let t = (0, ps.getInt64)(e, 4), r = e.getUint32(0);
+        let t = (0, ds.getInt64)(e, 4), r = e.getUint32(0);
         return { sec: t, nsec: r };
       }
       default:
         throw new Sn.DecodeError(`Unrecognized data size for timestamp (expected 4, 8, or 12): ${s.length}`);
     }
   }
-  _2.decodeTimestampToTimeSpec = fs;
-  function Rs(s) {
-    let e = fs(s);
+  _2.decodeTimestampToTimeSpec = Rs;
+  function ms(s) {
+    let e = Rs(s);
     return new Date(e.sec * 1e3 + e.nsec / 1e6);
   }
-  _2.decodeTimestampExtension = Rs;
-  _2.timestampExtension = { type: _2.EXT_TIMESTAMP, encode: ys, decode: Rs };
+  _2.decodeTimestampExtension = ms;
+  _2.timestampExtension = { type: _2.EXT_TIMESTAMP, encode: fs, decode: ms };
 });
 var Bt = S((Nt) => {
   "use strict";
   Object.defineProperty(Nt, "__esModule", { value: true });
   Nt.ExtensionCodec = void 0;
-  var jt = Dr(), Dn = Wr(), ze = class {
+  var jt = Dr(), Dn = Wr(), Xe = class {
     constructor() {
       this.builtInEncoders = [], this.builtInDecoders = [], this.encoders = [], this.decoders = [], this.register(Dn.timestampExtension);
     }
@@ -29785,21 +29785,21 @@ var Bt = S((Nt) => {
       return n ? n(e, t, r) : new jt.ExtData(t, e);
     }
   };
-  Nt.ExtensionCodec = ze;
-  ze.defaultCodec = new ze();
+  Nt.ExtensionCodec = Xe;
+  Xe.defaultCodec = new Xe();
 });
-var Or = S((xe) => {
+var Ar = S((xe) => {
   "use strict";
   Object.defineProperty(xe, "__esModule", { value: true });
   xe.createDataView = xe.ensureUint8Array = void 0;
-  function ms(s) {
+  function gs(s) {
     return s instanceof Uint8Array ? s : ArrayBuffer.isView(s) ? new Uint8Array(s.buffer, s.byteOffset, s.byteLength) : s instanceof ArrayBuffer ? new Uint8Array(s) : Uint8Array.from(s);
   }
-  xe.ensureUint8Array = ms;
+  xe.ensureUint8Array = gs;
   function Wn(s) {
     if (s instanceof ArrayBuffer)
       return new DataView(s);
-    let e = ms(s);
+    let e = gs(s);
     return new DataView(e.buffer, e.byteOffset, e.byteLength);
   }
   xe.createDataView = Wn;
@@ -29808,12 +29808,12 @@ var Ir = S((J2) => {
   "use strict";
   Object.defineProperty(J2, "__esModule", { value: true });
   J2.Encoder = J2.DEFAULT_INITIAL_BUFFER_SIZE = J2.DEFAULT_MAX_DEPTH = void 0;
-  var Xe = At(), On = Bt(), gs = Je(), An = Or();
+  var Ge = Ot(), An = Bt(), bs = He(), On = Ar();
   J2.DEFAULT_MAX_DEPTH = 100;
   J2.DEFAULT_INITIAL_BUFFER_SIZE = 2048;
-  var Ar = class {
-    constructor(e = On.ExtensionCodec.defaultCodec, t = void 0, r = J2.DEFAULT_MAX_DEPTH, n = J2.DEFAULT_INITIAL_BUFFER_SIZE, o = false, i = false, c2 = false, p2 = false) {
-      this.extensionCodec = e, this.context = t, this.maxDepth = r, this.initialBufferSize = n, this.sortKeys = o, this.forceFloat32 = i, this.ignoreUndefined = c2, this.forceIntegerToFloat = p2, this.pos = 0, this.view = new DataView(new ArrayBuffer(this.initialBufferSize)), this.bytes = new Uint8Array(this.view.buffer);
+  var Or = class {
+    constructor(e = An.ExtensionCodec.defaultCodec, t = void 0, r = J2.DEFAULT_MAX_DEPTH, n = J2.DEFAULT_INITIAL_BUFFER_SIZE, o = false, i = false, l = false, p2 = false) {
+      this.extensionCodec = e, this.context = t, this.maxDepth = r, this.initialBufferSize = n, this.sortKeys = o, this.forceFloat32 = i, this.ignoreUndefined = l, this.forceIntegerToFloat = p2, this.pos = 0, this.view = new DataView(new ArrayBuffer(this.initialBufferSize)), this.bytes = new Uint8Array(this.view.buffer);
     }
     reinitializeState() {
       this.pos = 0;
@@ -29859,12 +29859,12 @@ var Ir = S((J2) => {
         throw new Error(`Too long string: ${e} bytes in UTF-8`);
     }
     encodeString(e) {
-      if (e.length > Xe.TEXT_ENCODER_THRESHOLD) {
-        let n = (0, Xe.utf8Count)(e);
-        this.ensureBufferSizeToWrite(5 + n), this.writeStringHeader(n), (0, Xe.utf8EncodeTE)(e, this.bytes, this.pos), this.pos += n;
+      if (e.length > Ge.TEXT_ENCODER_THRESHOLD) {
+        let n = (0, Ge.utf8Count)(e);
+        this.ensureBufferSizeToWrite(5 + n), this.writeStringHeader(n), (0, Ge.utf8EncodeTE)(e, this.bytes, this.pos), this.pos += n;
       } else {
-        let n = (0, Xe.utf8Count)(e);
-        this.ensureBufferSizeToWrite(5 + n), this.writeStringHeader(n), (0, Xe.utf8EncodeJs)(e, this.bytes, this.pos), this.pos += n;
+        let n = (0, Ge.utf8Count)(e);
+        this.ensureBufferSizeToWrite(5 + n), this.writeStringHeader(n), (0, Ge.utf8EncodeJs)(e, this.bytes, this.pos), this.pos += n;
       }
     }
     encodeObject(e, t) {
@@ -29890,7 +29890,7 @@ var Ir = S((J2) => {
         this.writeU8(198), this.writeU32(t);
       else
         throw new Error(`Too large binary: ${t}`);
-      let r = (0, An.ensureUint8Array)(e);
+      let r = (0, On.ensureUint8Array)(e);
       this.writeU8a(r);
     }
     encodeArray(e, t) {
@@ -29980,15 +29980,15 @@ var Ir = S((J2) => {
       this.ensureBufferSizeToWrite(8), this.view.setFloat64(this.pos, e), this.pos += 8;
     }
     writeU64(e) {
-      this.ensureBufferSizeToWrite(8), (0, gs.setUint64)(this.view, this.pos, e), this.pos += 8;
+      this.ensureBufferSizeToWrite(8), (0, bs.setUint64)(this.view, this.pos, e), this.pos += 8;
     }
     writeI64(e) {
-      this.ensureBufferSizeToWrite(8), (0, gs.setInt64)(this.view, this.pos, e), this.pos += 8;
+      this.ensureBufferSizeToWrite(8), (0, bs.setInt64)(this.view, this.pos, e), this.pos += 8;
     }
   };
-  J2.Encoder = Ar;
+  J2.Encoder = Or;
 });
-var bs = S((Lt) => {
+var ws = S((Lt) => {
   "use strict";
   Object.defineProperty(Lt, "__esModule", { value: true });
   Lt.encode = void 0;
@@ -29998,7 +29998,7 @@ var bs = S((Lt) => {
   }
   Lt.encode = Cn;
 });
-var ws = S((Ft) => {
+var xs = S((Ft) => {
   "use strict";
   Object.defineProperty(Ft, "__esModule", { value: true });
   Ft.prettyByte = void 0;
@@ -30007,11 +30007,11 @@ var ws = S((Ft) => {
   }
   Ft.prettyByte = jn;
 });
-var xs = S((qt) => {
+var vs = S((qt) => {
   "use strict";
   Object.defineProperty(qt, "__esModule", { value: true });
   qt.CachedKeyDecoder = void 0;
-  var Nn = At(), Bn = 16, Ln = 16, Ur = class {
+  var Nn = Ot(), Bn = 16, Ln = 16, Ur = class {
     constructor(e = Bn, t = Ln) {
       this.maxKeyLength = e, this.maxLengthPerKey = t, this.hit = 0, this.miss = 0, this.caches = [];
       for (let r = 0; r < this.maxKeyLength; r++)
@@ -30025,8 +30025,8 @@ var xs = S((qt) => {
       e:
         for (let o of n) {
           let i = o.bytes;
-          for (let c2 = 0; c2 < r; c2++)
-            if (i[c2] !== e[t + c2])
+          for (let l = 0; l < r; l++)
+            if (i[l] !== e[t + l])
               continue e;
           return o.str;
         }
@@ -30051,10 +30051,10 @@ var Vt = S((Q2) => {
   "use strict";
   Object.defineProperty(Q2, "__esModule", { value: true });
   Q2.Decoder = Q2.DataViewIndexOutOfBoundsError = void 0;
-  var Cr = ws(), Fn = Bt(), ce2 = Je(), jr = At(), Nr = Or(), qn = xs(), K2 = Ct(), Vn = (s) => {
+  var Cr = xs(), Fn = Bt(), ce2 = He(), jr = Ot(), Nr = Ar(), qn = vs(), K2 = Ct(), Vn = (s) => {
     let e = typeof s;
     return e === "string" || e === "number";
-  }, Ge = -1, Lr = new DataView(new ArrayBuffer(0)), Jn = new Uint8Array(Lr.buffer);
+  }, $e2 = -1, Lr = new DataView(new ArrayBuffer(0)), Jn = new Uint8Array(Lr.buffer);
   Q2.DataViewIndexOutOfBoundsError = (() => {
     try {
       Lr.getInt8(0);
@@ -30063,18 +30063,18 @@ var Vt = S((Q2) => {
     }
     throw new Error("never reached");
   })();
-  var vs = new Q2.DataViewIndexOutOfBoundsError("Insufficient data"), Hn = new qn.CachedKeyDecoder(), Br = class {
-    constructor(e = Fn.ExtensionCodec.defaultCodec, t = void 0, r = ce2.UINT32_MAX, n = ce2.UINT32_MAX, o = ce2.UINT32_MAX, i = ce2.UINT32_MAX, c2 = ce2.UINT32_MAX, p2 = Hn) {
-      this.extensionCodec = e, this.context = t, this.maxStrLength = r, this.maxBinLength = n, this.maxArrayLength = o, this.maxMapLength = i, this.maxExtLength = c2, this.keyDecoder = p2, this.totalPos = 0, this.pos = 0, this.view = Lr, this.bytes = Jn, this.headByte = Ge, this.stack = [];
+  var Es = new Q2.DataViewIndexOutOfBoundsError("Insufficient data"), Hn = new qn.CachedKeyDecoder(), Br = class {
+    constructor(e = Fn.ExtensionCodec.defaultCodec, t = void 0, r = ce2.UINT32_MAX, n = ce2.UINT32_MAX, o = ce2.UINT32_MAX, i = ce2.UINT32_MAX, l = ce2.UINT32_MAX, p2 = Hn) {
+      this.extensionCodec = e, this.context = t, this.maxStrLength = r, this.maxBinLength = n, this.maxArrayLength = o, this.maxMapLength = i, this.maxExtLength = l, this.keyDecoder = p2, this.totalPos = 0, this.pos = 0, this.view = Lr, this.bytes = Jn, this.headByte = $e2, this.stack = [];
     }
     reinitializeState() {
-      this.totalPos = 0, this.headByte = Ge, this.stack.length = 0;
+      this.totalPos = 0, this.headByte = $e2, this.stack.length = 0;
     }
     setBuffer(e) {
       this.bytes = (0, Nr.ensureUint8Array)(e), this.view = (0, Nr.createDataView)(this.bytes), this.pos = 0;
     }
     appendBuffer(e) {
-      if (this.headByte === Ge && !this.hasRemaining(1))
+      if (this.headByte === $e2 && !this.hasRemaining(1))
         this.setBuffer(e);
       else {
         let t = this.bytes.subarray(this.pos), r = (0, Nr.ensureUint8Array)(e), n = new Uint8Array(t.length + r.length);
@@ -30101,10 +30101,10 @@ var Vt = S((Q2) => {
     }
     async decodeAsync(e) {
       let t = false, r;
-      for await (let c2 of e) {
+      for await (let l of e) {
         if (t)
           throw this.createExtraByteError(this.totalPos);
-        this.appendBuffer(c2);
+        this.appendBuffer(l);
         try {
           r = this.doDecodeSync(), t = true;
         } catch (p2) {
@@ -30290,10 +30290,10 @@ var Vt = S((Q2) => {
         }
     }
     readHeadByte() {
-      return this.headByte === Ge && (this.headByte = this.readU8()), this.headByte;
+      return this.headByte === $e2 && (this.headByte = this.readU8()), this.headByte;
     }
     complete() {
-      this.headByte = Ge;
+      this.headByte = $e2;
     }
     readArraySize() {
       let e = this.readHeadByte();
@@ -30324,7 +30324,7 @@ var Vt = S((Q2) => {
       if (e > this.maxStrLength)
         throw new K2.DecodeError(`Max length exceeded: UTF-8 byte length (${e}) > maxStrLength (${this.maxStrLength})`);
       if (this.bytes.byteLength < this.pos + t + e)
-        throw vs;
+        throw Es;
       let n = this.pos + t, o;
       return this.stateIsMapKey() && (!((r = this.keyDecoder) === null || r === void 0) && r.canBeCached(e)) ? o = this.keyDecoder.decode(this.bytes, n, e) : e > jr.TEXT_DECODER_THRESHOLD ? o = (0, jr.utf8DecodeTD)(this.bytes, n, e) : o = (0, jr.utf8DecodeJs)(this.bytes, n, e), this.pos += t + e, o;
     }
@@ -30335,7 +30335,7 @@ var Vt = S((Q2) => {
       if (e > this.maxBinLength)
         throw new K2.DecodeError(`Max length exceeded: bin length (${e}) > maxBinLength (${this.maxBinLength})`);
       if (!this.hasRemaining(e + t))
-        throw vs;
+        throw Es;
       let r = this.pos + t, n = this.bytes.subarray(r, r + e);
       return this.pos += t + e, n;
     }
@@ -30401,18 +30401,18 @@ var Fr = S((H2) => {
   "use strict";
   Object.defineProperty(H2, "__esModule", { value: true });
   H2.decodeMulti = H2.decode = H2.defaultDecodeOptions = void 0;
-  var Es = Vt();
+  var Ps = Vt();
   H2.defaultDecodeOptions = {};
   function zn(s, e = H2.defaultDecodeOptions) {
-    return new Es.Decoder(e.extensionCodec, e.context, e.maxStrLength, e.maxBinLength, e.maxArrayLength, e.maxMapLength, e.maxExtLength).decode(s);
+    return new Ps.Decoder(e.extensionCodec, e.context, e.maxStrLength, e.maxBinLength, e.maxArrayLength, e.maxMapLength, e.maxExtLength).decode(s);
   }
   H2.decode = zn;
   function Xn(s, e = H2.defaultDecodeOptions) {
-    return new Es.Decoder(e.extensionCodec, e.context, e.maxStrLength, e.maxBinLength, e.maxArrayLength, e.maxMapLength, e.maxExtLength).decodeMulti(s);
+    return new Ps.Decoder(e.extensionCodec, e.context, e.maxStrLength, e.maxBinLength, e.maxArrayLength, e.maxMapLength, e.maxExtLength).decodeMulti(s);
   }
   H2.decodeMulti = Xn;
 });
-var _s = S((re2) => {
+var Ss = S((re2) => {
   "use strict";
   Object.defineProperty(re2, "__esModule", { value: true });
   re2.ensureAsyncIterable = re2.asyncIterableFromStream = re2.isAsyncIterable = void 0;
@@ -30424,7 +30424,7 @@ var _s = S((re2) => {
     if (s == null)
       throw new Error("Assertion Failure: value must not be null nor undefined");
   }
-  async function* Ps(s) {
+  async function* _s(s) {
     let e = s.getReader();
     try {
       for (; ; ) {
@@ -30437,17 +30437,17 @@ var _s = S((re2) => {
       e.releaseLock();
     }
   }
-  re2.asyncIterableFromStream = Ps;
+  re2.asyncIterableFromStream = _s;
   function $n(s) {
-    return Ts(s) ? s : Ps(s);
+    return Ts(s) ? s : _s(s);
   }
   re2.ensureAsyncIterable = $n;
 });
-var ks = S((z2) => {
+var Ms = S((z2) => {
   "use strict";
   Object.defineProperty(z2, "__esModule", { value: true });
   z2.decodeStream = z2.decodeMultiStream = z2.decodeArrayStream = z2.decodeAsync = void 0;
-  var qr = Vt(), Vr = _s(), Jt = Fr();
+  var qr = Vt(), Vr = Ss(), Jt = Fr();
   async function Kn(s, e = Jt.defaultDecodeOptions) {
     let t = (0, Vr.ensureAsyncIterable)(s);
     return new qr.Decoder(e.extensionCodec, e.context, e.maxStrLength, e.maxBinLength, e.maxArrayLength, e.maxMapLength, e.maxExtLength).decodeAsync(t);
@@ -30458,13 +30458,13 @@ var ks = S((z2) => {
     return new qr.Decoder(e.extensionCodec, e.context, e.maxStrLength, e.maxBinLength, e.maxArrayLength, e.maxMapLength, e.maxExtLength).decodeArrayStream(t);
   }
   z2.decodeArrayStream = Qn;
-  function Ss(s, e = Jt.defaultDecodeOptions) {
+  function ks(s, e = Jt.defaultDecodeOptions) {
     let t = (0, Vr.ensureAsyncIterable)(s);
     return new qr.Decoder(e.extensionCodec, e.context, e.maxStrLength, e.maxBinLength, e.maxArrayLength, e.maxMapLength, e.maxExtLength).decodeStream(t);
   }
-  z2.decodeMultiStream = Ss;
+  z2.decodeMultiStream = ks;
   function Zn(s, e = Jt.defaultDecodeOptions) {
-    return Ss(s, e);
+    return ks(s, e);
   }
   z2.decodeStream = Zn;
 });
@@ -30472,18 +30472,18 @@ var zt = S((h2) => {
   "use strict";
   Object.defineProperty(h2, "__esModule", { value: true });
   h2.decodeTimestampExtension = h2.encodeTimestampExtension = h2.decodeTimestampToTimeSpec = h2.encodeTimeSpecToTimestamp = h2.encodeDateToTimeSpec = h2.EXT_TIMESTAMP = h2.ExtData = h2.ExtensionCodec = h2.Encoder = h2.DataViewIndexOutOfBoundsError = h2.DecodeError = h2.Decoder = h2.decodeStream = h2.decodeMultiStream = h2.decodeArrayStream = h2.decodeAsync = h2.decodeMulti = h2.decode = h2.encode = void 0;
-  var Yn = bs();
+  var Yn = ws();
   Object.defineProperty(h2, "encode", { enumerable: true, get: function() {
     return Yn.encode;
   } });
-  var Ms = Fr();
+  var Ds = Fr();
   Object.defineProperty(h2, "decode", { enumerable: true, get: function() {
-    return Ms.decode;
+    return Ds.decode;
   } });
   Object.defineProperty(h2, "decodeMulti", { enumerable: true, get: function() {
-    return Ms.decodeMulti;
+    return Ds.decodeMulti;
   } });
-  var Ht = ks();
+  var Ht = Ms();
   Object.defineProperty(h2, "decodeAsync", { enumerable: true, get: function() {
     return Ht.decodeAsync;
   } });
@@ -30496,12 +30496,12 @@ var zt = S((h2) => {
   Object.defineProperty(h2, "decodeStream", { enumerable: true, get: function() {
     return Ht.decodeStream;
   } });
-  var Ds = Vt();
+  var Ws = Vt();
   Object.defineProperty(h2, "Decoder", { enumerable: true, get: function() {
-    return Ds.Decoder;
+    return Ws.Decoder;
   } });
   Object.defineProperty(h2, "DataViewIndexOutOfBoundsError", { enumerable: true, get: function() {
-    return Ds.DataViewIndexOutOfBoundsError;
+    return Ws.DataViewIndexOutOfBoundsError;
   } });
   var eo = Ct();
   Object.defineProperty(h2, "DecodeError", { enumerable: true, get: function() {
@@ -30544,9 +30544,9 @@ var I = class extends Error {
     super(e), this.name = this.constructor.name, Object.setPrototypeOf(this, new.target.prototype);
   }
 };
-var O = class extends I {
+var A = class extends I {
 };
-var T = class extends I {
+var P = class extends I {
 };
 var Z = class extends I {
 };
@@ -30575,9 +30575,9 @@ else if (m)
   };
 else
   throw new I("Cannot determine runtime environment");
-var l = {};
+var c = {};
 function es(s) {
-  Object.keys(s).forEach((e) => l._free(s[e]));
+  Object.keys(s).forEach((e) => c._free(s[e]));
 }
 var N = { null: 0, symbol: 1, pairlist: 2, closure: 3, environment: 4, promise: 5, call: 6, special: 7, builtin: 8, string: 9, logical: 10, integer: 13, double: 14, complex: 15, character: 16, dots: 17, any: 18, list: 19, expression: 20, bytecode: 21, pointer: 22, weakref: 23, raw: 24, s4: 25, new: 30, free: 31, function: 99 };
 function mr(s) {
@@ -30587,68 +30587,68 @@ function Ce(s) {
   return !!s && typeof s == "object" && "re" in s && "im" in s;
 }
 function je(s) {
-  return l._Rf_protect(L(s)), s;
+  return c._Rf_protect(L(s)), s;
 }
 function w(s, e) {
-  return l._Rf_protect(L(s)), ++e.n, s;
+  return c._Rf_protect(L(s)), ++e.n, s;
 }
 function ts(s) {
-  let e = l._malloc(4);
-  return l._R_ProtectWithIndex(L(s), e), { loc: l.getValue(e, "i32"), ptr: e };
+  let e = c._malloc(4);
+  return c._R_ProtectWithIndex(L(s), e), { loc: c.getValue(e, "i32"), ptr: e };
 }
 function rs(s) {
-  l._Rf_unprotect(1), l._free(s.ptr);
+  c._Rf_unprotect(1), c._free(s.ptr);
 }
 function ss(s, e) {
-  return l._R_Reprotect(L(s), e.loc), s;
+  return c._R_Reprotect(L(s), e.loc), s;
 }
-function P(s) {
-  l._Rf_unprotect(s);
+function T(s) {
+  c._Rf_unprotect(s);
 }
 function gr(s, e, t) {
-  l._Rf_defineVar(L(e), L(t), L(s));
+  c._Rf_defineVar(L(e), L(t), L(s));
 }
 function br(s, e) {
   let t = {}, r = { n: 0 };
   try {
     let n = new Be(e);
-    w(n, r), t.code = l.allocateUTF8(s);
-    let o = l._R_ParseEvalString(t.code, n.ptr);
+    w(n, r), t.code = c.allocateUTF8(s);
+    let o = c._R_ParseEvalString(t.code, n.ptr);
     return y.wrap(o);
   } finally {
-    es(t), P(r.n);
+    es(t), T(r.n);
   }
 }
 function Ne(s, e) {
-  return l.getWasmTableEntry(l.GOT.ffi_safe_eval.value)(L(s), L(e));
+  return c.getWasmTableEntry(c.GOT.ffi_safe_eval.value)(L(s), L(e));
 }
-var cn = /* @__PURE__ */ new WeakMap();
+var un = /* @__PURE__ */ new WeakMap();
 function ns(s, e) {
-  return cn.set(s, e), s;
+  return un.set(s, e), s;
 }
-var wt = 63;
+var Le = 63;
 function xt() {
-  let s = Array.from({ length: 4 }, un).join("-");
-  if (s.length !== wt)
+  let s = Array.from({ length: 4 }, pn).join("-");
+  if (s.length !== Le)
     throw new Error("comlink internal error: UUID has the wrong length");
   return s;
 }
-function un() {
+function pn() {
   let s = Math.floor(Math.random() * Number.MAX_SAFE_INTEGER).toString(16), e = 15 - s.length;
   return e > 0 && (s = Array.from({ length: e }, () => 0).join("") + s), s;
 }
 function L(s) {
-  return Pt(s) ? s.ptr : s;
+  return Tt(s) ? s.ptr : s;
 }
 function le(s, e) {
-  if (l._TYPEOF(s.ptr) !== N[e])
+  if (c._TYPEOF(s.ptr) !== N[e])
     throw new Error(`Unexpected object type "${s.type()}" when expecting type "${e}"`);
 }
-function os(s) {
+function as(s) {
   if (mr(s))
-    return new (as(s.type))(s);
+    return new (is(s.type))(s);
   if (s && typeof s == "object" && "type" in s && s.type === "null")
-    return new Tt();
+    return new Pt();
   if (s === null)
     return new Y({ type: "logical", names: null, values: [null] });
   if (typeof s == "boolean")
@@ -30658,9 +30658,9 @@ function os(s) {
   if (typeof s == "string")
     return new F(s);
   if (Ce(s))
-    return new Le(s);
-  if (ArrayBuffer.isView(s) || s instanceof ArrayBuffer)
     return new Fe(s);
+  if (ArrayBuffer.isView(s) || s instanceof ArrayBuffer)
+    return new qe(s);
   if (Array.isArray(s))
     return dn(s);
   if (typeof s == "object")
@@ -30669,8 +30669,8 @@ function os(s) {
 }
 function dn(s) {
   let e = { n: 0 };
-  if (s.every((r) => r && typeof r == "object" && !Pt(r) && !Ce(r))) {
-    let r = s, n = r.every((i) => Object.keys(i).filter((c2) => !Object.keys(r[0]).includes(c2)).length === 0 && Object.keys(r[0]).filter((c2) => !Object.keys(i).includes(c2)).length === 0), o = r.every((i) => Object.values(i).every((c2) => ls(c2) || is(c2)));
+  if (s.every((r) => r && typeof r == "object" && !Tt(r) && !Ce(r))) {
+    let r = s, n = r.every((i) => Object.keys(i).filter((l) => !Object.keys(r[0]).includes(l)).length === 0 && Object.keys(r[0]).filter((l) => !Object.keys(i).includes(l)).length === 0), o = r.every((i) => Object.values(i).every((l) => cs(l) || ls(l)));
     if (n && o)
       return ee.fromD3(r);
   }
@@ -30684,7 +30684,7 @@ function dn(s) {
     let r = new q([new U("c"), ...s]);
     return w(r, e), r.eval();
   } finally {
-    P(e.n);
+    T(e.n);
   }
 }
 var x = class {
@@ -30692,7 +30692,7 @@ var x = class {
     this.ptr = e;
   }
   type() {
-    let e = l._TYPEOF(this.ptr);
+    let e = c._TYPEOF(this.ptr);
     return Object.keys(N).find((r) => N[r] === e);
   }
 };
@@ -30701,13 +30701,13 @@ var vt;
 var ae = class extends x {
   constructor(t) {
     if (!(t instanceof x))
-      return os(t);
+      return as(t);
     super(t.ptr);
     u(this, Re);
   }
   static wrap(t) {
-    let r = l._TYPEOF(t), n = Object.keys(N)[Object.values(N).indexOf(r)];
-    return new (as(n))(new x(t));
+    let r = c._TYPEOF(t), n = Object.keys(N)[Object.values(N).indexOf(r)];
+    return new (is(n))(new x(t));
   }
   get [Symbol.toStringTag]() {
     return `RObject:${this.type()}`;
@@ -30722,21 +30722,21 @@ var ae = class extends x {
     br(".Internal(inspect(x))", { x: this });
   }
   isNull() {
-    return l._TYPEOF(this.ptr) === N.null;
+    return c._TYPEOF(this.ptr) === N.null;
   }
   isNa() {
     try {
       let t = br("is.na(x)", { x: this });
       return je(t), t.toBoolean();
     } finally {
-      P(1);
+      T(1);
     }
   }
   isUnbound() {
     return this.ptr === k.unboundValue.ptr;
   }
   attrs() {
-    return ie.wrap(l._ATTRIB(this.ptr));
+    return ie.wrap(c._ATTRIB(this.ptr));
   }
   class() {
     let t = { n: 0 }, r = new q([new U("class"), this]);
@@ -30744,7 +30744,7 @@ var ae = class extends x {
     try {
       return r.eval();
     } finally {
-      P(t.n);
+      T(t.n);
     }
   }
   setNames(t) {
@@ -30755,10 +30755,10 @@ var ae = class extends x {
       r = new F(t);
     else
       throw new Error("Argument to setNames must be null or an Array of strings or null");
-    return l._Rf_setAttrib(this.ptr, k.namesSymbol.ptr, r.ptr), this;
+    return c._Rf_setAttrib(this.ptr, k.namesSymbol.ptr, r.ptr), this;
   }
   names() {
-    let t = F.wrap(l._Rf_getAttrib(this.ptr, k.namesSymbol.ptr));
+    let t = F.wrap(c._Rf_getAttrib(this.ptr, k.namesSymbol.ptr));
     return t.isNull() ? null : t.toArray();
   }
   includes(t) {
@@ -30780,8 +30780,8 @@ var ae = class extends x {
   pluck(...t) {
     let r = ts(k.null);
     try {
-      let n = (i, c2) => {
-        let p2 = i.get(c2);
+      let n = (i, l) => {
+        let p2 = i.get(l);
         return ss(p2, r);
       }, o = t.reduce(n, this);
       return o.isNull() ? void 0 : o;
@@ -30796,10 +30796,10 @@ var ae = class extends x {
       w(o, n);
       let i = new ae(r);
       w(i, n);
-      let c2 = new U("[[<-"), p2 = l._Rf_lang4(c2.ptr, this.ptr, o.ptr, i.ptr);
+      let l = new U("[[<-"), p2 = c._Rf_lang4(l.ptr, this.ptr, o.ptr, i.ptr);
       return w(p2, n), ae.wrap(Ne(p2, k.baseEnv));
     } finally {
-      P(n.n);
+      T(n.n);
     }
   }
   static getMethods(t) {
@@ -30816,15 +30816,15 @@ Re = /* @__PURE__ */ new WeakSet(), vt = function(t, r) {
   try {
     let o = new ae(t);
     w(o, n);
-    let i = l._Rf_lang3(r, this.ptr, o.ptr);
+    let i = c._Rf_lang3(r, this.ptr, o.ptr);
     return w(i, n), ae.wrap(Ne(i, k.baseEnv));
   } finally {
-    P(n.n);
+    T(n.n);
   }
 };
-var Tt = class extends y {
+var Pt = class extends y {
   constructor() {
-    return super(new x(l.getValue(l._R_NilValue, "*"))), this;
+    return super(new x(c.getValue(c._R_NilValue, "*"))), this;
   }
   toJs() {
     return { type: "null" };
@@ -30836,11 +30836,11 @@ var U = class extends y {
       le(e, "symbol"), super(e);
       return;
     }
-    let t = l.allocateUTF8(e);
+    let t = c.allocateUTF8(e);
     try {
-      super(new x(l._Rf_install(t)));
+      super(new x(c._Rf_install(t)));
     } finally {
-      l._free(t);
+      c._free(t);
     }
   }
   toJs() {
@@ -30854,13 +30854,13 @@ var U = class extends y {
     return this.printname().toString();
   }
   printname() {
-    return Ve.wrap(l._PRINTNAME(this.ptr));
+    return Je.wrap(c._PRINTNAME(this.ptr));
   }
   symvalue() {
-    return y.wrap(l._SYMVALUE(this.ptr));
+    return y.wrap(c._SYMVALUE(this.ptr));
   }
   internal() {
-    return y.wrap(l._INTERNAL(this.ptr));
+    return y.wrap(c._INTERNAL(this.ptr));
   }
 };
 var ie = class extends y {
@@ -30869,13 +30869,13 @@ var ie = class extends y {
       return le(e, "pairlist"), super(e), this;
     let t = { n: 0 };
     try {
-      let { names: r, values: n } = me(e), o = ie.wrap(l._Rf_allocList(n.length));
+      let { names: r, values: n } = me(e), o = ie.wrap(c._Rf_allocList(n.length));
       w(o, t);
-      for (let [i, c2] = [0, o]; !c2.isNull(); [i, c2] = [i + 1, c2.cdr()])
-        c2.setcar(new y(n[i]));
+      for (let [i, l] = [0, o]; !l.isNull(); [i, l] = [i + 1, l.cdr()])
+        l.setcar(new y(n[i]));
       o.setNames(r), super(o);
     } finally {
-      P(t.n);
+      T(t.n);
     }
   }
   get length() {
@@ -30890,7 +30890,7 @@ var ie = class extends y {
       throw new Error("Duplicate key when converting pairlist without allowDuplicateKey enabled");
     if (!t && o.some((i) => !i))
       throw new Error("Empty or null key when converting pairlist without allowEmptyKey enabled");
-    return Object.fromEntries(n.filter((i, c2) => n.findIndex((p2) => p2[0] === i[0]) === c2));
+    return Object.fromEntries(n.filter((i, l) => n.findIndex((p2) => p2[0] === i[0]) === l));
   }
   entries(e = { depth: 1 }) {
     let t = this.toJs(e);
@@ -30898,9 +30898,9 @@ var ie = class extends y {
   }
   toJs(e = { depth: 0 }, t = 1) {
     let r = [], n = false, o = [];
-    for (let c2 = this; !c2.isNull(); c2 = c2.cdr()) {
-      let p2 = c2.tag();
-      p2.isNull() ? r.push("") : (n = true, r.push(p2.toString())), e.depth && t >= e.depth ? o.push(c2.car()) : o.push(c2.car().toJs(e, t + 1));
+    for (let l = this; !l.isNull(); l = l.cdr()) {
+      let p2 = l.tag();
+      p2.isNull() ? r.push("") : (n = true, r.push(p2.toString())), e.depth && t >= e.depth ? o.push(l.car()) : o.push(l.car().toJs(e, t + 1));
     }
     return { type: "pairlist", names: n ? r : null, values: o };
   }
@@ -30908,16 +30908,16 @@ var ie = class extends y {
     return e in this.toObject();
   }
   setcar(e) {
-    l._SETCAR(this.ptr, e.ptr);
+    c._SETCAR(this.ptr, e.ptr);
   }
   car() {
-    return y.wrap(l._CAR(this.ptr));
+    return y.wrap(c._CAR(this.ptr));
   }
   cdr() {
-    return y.wrap(l._CDR(this.ptr));
+    return y.wrap(c._CDR(this.ptr));
   }
   tag() {
-    return y.wrap(l._TAG(this.ptr));
+    return y.wrap(c._TAG(this.ptr));
   }
 };
 var q = class extends y {
@@ -30926,43 +30926,43 @@ var q = class extends y {
       return le(e, "call"), super(e), this;
     let t = { n: 0 };
     try {
-      let { values: r } = me(e), n = r.map((i) => w(new y(i), t)), o = q.wrap(l._Rf_allocVector(N.call, r.length));
+      let { values: r } = me(e), n = r.map((i) => w(new y(i), t)), o = q.wrap(c._Rf_allocVector(N.call, r.length));
       w(o, t);
-      for (let [i, c2] = [0, o]; !c2.isNull(); [i, c2] = [i + 1, c2.cdr()])
-        c2.setcar(n[i]);
+      for (let [i, l] = [0, o]; !l.isNull(); [i, l] = [i + 1, l.cdr()])
+        l.setcar(n[i]);
       super(o);
     } finally {
-      P(t.n);
+      T(t.n);
     }
   }
   setcar(e) {
-    l._SETCAR(this.ptr, e.ptr);
+    c._SETCAR(this.ptr, e.ptr);
   }
   car() {
-    return y.wrap(l._CAR(this.ptr));
+    return y.wrap(c._CAR(this.ptr));
   }
   cdr() {
-    return y.wrap(l._CDR(this.ptr));
+    return y.wrap(c._CDR(this.ptr));
   }
   eval() {
-    return l.webr.evalR(this, { env: k.baseEnv });
+    return c.webr.evalR(this, { env: k.baseEnv });
   }
   capture(e = {}) {
-    return l.webr.captureR(this, e);
+    return c.webr.captureR(this, e);
   }
   deparse() {
     let e = { n: 0 };
     try {
-      let t = l._Rf_lang2(new U("deparse1").ptr, l._Rf_lang2(new U("quote").ptr, this.ptr));
+      let t = c._Rf_lang2(new U("deparse1").ptr, c._Rf_lang2(new U("quote").ptr, this.ptr));
       w(t, e);
       let r = F.wrap(Ne(t, k.baseEnv));
       return w(r, e), r.toString();
     } finally {
-      P(e.n);
+      T(e.n);
     }
   }
 };
-var qe = class extends y {
+var Ve = class extends y {
   constructor(e, t = null) {
     if (e instanceof x) {
       if (le(e, "list"), super(e), t) {
@@ -30974,23 +30974,23 @@ var qe = class extends y {
     }
     let r = { n: 0 };
     try {
-      let n = me(e), o = l._Rf_allocVector(N.list, n.values.length);
-      w(o, r), n.values.forEach((c2, p2) => {
-        l._SET_VECTOR_ELT(o, p2, new y(c2).ptr);
+      let n = me(e), o = c._Rf_allocVector(N.list, n.values.length);
+      w(o, r), n.values.forEach((l, p2) => {
+        c._SET_VECTOR_ELT(o, p2, new y(l).ptr);
       });
       let i = t || n.names;
       if (i && i.length !== n.values.length)
         throw new Error("Can't construct named `RList`. Supplied `names` must be the same length as the list.");
       y.wrap(o).setNames(i), super(new x(o));
     } finally {
-      P(r.n);
+      T(r.n);
     }
   }
   get length() {
-    return l._LENGTH(this.ptr);
+    return c._LENGTH(this.ptr);
   }
   isDataFrame() {
-    let e = ie.wrap(l._ATTRIB(this.ptr)).get("class");
+    let e = ie.wrap(c._ATTRIB(this.ptr)).get("class");
     return !e.isNull() && e.toArray().includes("data.frame");
   }
   toArray(e = { depth: 1 }) {
@@ -31002,7 +31002,7 @@ var qe = class extends y {
       throw new Error("Duplicate key when converting list without allowDuplicateKey enabled");
     if (!t && o.some((i) => !i))
       throw new Error("Empty or null key when converting list without allowEmptyKey enabled");
-    return Object.fromEntries(n.filter((i, c2) => n.findIndex((p2) => p2[0] === i[0]) === c2));
+    return Object.fromEntries(n.filter((i, l) => n.findIndex((p2) => p2[0] === i[0]) === l));
   }
   toD3() {
     if (!this.isDataFrame())
@@ -31017,7 +31017,7 @@ var qe = class extends y {
     return { type: "list", names: this.names(), values: [...Array(this.length).keys()].map((r) => e.depth && t >= e.depth ? this.get(r + 1) : this.get(r + 1).toJs(e, t + 1)) };
   }
 };
-var ee = class extends qe {
+var ee = class extends Ve {
   constructor(e) {
     if (e instanceof x) {
       if (super(e), !this.isDataFrame())
@@ -31029,18 +31029,18 @@ var ee = class extends qe {
   static fromObject(e) {
     let { names: t, values: r } = me(e), n = { n: 0 };
     try {
-      let o = !!t && t.length > 0 && t.every((c2) => c2), i = r.length > 0 && r.every((c2) => Array.isArray(c2) || ArrayBuffer.isView(c2) || c2 instanceof ArrayBuffer);
+      let o = !!t && t.length > 0 && t.every((l) => l), i = r.length > 0 && r.every((l) => Array.isArray(l) || ArrayBuffer.isView(l) || l instanceof ArrayBuffer);
       if (o && i) {
-        let c2 = r, p2 = c2.every((b2) => b2.length === c2[0].length), D2 = c2.every((b2) => ls(b2[0]) || is(b2[0]));
+        let l = r, p2 = l.every((b2) => b2.length === l[0].length), D2 = l.every((b2) => cs(b2[0]) || ls(b2[0]));
         if (p2 && D2) {
-          let b2 = new qe({ type: "list", names: t, values: c2.map((tn) => os(tn)) });
+          let b2 = new Ve({ type: "list", names: t, values: l.map((rn) => as(rn)) });
           w(b2, n);
           let j2 = new q([new U("as.data.frame"), b2]);
           return w(j2, n), new ee(j2.eval());
         }
       }
     } finally {
-      P(n.n);
+      T(n.n);
     }
     throw new Error("Can't construct `data.frame`. Source object is not eligible.");
   }
@@ -31055,7 +31055,7 @@ var ye = class extends y {
       let r = new q([this, ...e]);
       return w(r, t), r.eval();
     } finally {
-      P(t.n);
+      T(t.n);
     }
   }
   capture(e = {}, ...t) {
@@ -31064,25 +31064,25 @@ var ye = class extends y {
       let n = new q([this, ...t]);
       return w(n, r), n.capture(e);
     } finally {
-      P(r.n);
+      T(r.n);
     }
   }
 };
-var Ve = class extends y {
+var Je = class extends y {
   constructor(e) {
     if (e instanceof x) {
       le(e, "string"), super(e);
       return;
     }
-    let t = l.allocateUTF8(e);
+    let t = c.allocateUTF8(e);
     try {
-      super(new x(l._Rf_mkChar(t)));
+      super(new x(c._Rf_mkChar(t)));
     } finally {
-      l._free(t);
+      c._free(t);
     }
   }
   toString() {
-    return l.UTF8ToString(l._R_CHAR(this.ptr));
+    return c.UTF8ToString(c._R_CHAR(this.ptr));
   }
   toJs() {
     return { type: "string", value: this.toString() };
@@ -31094,38 +31094,38 @@ var Be = class extends y {
       return le(e, "environment"), super(e), this;
     let t = 0;
     try {
-      let { names: r, values: n } = me(e), o = je(l._R_NewEnv(k.globalEnv.ptr, 0, 0));
-      ++t, n.forEach((i, c2) => {
-        let p2 = r ? r[c2] : null;
+      let { names: r, values: n } = me(e), o = je(c._R_NewEnv(k.globalEnv.ptr, 0, 0));
+      ++t, n.forEach((i, l) => {
+        let p2 = r ? r[l] : null;
         if (!p2)
           throw new Error("Can't create object in new environment with empty symbol name");
         let D2 = new U(p2), b2 = je(new y(i));
         try {
           gr(o, D2, b2);
         } finally {
-          P(1);
+          T(1);
         }
       }), super(new x(o));
     } finally {
-      P(t);
+      T(t);
     }
   }
   ls(e = false, t = true) {
-    return F.wrap(l._R_lsInternal3(this.ptr, Number(e), Number(t))).toArray();
+    return F.wrap(c._R_lsInternal3(this.ptr, Number(e), Number(t))).toArray();
   }
   bind(e, t) {
     let r = new U(e), n = je(new y(t));
     try {
       gr(this, r, n);
     } finally {
-      P(1);
+      T(1);
     }
   }
   names() {
     return this.ls(true, true);
   }
   frame() {
-    return y.wrap(l._FRAME(this.ptr));
+    return y.wrap(c._FRAME(this.ptr));
   }
   subset(e) {
     if (typeof e == "number")
@@ -31150,14 +31150,14 @@ var te = class extends y {
       return le(e, t), super(e), this;
     let n = { n: 0 };
     try {
-      let { names: o, values: i } = me(e), c2 = l._Rf_allocVector(N[t], i.length);
-      w(c2, n), i.forEach(r(c2)), y.wrap(c2).setNames(o), super(new x(c2));
+      let { names: o, values: i } = me(e), l = c._Rf_allocVector(N[t], i.length);
+      w(l, n), i.forEach(r(l)), y.wrap(l).setNames(o), super(new x(l));
     } finally {
-      P(n.n);
+      T(n.n);
     }
   }
   get length() {
-    return l._LENGTH(this.ptr);
+    return c._LENGTH(this.ptr);
   }
   get(e) {
     return super.get(e);
@@ -31171,14 +31171,14 @@ var te = class extends y {
   detectMissing() {
     let e = { n: 0 };
     try {
-      let t = l._Rf_lang2(new U("is.na").ptr, this.ptr);
+      let t = c._Rf_lang2(new U("is.na").ptr, this.ptr);
       w(t, e);
       let r = Y.wrap(Ne(t, k.baseEnv));
       w(r, e);
       let n = r.toTypedArray();
       return Array.from(n).map((o) => !!o);
     } finally {
-      P(e.n);
+      T(e.n);
     }
   }
   toArray() {
@@ -31191,7 +31191,7 @@ var te = class extends y {
       throw new Error("Duplicate key when converting atomic vector without allowDuplicateKey enabled");
     if (!t && n.some((o) => !o))
       throw new Error("Empty or null key when converting atomic vector without allowEmptyKey enabled");
-    return Object.fromEntries(r.filter((o, i) => r.findIndex((c2) => c2[0] === o[0]) === i));
+    return Object.fromEntries(r.filter((o, i) => r.findIndex((l) => l[0] === o[0]) === i));
   }
   entries() {
     let e = this.toArray(), t = this.names();
@@ -31218,7 +31218,7 @@ var wr = class extends te {
     return e;
   }
   toTypedArray() {
-    return new Int32Array(l.HEAP32.subarray(l._LOGICAL(this.ptr) / 4, l._LOGICAL(this.ptr) / 4 + this.length));
+    return new Int32Array(c.HEAP32.subarray(c._LOGICAL(this.ptr) / 4, c._LOGICAL(this.ptr) / 4 + this.length));
   }
   toArray() {
     let e = this.toTypedArray();
@@ -31227,9 +31227,9 @@ var wr = class extends te {
 };
 var Y = wr;
 _t = /* @__PURE__ */ new WeakMap(), u(Y, _t, (e) => {
-  let t = l._LOGICAL(e), r = l.getValue(l._R_NaInt, "i32");
+  let t = c._LOGICAL(e), r = c.getValue(c._R_NaInt, "i32");
   return (n, o) => {
-    l.setValue(t + 4 * o, n === null ? r : !!n, "i32");
+    c.setValue(t + 4 * o, n === null ? r : !!n, "i32");
   };
 });
 var St;
@@ -31249,14 +31249,14 @@ var xr = class extends te {
     return e;
   }
   toTypedArray() {
-    return new Int32Array(l.HEAP32.subarray(l._INTEGER(this.ptr) / 4, l._INTEGER(this.ptr) / 4 + this.length));
+    return new Int32Array(c.HEAP32.subarray(c._INTEGER(this.ptr) / 4, c._INTEGER(this.ptr) / 4 + this.length));
   }
 };
 var Et = xr;
 St = /* @__PURE__ */ new WeakMap(), u(Et, St, (e) => {
-  let t = l._INTEGER(e), r = l.getValue(l._R_NaInt, "i32");
+  let t = c._INTEGER(e), r = c.getValue(c._R_NaInt, "i32");
   return (n, o) => {
-    l.setValue(t + 4 * o, n === null ? r : Math.round(Number(n)), "i32");
+    c.setValue(t + 4 * o, n === null ? r : Math.round(Number(n)), "i32");
   };
 });
 var kt;
@@ -31276,14 +31276,14 @@ var vr = class extends te {
     return e;
   }
   toTypedArray() {
-    return new Float64Array(l.HEAPF64.subarray(l._REAL(this.ptr) / 8, l._REAL(this.ptr) / 8 + this.length));
+    return new Float64Array(c.HEAPF64.subarray(c._REAL(this.ptr) / 8, c._REAL(this.ptr) / 8 + this.length));
   }
 };
 var fe = vr;
 kt = /* @__PURE__ */ new WeakMap(), u(fe, kt, (e) => {
-  let t = l._REAL(e), r = l.getValue(l._R_NaReal, "double");
+  let t = c._REAL(e), r = c.getValue(c._R_NaReal, "double");
   return (n, o) => {
-    l.setValue(t + 8 * o, n === null ? r : n, "double");
+    c.setValue(t + 8 * o, n === null ? r : n, "double");
   };
 });
 var Mt;
@@ -31303,24 +31303,24 @@ var Er = class extends te {
     return e;
   }
   toTypedArray() {
-    return new Float64Array(l.HEAPF64.subarray(l._COMPLEX(this.ptr) / 8, l._COMPLEX(this.ptr) / 8 + 2 * this.length));
+    return new Float64Array(c.HEAPF64.subarray(c._COMPLEX(this.ptr) / 8, c._COMPLEX(this.ptr) / 8 + 2 * this.length));
   }
   toArray() {
     let e = this.toTypedArray();
     return this.detectMissing().map((t, r) => t ? null : { re: e[2 * r], im: e[2 * r + 1] });
   }
 };
-var Le = Er;
-Mt = /* @__PURE__ */ new WeakMap(), u(Le, Mt, (e) => {
-  let t = l._COMPLEX(e), r = l.getValue(l._R_NaReal, "double");
+var Fe = Er;
+Mt = /* @__PURE__ */ new WeakMap(), u(Fe, Mt, (e) => {
+  let t = c._COMPLEX(e), r = c.getValue(c._R_NaReal, "double");
   return (n, o) => {
-    l.setValue(t + 8 * (2 * o), n === null ? r : n.re, "double"), l.setValue(t + 8 * (2 * o + 1), n === null ? r : n.im, "double");
+    c.setValue(t + 8 * (2 * o), n === null ? r : n.re, "double"), c.setValue(t + 8 * (2 * o + 1), n === null ? r : n.im, "double");
   };
 });
 var Dt;
-var Tr = class extends te {
+var Pr = class extends te {
   constructor(e) {
-    super(e, "character", a(Tr, Dt));
+    super(e, "character", a(Pr, Dt));
   }
   getString(e) {
     return this.get(e).toArray()[0];
@@ -31334,20 +31334,20 @@ var Tr = class extends te {
     return e;
   }
   toTypedArray() {
-    return new Uint32Array(l.HEAPU32.subarray(l._STRING_PTR(this.ptr) / 4, l._STRING_PTR(this.ptr) / 4 + this.length));
+    return new Uint32Array(c.HEAPU32.subarray(c._STRING_PTR(this.ptr) / 4, c._STRING_PTR(this.ptr) / 4 + this.length));
   }
   toArray() {
-    return this.detectMissing().map((e, t) => e ? null : l.UTF8ToString(l._R_CHAR(l._STRING_ELT(this.ptr, t))));
+    return this.detectMissing().map((e, t) => e ? null : c.UTF8ToString(c._R_CHAR(c._STRING_ELT(this.ptr, t))));
   }
 };
-var F = Tr;
+var F = Pr;
 Dt = /* @__PURE__ */ new WeakMap(), u(F, Dt, (e) => (t, r) => {
-  t === null ? l._SET_STRING_ELT(e, r, k.naString.ptr) : l._SET_STRING_ELT(e, r, new Ve(t).ptr);
+  t === null ? c._SET_STRING_ELT(e, r, k.naString.ptr) : c._SET_STRING_ELT(e, r, new Je(t).ptr);
 });
 var Wt;
-var Pr = class extends te {
+var Tr = class extends te {
   constructor(e) {
-    e instanceof ArrayBuffer && (e = new Uint8Array(e)), super(e, "raw", a(Pr, Wt));
+    e instanceof ArrayBuffer && (e = new Uint8Array(e)), super(e, "raw", a(Tr, Wt));
   }
   getNumber(e) {
     return this.get(e).toArray()[0];
@@ -31361,31 +31361,31 @@ var Pr = class extends te {
     return e;
   }
   toTypedArray() {
-    return new Uint8Array(l.HEAPU8.subarray(l._RAW(this.ptr), l._RAW(this.ptr) + this.length));
+    return new Uint8Array(c.HEAPU8.subarray(c._RAW(this.ptr), c._RAW(this.ptr) + this.length));
   }
 };
-var Fe = Pr;
-Wt = /* @__PURE__ */ new WeakMap(), u(Fe, Wt, (e) => {
-  let t = l._RAW(e);
+var qe = Tr;
+Wt = /* @__PURE__ */ new WeakMap(), u(qe, Wt, (e) => {
+  let t = c._RAW(e);
   return (r, n) => {
-    l.setValue(t + n, Number(r), "i8");
+    c.setValue(t + n, Number(r), "i8");
   };
 });
 function me(s) {
   return mr(s) ? s : Array.isArray(s) || ArrayBuffer.isView(s) ? { names: null, values: s } : s && typeof s == "object" && !Ce(s) ? { names: Object.keys(s), values: Object.values(s) } : { names: null, values: [s] };
 }
-function as(s) {
-  let e = { object: y, null: Tt, symbol: U, pairlist: ie, closure: ye, environment: Be, call: q, special: ye, builtin: ye, string: Ve, logical: Y, integer: Et, double: fe, complex: Le, character: F, list: qe, raw: Fe, function: ye, dataframe: ee };
+function is(s) {
+  let e = { object: y, null: Pt, symbol: U, pairlist: ie, closure: ye, environment: Be, call: q, special: ye, builtin: ye, string: Je, logical: Y, integer: Et, double: fe, complex: Fe, character: F, list: Ve, raw: qe, function: ye, dataframe: ee };
   return s in e ? e[s] : y;
 }
-function Pt(s) {
+function Tt(s) {
   return s instanceof y;
 }
-function is(s) {
-  let e = ["logical", "integer", "double", "complex", "character"];
-  return Pt(s) && e.includes(s.type()) || Pt(s) && s.isNa();
-}
 function ls(s) {
+  let e = ["logical", "integer", "double", "complex", "character"];
+  return Tt(s) && e.includes(s.type()) || Tt(s) && s.isNa();
+}
+function cs(s) {
   return s === null || typeof s == "number" || typeof s == "boolean" || typeof s == "string" || Ce(s);
 }
 var k;
@@ -31397,7 +31397,7 @@ function $() {
   });
   return s.promise = e, s;
 }
-function cs(s) {
+function us(s) {
   return new Promise((e) => setTimeout(e, s));
 }
 function V(s, e, t, ...r) {
@@ -31421,14 +31421,14 @@ function yn(s) {
 }
 var Os = oe(zt());
 var no = new TextEncoder();
-async function As(s, e, t) {
+async function Is(s, e, t) {
   try {
-    let { taskId: r, sizeBuffer: n, dataBuffer: o, signalBuffer: i } = e, c2 = (0, Os.encode)(t), p2 = c2.length <= o.length;
-    if (Atomics.store(n, 0, c2.length), Atomics.store(n, 1, +p2), !p2) {
+    let { taskId: r, sizeBuffer: n, dataBuffer: o, signalBuffer: i } = e, l = (0, Os.encode)(t), p2 = l.length <= o.length;
+    if (Atomics.store(n, 0, l.length), Atomics.store(n, 1, +p2), !p2) {
       let [D2, b2] = oo(s);
-      o.set(no.encode(D2)), await Ws(i, r), o = (await b2).dataBuffer;
+      o.set(no.encode(D2)), await As(i, r), o = (await b2).dataBuffer;
     }
-    o.set(c2), Atomics.store(n, 1, 1), await Ws(i, r);
+    o.set(l), Atomics.store(n, 1, 1), await As(i, r);
   } catch (r) {
     console.warn(r);
   }
@@ -31443,19 +31443,19 @@ function oo(s) {
     }), s.start && s.start();
   })];
 }
-async function Ws(s, e) {
+async function As(s, e) {
   let t = (e >> 1) % 32, r = 1;
   for (; Atomics.compareExchange(s, t + 1, 0, e) !== 0; )
-    await cs(r), r < 32 && (r *= 2);
+    await us(r), r < 32 && (r *= 2);
   Atomics.or(s, 0, 1 << t), Atomics.notify(s, 0);
 }
 var X;
 var G;
-var $e;
+var Ke;
 var Jr;
 var Ee = class {
   constructor() {
-    u(this, $e);
+    u(this, Ke);
     u(this, X, void 0);
     u(this, G, void 0);
     d(this, G, []), d(this, X, []);
@@ -31464,10 +31464,10 @@ var Ee = class {
     d(this, G, []), d(this, X, []);
   }
   put(e) {
-    a(this, G).length || E(this, $e, Jr).call(this), a(this, G).shift()(e);
+    a(this, G).length || E(this, Ke, Jr).call(this), a(this, G).shift()(e);
   }
   async get() {
-    return a(this, X).length || E(this, $e, Jr).call(this), a(this, X).shift();
+    return a(this, X).length || E(this, Ke, Jr).call(this), a(this, X).shift();
   }
   isEmpty() {
     return !a(this, X).length;
@@ -31479,22 +31479,22 @@ var Ee = class {
     return a(this, X).length - a(this, G).length;
   }
 };
-X = /* @__PURE__ */ new WeakMap(), G = /* @__PURE__ */ new WeakMap(), $e = /* @__PURE__ */ new WeakSet(), Jr = function() {
+X = /* @__PURE__ */ new WeakMap(), G = /* @__PURE__ */ new WeakMap(), Ke = /* @__PURE__ */ new WeakSet(), Jr = function() {
   a(this, X).push(new Promise((e) => {
     a(this, G).push(e);
   }));
 };
-function Te(s, e) {
-  return Is({ type: "request", data: { uuid: xt(), msg: s } }, e);
+function Pe(s, e) {
+  return Us({ type: "request", data: { uuid: xt(), msg: s } }, e);
 }
-function Ke(s, e, t) {
-  return Is({ type: "response", data: { uuid: s, resp: e } }, t);
+function Qe(s, e, t) {
+  return Us({ type: "response", data: { uuid: s, resp: e } }, t);
 }
-function Is(s, e) {
+function Us(s, e) {
   return e && ns(s, e), s;
 }
-function Cs(s) {
-  let e = new O(s.obj.message);
+function js(s) {
+  let e = new A(s.obj.message);
   return s.obj.name !== "Error" && (e.name = s.obj.name), e.stack = s.obj.stack, e;
 }
 function ao(s) {
@@ -31503,15 +31503,15 @@ function ao(s) {
 function $t(s) {
   return ao(s) && s.payloadType === "ptr";
 }
-var Pe;
-var Qe;
+var Te;
+var Ze;
 var se = class {
   constructor() {
     this.inputQueue = new Ee();
     this.outputQueue = new Ee();
     this.systemQueue = new Ee();
-    u(this, Pe, /* @__PURE__ */ new Map());
-    u(this, Qe, false);
+    u(this, Te, /* @__PURE__ */ new Map());
+    u(this, Ze, false);
   }
   async read() {
     return await this.outputQueue.get();
@@ -31526,49 +31526,49 @@ var se = class {
     return await this.systemQueue.get();
   }
   write(e) {
-    if (a(this, Qe))
-      throw new T("The webR communication channel has been closed.");
+    if (a(this, Ze))
+      throw new P("The webR communication channel has been closed.");
     this.inputQueue.put(e);
   }
   async request(e, t) {
-    let r = Te(e, t), { resolve: n, reject: o, promise: i } = $();
-    return a(this, Pe).set(r.data.uuid, { resolve: n, reject: o }), this.write(r), i;
+    let r = Pe(e, t), { resolve: n, reject: o, promise: i } = $();
+    return a(this, Te).set(r.data.uuid, { resolve: n, reject: o }), this.write(r), i;
   }
   putClosedMessage() {
-    d(this, Qe, true), this.outputQueue.put({ type: "closed" });
+    d(this, Ze, true), this.outputQueue.put({ type: "closed" });
   }
   resolveResponse(e) {
-    let t = e.data.uuid, r = a(this, Pe).get(t);
+    let t = e.data.uuid, r = a(this, Te).get(t);
     if (r) {
       let n = e.data.resp;
-      a(this, Pe).delete(t), n.payloadType === "err" ? r.reject(Cs(n)) : r.resolve(n);
+      a(this, Te).delete(t), n.payloadType === "err" ? r.reject(js(n)) : r.resolve(n);
     } else
       console.warn("Can't find request.");
   }
 };
-Pe = /* @__PURE__ */ new WeakMap(), Qe = /* @__PURE__ */ new WeakMap();
-var Ns = oe(zt());
+Te = /* @__PURE__ */ new WeakMap(), Ze = /* @__PURE__ */ new WeakMap();
+var Bs = oe(zt());
 var lo = new TextDecoder("utf-8");
 var _e;
 var Se;
-var Ze;
 var Ye;
+var et;
 var ke;
-_e = /* @__PURE__ */ new WeakMap(), Se = /* @__PURE__ */ new WeakMap(), Ze = /* @__PURE__ */ new WeakMap(), Ye = /* @__PURE__ */ new WeakMap(), ke = /* @__PURE__ */ new WeakMap();
+_e = /* @__PURE__ */ new WeakMap(), Se = /* @__PURE__ */ new WeakMap(), Ye = /* @__PURE__ */ new WeakMap(), et = /* @__PURE__ */ new WeakMap(), ke = /* @__PURE__ */ new WeakMap();
 var zr = new Int32Array(new ArrayBuffer(4));
 m && (globalThis.Worker = B("worker_threads").Worker);
 var Me;
 var Zt;
-var qs;
-var tt;
-var et = class extends se {
+var Vs;
+var rt;
+var tt = class extends se {
   constructor(t) {
     super();
     u(this, Zt);
     u(this, Me, void 0);
     this.close = () => {
     };
-    u(this, tt, async (t2, r2) => {
+    u(this, rt, async (t2, r2) => {
       if (!(!r2 || !r2.type))
         switch (r2.type) {
           case "resolve":
@@ -31587,25 +31587,25 @@ var et = class extends se {
             let n = r2, o = n.data.msg, i = n.data.reqData;
             switch (o.type) {
               case "read": {
-                let c2 = await this.inputQueue.get();
-                await As(t2, i, c2);
+                let l = await this.inputQueue.get();
+                await Is(t2, i, l);
                 break;
               }
               default:
-                throw new T(`Unsupported request type '${o.type}'.`);
+                throw new P(`Unsupported request type '${o.type}'.`);
             }
             return;
           }
           case "request":
-            throw new T("Can't send messages of type 'request' from a worker. Please Use 'sync-request' instead.");
+            throw new P("Can't send messages of type 'request' from a worker. Please Use 'sync-request' instead.");
         }
     });
     ({ resolve: this.resolve, reject: this.reject, promise: this.initialised } = $());
     let r = (n) => {
-      E(this, Zt, qs).call(this, n), this.close = () => {
+      E(this, Zt, Vs).call(this, n), this.close = () => {
         n.terminate(), this.putClosedMessage();
       };
-      let o = { type: "init", data: { config: t, channelType: A.SharedArrayBuffer } };
+      let o = { type: "init", data: { config: t, channelType: O.SharedArrayBuffer } };
       n.postMessage(o);
     };
     if (be(t.baseUrl))
@@ -31617,36 +31617,36 @@ var et = class extends se {
   }
   interrupt() {
     if (!a(this, Me))
-      throw new T("Failed attempt to interrupt before initialising interruptBuffer");
+      throw new P("Failed attempt to interrupt before initialising interruptBuffer");
     this.inputQueue.reset(), a(this, Me)[0] = 1;
   }
 };
-Me = /* @__PURE__ */ new WeakMap(), Zt = /* @__PURE__ */ new WeakSet(), qs = function(t) {
+Me = /* @__PURE__ */ new WeakMap(), Zt = /* @__PURE__ */ new WeakSet(), Vs = function(t) {
   m ? (t.on("message", (r) => {
-    a(this, tt).call(this, t, r);
+    a(this, rt).call(this, t, r);
   }), t.on("error", (r) => {
-    console.error(r), this.reject(new O("An error occurred initialising the webR SharedBufferChannel worker."));
-  })) : (t.onmessage = (r) => a(this, tt).call(this, t, r.data), t.onerror = (r) => {
-    console.error(r), this.reject(new O("An error occurred initialising the webR SharedBufferChannel worker."));
+    console.error(r), this.reject(new A("An error occurred initialising the webR SharedBufferChannel worker."));
+  })) : (t.onmessage = (r) => a(this, rt).call(this, t, r.data), t.onerror = (r) => {
+    console.error(r), this.reject(new A("An error occurred initialising the webR SharedBufferChannel worker."));
   });
-}, tt = /* @__PURE__ */ new WeakMap();
+}, rt = /* @__PURE__ */ new WeakMap();
 var ue;
-var rt;
-var pe;
 var st;
-ue = /* @__PURE__ */ new WeakMap(), rt = /* @__PURE__ */ new WeakMap(), pe = /* @__PURE__ */ new WeakMap(), st = /* @__PURE__ */ new WeakMap();
+var pe;
+var nt;
+ue = /* @__PURE__ */ new WeakMap(), st = /* @__PURE__ */ new WeakMap(), pe = /* @__PURE__ */ new WeakMap(), nt = /* @__PURE__ */ new WeakMap();
 var sr = oe(zt());
 m && (globalThis.Worker = B("worker_threads").Worker);
 var De;
 var de;
 var We;
 var er;
-var Vs;
-var tr;
 var Js;
-var rr;
+var tr;
 var Hs;
-var nt;
+var rr;
+var zs;
+var ot;
 var Yt = class extends se {
   constructor(t) {
     super();
@@ -31658,7 +31658,7 @@ var Yt = class extends se {
     u(this, De, /* @__PURE__ */ new Map());
     u(this, de, void 0);
     u(this, We, false);
-    u(this, nt, (t2, r2) => {
+    u(this, ot, (t2, r2) => {
       if (!(!r2 || !r2.type))
         switch (r2.type) {
           case "resolve":
@@ -31679,15 +31679,15 @@ var Yt = class extends se {
             return;
           }
           case "request":
-            throw new T("Can't send messages of type 'request' from a worker.Use service worker fetch request instead.");
+            throw new P("Can't send messages of type 'request' from a worker.Use service worker fetch request instead.");
         }
     });
     ({ resolve: this.resolve, reject: this.reject, promise: this.initialised } = $()), console.warn("The ServiceWorker communication channel is deprecated and will be removed in a future version of webR. Consider using the PostMessage channel instead. If blocking input is required (for example, `browser()`) the SharedArrayBuffer channel should be used. See https://docs.r-wasm.org/webr/latest/serving.html for further information.");
     let r = (n) => {
-      E(this, rr, Hs).call(this, n), this.close = () => {
+      E(this, rr, zs).call(this, n), this.close = () => {
         n.terminate(), this.putClosedMessage();
-      }, E(this, er, Vs).call(this, `${t.serviceWorkerUrl}webr-serviceworker.js`).then((o) => {
-        let i = { type: "init", data: { config: t, channelType: A.ServiceWorker, clientId: o, location: window.location.href } };
+      }, E(this, er, Js).call(this, `${t.serviceWorkerUrl}webr-serviceworker.js`).then((o) => {
+        let i = { type: "init", data: { config: t, channelType: O.ServiceWorker, clientId: o, location: window.location.href } };
         n.postMessage(i);
       });
     };
@@ -31701,14 +31701,14 @@ var Yt = class extends se {
   activeRegistration() {
     var t;
     if (!((t = a(this, de)) != null && t.active))
-      throw new T("Attempted to obtain a non-existent active registration.");
+      throw new P("Attempted to obtain a non-existent active registration.");
     return a(this, de).active;
   }
   interrupt() {
     d(this, We, true);
   }
 };
-De = /* @__PURE__ */ new WeakMap(), de = /* @__PURE__ */ new WeakMap(), We = /* @__PURE__ */ new WeakMap(), er = /* @__PURE__ */ new WeakSet(), Vs = async function(t) {
+De = /* @__PURE__ */ new WeakMap(), de = /* @__PURE__ */ new WeakMap(), We = /* @__PURE__ */ new WeakMap(), er = /* @__PURE__ */ new WeakSet(), Js = async function(t) {
   d(this, de, await navigator.serviceWorker.register(t)), await navigator.serviceWorker.ready, window.addEventListener("beforeunload", () => {
     var n;
     (n = a(this, de)) == null || n.unregister();
@@ -31719,58 +31719,58 @@ De = /* @__PURE__ */ new WeakMap(), de = /* @__PURE__ */ new WeakMap(), We = /* 
     }), this.activeRegistration().postMessage({ type: "register-client-main" });
   });
   return navigator.serviceWorker.addEventListener("message", (n) => {
-    E(this, tr, Js).call(this, n);
+    E(this, tr, Hs).call(this, n);
   }), r;
-}, tr = /* @__PURE__ */ new WeakSet(), Js = async function(t) {
+}, tr = /* @__PURE__ */ new WeakSet(), Hs = async function(t) {
   if (t.data.type === "request") {
     let r = t.data.data, n = a(this, De).get(r);
     if (!n)
-      throw new T("Request not found during service worker XHR request");
+      throw new P("Request not found during service worker XHR request");
     switch (a(this, De).delete(r), n.type) {
       case "read": {
         let o = await this.inputQueue.get();
-        this.activeRegistration().postMessage({ type: "wasm-webr-fetch-response", uuid: r, response: Ke(r, o) });
+        this.activeRegistration().postMessage({ type: "wasm-webr-fetch-response", uuid: r, response: Qe(r, o) });
         break;
       }
       case "interrupt": {
         let o = a(this, We);
-        this.activeRegistration().postMessage({ type: "wasm-webr-fetch-response", uuid: r, response: Ke(r, o) }), this.inputQueue.reset(), d(this, We, false);
+        this.activeRegistration().postMessage({ type: "wasm-webr-fetch-response", uuid: r, response: Qe(r, o) }), this.inputQueue.reset(), d(this, We, false);
         break;
       }
       default:
-        throw new T(`Unsupported request type '${n.type}'.`);
+        throw new P(`Unsupported request type '${n.type}'.`);
     }
     return;
   }
-}, rr = /* @__PURE__ */ new WeakSet(), Hs = function(t) {
+}, rr = /* @__PURE__ */ new WeakSet(), zs = function(t) {
   m ? (t.on("message", (r) => {
-    a(this, nt).call(this, t, r);
+    a(this, ot).call(this, t, r);
   }), t.on("error", (r) => {
-    console.error(r), this.reject(new O("An error occurred initialising the webR ServiceWorkerChannel worker."));
-  })) : (t.onmessage = (r) => a(this, nt).call(this, t, r.data), t.onerror = (r) => {
-    console.error(r), this.reject(new O("An error occurred initialising the webR ServiceWorkerChannel worker."));
+    console.error(r), this.reject(new A("An error occurred initialising the webR ServiceWorkerChannel worker."));
+  })) : (t.onmessage = (r) => a(this, ot).call(this, t, r.data), t.onerror = (r) => {
+    console.error(r), this.reject(new A("An error occurred initialising the webR ServiceWorkerChannel worker."));
   });
-}, nt = /* @__PURE__ */ new WeakMap();
-var Oe;
-var ot;
+}, ot = /* @__PURE__ */ new WeakMap();
+var Ae;
 var at;
 var it;
 var lt;
 var ct;
-Oe = /* @__PURE__ */ new WeakMap(), ot = /* @__PURE__ */ new WeakMap(), at = /* @__PURE__ */ new WeakMap(), it = /* @__PURE__ */ new WeakMap(), lt = /* @__PURE__ */ new WeakMap(), ct = /* @__PURE__ */ new WeakMap();
+var ut;
+Ae = /* @__PURE__ */ new WeakMap(), at = /* @__PURE__ */ new WeakMap(), it = /* @__PURE__ */ new WeakMap(), lt = /* @__PURE__ */ new WeakMap(), ct = /* @__PURE__ */ new WeakMap(), ut = /* @__PURE__ */ new WeakMap();
 m && (globalThis.Worker = B("worker_threads").Worker);
-var Ae;
+var Oe;
 var nr;
-var zs;
-var pt;
-var ut = class extends se {
+var Xs;
+var dt;
+var pt = class extends se {
   constructor(t) {
     super();
     u(this, nr);
     this.close = () => {
     };
-    u(this, Ae, void 0);
-    u(this, pt, async (t2, r2) => {
+    u(this, Oe, void 0);
+    u(this, dt, async (t2, r2) => {
       if (!(!r2 || !r2.type))
         switch (r2.type) {
           case "resolve":
@@ -31790,27 +31790,27 @@ var ut = class extends se {
             switch (o.type) {
               case "read": {
                 let i = await this.inputQueue.get();
-                if (a(this, Ae)) {
-                  let c2 = Ke(n.data.uuid, i);
-                  a(this, Ae).postMessage(c2);
+                if (a(this, Oe)) {
+                  let l = Qe(n.data.uuid, i);
+                  a(this, Oe).postMessage(l);
                 }
                 break;
               }
               default:
-                throw new T(`Unsupported request type '${o.type}'.`);
+                throw new P(`Unsupported request type '${o.type}'.`);
             }
             return;
           }
           case "sync-request":
-            throw new T("Can't send messages of type 'sync-request' in PostMessage mode. Use 'request' instead.");
+            throw new P("Can't send messages of type 'sync-request' in PostMessage mode. Use 'request' instead.");
         }
     });
     ({ resolve: this.resolve, reject: this.reject, promise: this.initialised } = $());
     let r = (n) => {
-      d(this, Ae, n), E(this, nr, zs).call(this, n), this.close = () => {
+      d(this, Oe, n), E(this, nr, Xs).call(this, n), this.close = () => {
         n.terminate(), this.putClosedMessage();
       };
-      let o = { type: "init", data: { config: t, channelType: A.PostMessage } };
+      let o = { type: "init", data: { config: t, channelType: O.PostMessage } };
       n.postMessage(o);
     };
     if (be(t.baseUrl))
@@ -31824,45 +31824,45 @@ var ut = class extends se {
     console.error("Interrupting R execution is not available when using the PostMessage channel");
   }
 };
-Ae = /* @__PURE__ */ new WeakMap(), nr = /* @__PURE__ */ new WeakSet(), zs = function(t) {
+Oe = /* @__PURE__ */ new WeakMap(), nr = /* @__PURE__ */ new WeakSet(), Xs = function(t) {
   m ? (t.on("message", (r) => {
-    a(this, pt).call(this, t, r);
+    a(this, dt).call(this, t, r);
   }), t.on("error", (r) => {
-    console.error(r), this.reject(new O("An error occurred initialising the webR PostMessageChannel worker."));
-  })) : (t.onmessage = (r) => a(this, pt).call(this, t, r.data), t.onerror = (r) => {
-    console.error(r), this.reject(new O("An error occurred initialising the webR PostMessageChannel worker."));
+    console.error(r), this.reject(new A("An error occurred initialising the webR PostMessageChannel worker."));
+  })) : (t.onmessage = (r) => a(this, dt).call(this, t, r.data), t.onerror = (r) => {
+    console.error(r), this.reject(new A("An error occurred initialising the webR PostMessageChannel worker."));
   });
-}, pt = /* @__PURE__ */ new WeakMap();
+}, dt = /* @__PURE__ */ new WeakMap();
 var Ie;
 var Ue;
-var dt;
+var ht;
 var he;
 var or;
-Ie = /* @__PURE__ */ new WeakMap(), Ue = /* @__PURE__ */ new WeakMap(), dt = /* @__PURE__ */ new WeakMap(), he = /* @__PURE__ */ new WeakMap(), or = /* @__PURE__ */ new WeakMap();
-var A = { Automatic: 0, SharedArrayBuffer: 1, ServiceWorker: 2, PostMessage: 3 };
-function Xs(s) {
+Ie = /* @__PURE__ */ new WeakMap(), Ue = /* @__PURE__ */ new WeakMap(), ht = /* @__PURE__ */ new WeakMap(), he = /* @__PURE__ */ new WeakMap(), or = /* @__PURE__ */ new WeakMap();
+var O = { Automatic: 0, SharedArrayBuffer: 1, ServiceWorker: 2, PostMessage: 3 };
+function Gs(s) {
   switch (s.channelType) {
-    case A.SharedArrayBuffer:
-      return new et(s);
-    case A.ServiceWorker:
+    case O.SharedArrayBuffer:
+      return new tt(s);
+    case O.ServiceWorker:
       return new Yt(s);
-    case A.PostMessage:
-      return new ut(s);
-    case A.Automatic:
+    case O.PostMessage:
+      return new pt(s);
+    case O.Automatic:
     default:
-      return typeof SharedArrayBuffer < "u" ? new et(s) : new ut(s);
+      return typeof SharedArrayBuffer < "u" ? new tt(s) : new pt(s);
   }
 }
-var Gs = m ? __dirname + "/" : "https://webr.r-wasm.org/v0.4.1/";
-var $s = "https://repo.r-wasm.org";
-var Kr = "0.4.1";
+var $s = m ? __dirname + "/" : "https://webr.r-wasm.org/v0.4.2/";
+var Ks = "https://repo.r-wasm.org";
+var Kr = "0.4.2";
 function v(s) {
   return !!s && (typeof s == "object" || typeof s == "function") && "payloadType" in s && $t(s._payload);
 }
 function Zi(s) {
   return v(s) && s._payload.obj.type === "list";
 }
-function Ks(s) {
+function Qs(s) {
   var e;
   return !!(v(s) && ((e = s._payload.obj.methods) != null && e.includes("exec")));
 }
@@ -31877,9 +31877,9 @@ function po(s, e) {
       yield e.get(n);
   };
 }
-function Qs(s, e, t) {
+function Zs(s, e, t) {
   return async (...r) => {
-    let n = r.map((c2) => v(c2) ? c2._payload : { obj: V(c2, v, (p2) => p2._payload), payloadType: "raw" }), o = { type: "callRObjectMethod", data: { payload: t, prop: e, args: n } }, i = await s.request(o);
+    let n = r.map((l) => v(l) ? l._payload : { obj: V(l, v, (p2) => p2._payload), payloadType: "raw" }), o = { type: "callRObjectMethod", data: { payload: t, prop: e, args: n } }, i = await s.request(o);
     switch (i.payloadType) {
       case "ptr":
         return ne(s, i);
@@ -31906,43 +31906,43 @@ function ne(s, e) {
     if (o === Symbol.asyncIterator)
       return po(s, t);
     if ((i = e.obj.methods) != null && i.includes(o.toString()))
-      return Qs(s, o.toString(), e);
+      return Zs(s, o.toString(), e);
   }, apply: async (n, o, i) => {
-    let c2 = await ne(s, e).exec(...i);
-    return Ks(c2) ? c2 : c2.toJs();
+    let l = await ne(s, e).exec(...i);
+    return Qs(l) ? l : l.toJs();
   } });
   return t;
 }
 function W(s, e, t) {
-  return new Proxy(y, { construct: (r, n) => ho(s, t, e, ...n), get: (r, n) => Qs(s, n.toString()) });
+  return new Proxy(y, { construct: (r, n) => ho(s, t, e, ...n), get: (r, n) => Zs(s, n.toString()) });
 }
-var ht;
 var yt;
 var ft;
 var Rt;
 var mt;
+var gt;
 var ar;
 var ir;
 var lr;
 var cr;
 var ur;
 var pr;
-var Zs;
-ht = /* @__PURE__ */ new WeakMap(), yt = /* @__PURE__ */ new WeakMap(), ft = /* @__PURE__ */ new WeakMap(), Rt = /* @__PURE__ */ new WeakMap(), mt = /* @__PURE__ */ new WeakMap(), ar = /* @__PURE__ */ new WeakMap(), ir = /* @__PURE__ */ new WeakMap(), lr = /* @__PURE__ */ new WeakMap(), cr = /* @__PURE__ */ new WeakMap(), ur = /* @__PURE__ */ new WeakMap(), pr = /* @__PURE__ */ new WeakSet(), Zs = async function() {
+var Ys;
+yt = /* @__PURE__ */ new WeakMap(), ft = /* @__PURE__ */ new WeakMap(), Rt = /* @__PURE__ */ new WeakMap(), mt = /* @__PURE__ */ new WeakMap(), gt = /* @__PURE__ */ new WeakMap(), ar = /* @__PURE__ */ new WeakMap(), ir = /* @__PURE__ */ new WeakMap(), lr = /* @__PURE__ */ new WeakMap(), cr = /* @__PURE__ */ new WeakMap(), ur = /* @__PURE__ */ new WeakMap(), pr = /* @__PURE__ */ new WeakSet(), Ys = async function() {
   for (; ; ) {
     let e = await this.webR.read();
     switch (e.type) {
       case "stdout":
-        a(this, ht).call(this, e.data);
-        break;
-      case "stderr":
         a(this, yt).call(this, e.data);
         break;
-      case "prompt":
+      case "stderr":
         a(this, ft).call(this, e.data);
         break;
+      case "prompt":
+        a(this, Rt).call(this, e.data);
+        break;
       case "canvas":
-        e.data.event === "canvasImage" ? a(this, Rt).call(this, e.data.image) : e.data.event === "canvasNewPage" && a(this, mt).call(this);
+        e.data.event === "canvasImage" ? a(this, mt).call(this, e.data.image) : e.data.event === "canvasNewPage" && a(this, gt).call(this);
         break;
       case "closed":
         return;
@@ -31952,16 +31952,16 @@ ht = /* @__PURE__ */ new WeakMap(), yt = /* @__PURE__ */ new WeakMap(), ft = /* 
   }
 };
 var yo = { FONTCONFIG_PATH: "/etc/fonts", R_HOME: "/usr/lib/R", R_ENABLE_JIT: "0", WEBR: "1", WEBR_VERSION: Kr };
-var Ys = { RArgs: [], REnv: yo, baseUrl: Gs, serviceWorkerUrl: "", repoUrl: $s, homedir: "/home/web_user", interactive: true, channelType: A.Automatic, createLazyFilesystem: true };
+var en = { RArgs: [], REnv: yo, baseUrl: $s, serviceWorkerUrl: "", repoUrl: Ks, homedir: "/home/web_user", interactive: true, channelType: O.Automatic, createLazyFilesystem: true };
 var R;
-var gt;
+var bt;
 var yr;
-var en;
+var tn;
 var dr = class {
   constructor(e = {}) {
     u(this, yr);
     u(this, R, void 0);
-    u(this, gt, void 0);
+    u(this, bt, void 0);
     this.version = Kr;
     this.FS = { lookupPath: async (e2) => {
       let t2 = { type: "lookupPath", data: { path: e2 } };
@@ -31970,8 +31970,14 @@ var dr = class {
       let t2 = { type: "mkdir", data: { path: e2 } };
       return (await a(this, R).request(t2)).obj;
     }, mount: async (e2, t2, r) => {
-      let n = { type: "mount", data: { type: e2, options: t2, mountpoint: r } };
-      await a(this, R).request(n);
+      let n = [];
+      "blobs" in t2 && t2.blobs && (n = [...n, ...t2.blobs.map((i) => i.data instanceof Blob ? i.data.arrayBuffer().then((l) => {
+        i.data = new Uint8Array(l);
+      }) : Promise.resolve())]), "packages" in t2 && t2.packages && (n = [...n, ...t2.packages.map((i) => i.blob instanceof Blob ? i.blob.arrayBuffer().then((l) => {
+        i.blob = new Uint8Array(l);
+      }) : Promise.resolve())]), await Promise.all(n);
+      let o = { type: "mount", data: { type: e2, options: t2, mountpoint: r } };
+      await a(this, R).request(o);
     }, syncfs: async (e2) => {
       let t2 = { type: "syncfs", data: { populate: e2 } };
       await a(this, R).request(t2);
@@ -31991,13 +31997,13 @@ var dr = class {
       let t2 = { type: "unmount", data: { path: e2 } };
       await a(this, R).request(t2);
     } };
-    let t = { ...Ys, ...e, REnv: { ...Ys.REnv, ...e.REnv } };
-    d(this, R, Xs(t)), this.objs = {}, this.Shelter = fo(a(this, R)), d(this, gt, a(this, R).initialised.then(async () => {
-      this.globalShelter = await new this.Shelter(), this.RObject = this.globalShelter.RObject, this.RLogical = this.globalShelter.RLogical, this.RInteger = this.globalShelter.RInteger, this.RDouble = this.globalShelter.RDouble, this.RComplex = this.globalShelter.RComplex, this.RCharacter = this.globalShelter.RCharacter, this.RRaw = this.globalShelter.RRaw, this.RList = this.globalShelter.RList, this.RDataFrame = this.globalShelter.RDataFrame, this.RPairlist = this.globalShelter.RPairlist, this.REnvironment = this.globalShelter.REnvironment, this.RSymbol = this.globalShelter.RSymbol, this.RString = this.globalShelter.RString, this.RCall = this.globalShelter.RCall, this.objs = { baseEnv: await this.RObject.getPersistentObject("baseEnv"), globalEnv: await this.RObject.getPersistentObject("globalEnv"), null: await this.RObject.getPersistentObject("null"), true: await this.RObject.getPersistentObject("true"), false: await this.RObject.getPersistentObject("false"), na: await this.RObject.getPersistentObject("na") }, E(this, yr, en).call(this);
+    let t = { ...en, ...e, REnv: { ...en.REnv, ...e.REnv } };
+    d(this, R, Gs(t)), this.objs = {}, this.Shelter = fo(a(this, R)), d(this, bt, a(this, R).initialised.then(async () => {
+      this.globalShelter = await new this.Shelter(), this.RObject = this.globalShelter.RObject, this.RLogical = this.globalShelter.RLogical, this.RInteger = this.globalShelter.RInteger, this.RDouble = this.globalShelter.RDouble, this.RComplex = this.globalShelter.RComplex, this.RCharacter = this.globalShelter.RCharacter, this.RRaw = this.globalShelter.RRaw, this.RList = this.globalShelter.RList, this.RDataFrame = this.globalShelter.RDataFrame, this.RPairlist = this.globalShelter.RPairlist, this.REnvironment = this.globalShelter.REnvironment, this.RSymbol = this.globalShelter.RSymbol, this.RString = this.globalShelter.RString, this.RCall = this.globalShelter.RCall, this.objs = { baseEnv: await this.RObject.getPersistentObject("baseEnv"), globalEnv: await this.RObject.getPersistentObject("globalEnv"), null: await this.RObject.getPersistentObject("null"), true: await this.RObject.getPersistentObject("true"), false: await this.RObject.getPersistentObject("false"), na: await this.RObject.getPersistentObject("na") }, E(this, yr, tn).call(this);
     }));
   }
   async init() {
-    return a(this, gt);
+    return a(this, bt);
   }
   close() {
     a(this, R).close();
@@ -32041,7 +32047,7 @@ var dr = class {
     return this.evalRRaw(e, "string", t);
   }
   async evalRRaw(e, t, r = {}) {
-    let n = V(r, v, (c2) => c2._payload), o = { type: "evalRRaw", data: { code: e, options: n, outputType: t } }, i = await a(this, R).request(o);
+    let n = V(r, v, (l) => l._payload), o = { type: "evalRRaw", data: { code: e, options: n, outputType: t } }, i = await a(this, R).request(o);
     switch (i.payloadType) {
       case "raw":
         return i.obj;
@@ -32054,7 +32060,7 @@ var dr = class {
     return (await a(this, R).request(r)).obj;
   }
 };
-R = /* @__PURE__ */ new WeakMap(), gt = /* @__PURE__ */ new WeakMap(), yr = /* @__PURE__ */ new WeakSet(), en = async function() {
+R = /* @__PURE__ */ new WeakMap(), bt = /* @__PURE__ */ new WeakMap(), yr = /* @__PURE__ */ new WeakSet(), tn = async function() {
   for (; ; ) {
     let e = await a(this, R).readSystem();
     switch (e.type) {
@@ -32082,19 +32088,19 @@ R = /* @__PURE__ */ new WeakMap(), gt = /* @__PURE__ */ new WeakMap(), yr = /* @
 };
 var g;
 var f;
-var bt;
+var wt;
 var hr = class {
   constructor(e) {
     u(this, g, "");
     u(this, f, void 0);
-    u(this, bt, false);
+    u(this, wt, false);
     d(this, f, e);
   }
   async init() {
-    if (a(this, bt))
+    if (a(this, wt))
       return;
     let e = { type: "newShelter" }, t = await a(this, f).request(e);
-    d(this, g, t.obj), this.RObject = W(a(this, f), a(this, g), "object"), this.RLogical = W(a(this, f), a(this, g), "logical"), this.RInteger = W(a(this, f), a(this, g), "integer"), this.RDouble = W(a(this, f), a(this, g), "double"), this.RComplex = W(a(this, f), a(this, g), "complex"), this.RCharacter = W(a(this, f), a(this, g), "character"), this.RRaw = W(a(this, f), a(this, g), "raw"), this.RList = W(a(this, f), a(this, g), "list"), this.RDataFrame = W(a(this, f), a(this, g), "dataframe"), this.RPairlist = W(a(this, f), a(this, g), "pairlist"), this.REnvironment = W(a(this, f), a(this, g), "environment"), this.RSymbol = W(a(this, f), a(this, g), "symbol"), this.RString = W(a(this, f), a(this, g), "string"), this.RCall = W(a(this, f), a(this, g), "call"), d(this, bt, true);
+    d(this, g, t.obj), this.RObject = W(a(this, f), a(this, g), "object"), this.RLogical = W(a(this, f), a(this, g), "logical"), this.RInteger = W(a(this, f), a(this, g), "integer"), this.RDouble = W(a(this, f), a(this, g), "double"), this.RComplex = W(a(this, f), a(this, g), "complex"), this.RCharacter = W(a(this, f), a(this, g), "character"), this.RRaw = W(a(this, f), a(this, g), "raw"), this.RList = W(a(this, f), a(this, g), "list"), this.RDataFrame = W(a(this, f), a(this, g), "dataframe"), this.RPairlist = W(a(this, f), a(this, g), "pairlist"), this.REnvironment = W(a(this, f), a(this, g), "environment"), this.RSymbol = W(a(this, f), a(this, g), "symbol"), this.RString = W(a(this, f), a(this, g), "string"), this.RCall = W(a(this, f), a(this, g), "call"), d(this, wt, true);
   }
   async purge() {
     let e = { type: "shelterPurge", data: a(this, g) };
@@ -32123,15 +32129,15 @@ var hr = class {
       case "ptr":
         throw new Z("Unexpected payload type returned from evalR");
       case "raw": {
-        let i = o.obj, c2 = ne(a(this, f), i.result), p2 = i.output, D2 = i.images;
+        let i = o.obj, l = ne(a(this, f), i.result), p2 = i.output, D2 = i.images;
         for (let b2 = 0; b2 < p2.length; ++b2)
           p2[b2].type !== "stdout" && p2[b2].type !== "stderr" && (p2[b2].data = ne(a(this, f), p2[b2].data));
-        return { result: c2, output: p2, images: D2 };
+        return { result: l, output: p2, images: D2 };
       }
     }
   }
 };
-g = /* @__PURE__ */ new WeakMap(), f = /* @__PURE__ */ new WeakMap(), bt = /* @__PURE__ */ new WeakMap();
+g = /* @__PURE__ */ new WeakMap(), f = /* @__PURE__ */ new WeakMap(), wt = /* @__PURE__ */ new WeakMap();
 function fo(s) {
   return new Proxy(hr, { construct: async () => {
     let e = new hr(s);
@@ -32559,7 +32565,7 @@ function postableErrorObjectToError(errObj) {
 
 // src/pyodide/pyodide.js
 var Q = Object.defineProperty;
-var c = (e, t) => Q(e, "name", { value: t, configurable: true });
+var c2 = (e, t) => Q(e, "name", { value: t, configurable: true });
 var O2 = ((e) => typeof __require < "u" ? __require : typeof Proxy < "u" ? new Proxy(e, { get: (t, i) => (typeof __require < "u" ? __require : t)[i] }) : e)(function(e) {
   if (typeof __require < "u")
     return __require.apply(this, arguments);
@@ -32568,17 +32574,17 @@ var O2 = ((e) => typeof __require < "u" ? __require : typeof Proxy < "u" ? new P
 function Z2(e) {
   return !isNaN(parseFloat(e)) && isFinite(e);
 }
-c(Z2, "_isNumber");
+c2(Z2, "_isNumber");
 function E2(e) {
   return e.charAt(0).toUpperCase() + e.substring(1);
 }
-c(E2, "_capitalize");
+c2(E2, "_capitalize");
 function P2(e) {
   return function() {
     return this[e];
   };
 }
-c(P2, "_getter");
+c2(P2, "_getter");
 var w2 = ["isConstructor", "isEval", "isNative", "isToplevel"];
 var N2 = ["columnNumber", "lineNumber"];
 var _ = ["fileName", "functionName", "source"];
@@ -32590,7 +32596,7 @@ function p(e) {
     for (var t = 0; t < I2.length; t++)
       e[I2[t]] !== void 0 && this["set" + E2(I2[t])](e[I2[t]]);
 }
-c(p, "StackFrame");
+c2(p, "StackFrame");
 p.prototype = { getArgs: function() {
   return this.args;
 }, setArgs: function(e) {
@@ -32610,11 +32616,11 @@ p.prototype = { getArgs: function() {
   var e = this.getFileName() || "", t = this.getLineNumber() || "", i = this.getColumnNumber() || "", r = this.getFunctionName() || "";
   return this.getIsEval() ? e ? "[eval] (" + e + ":" + t + ":" + i + ")" : "[eval]:" + t + ":" + i : r ? r + " (" + e + ":" + t + ":" + i + ")" : e + ":" + t + ":" + i;
 } };
-p.fromString = c(function(t) {
+p.fromString = c2(function(t) {
   var i = t.indexOf("("), r = t.lastIndexOf(")"), a2 = t.substring(0, i), n = t.substring(i + 1, r).split(","), o = t.substring(r + 1);
   if (o.indexOf("@") === 0)
-    var s = /@(.+?)(?::(\d+))?(?::(\d+))?$/.exec(o, ""), l2 = s[1], d2 = s[2], u2 = s[3];
-  return new p({ functionName: a2, args: n || void 0, fileName: l2, lineNumber: d2 || void 0, columnNumber: u2 || void 0 });
+    var s = /@(.+?)(?::(\d+))?(?::(\d+))?$/.exec(o, ""), l = s[1], d2 = s[2], u2 = s[3];
+  return new p({ functionName: a2, args: n || void 0, fileName: l, lineNumber: d2 || void 0, columnNumber: u2 || void 0 });
 }, "StackFrame$$fromString");
 for (b = 0; b < w2.length; b++)
   p.prototype["get" + E2(w2[b])] = P2(w2[b]), p.prototype["set" + E2(w2[b])] = function(e) {
@@ -32642,18 +32648,18 @@ var h;
 var x2 = p;
 function ne2() {
   var e = /^\s*at .*(\S+:\d+|\(native\))/m, t = /^(eval@)?(\[native code])?$/;
-  return { parse: c(function(r) {
+  return { parse: c2(function(r) {
     if (r.stack && r.stack.match(e))
       return this.parseV8OrIE(r);
     if (r.stack)
       return this.parseFFOrSafari(r);
     throw new Error("Cannot parse given Error object");
-  }, "ErrorStackParser$$parse"), extractLocation: c(function(r) {
+  }, "ErrorStackParser$$parse"), extractLocation: c2(function(r) {
     if (r.indexOf(":") === -1)
       return [r];
     var a2 = /(.+?)(?::(\d+))?(?::(\d+))?$/, n = a2.exec(r.replace(/[()]/g, ""));
     return [n[1], n[2] || void 0, n[3] || void 0];
-  }, "ErrorStackParser$$extractLocation"), parseV8OrIE: c(function(r) {
+  }, "ErrorStackParser$$extractLocation"), parseV8OrIE: c2(function(r) {
     var a2 = r.stack.split(`
 `).filter(function(n) {
       return !!n.match(e);
@@ -32662,10 +32668,10 @@ function ne2() {
       n.indexOf("(eval ") > -1 && (n = n.replace(/eval code/g, "eval").replace(/(\(eval at [^()]*)|(,.*$)/g, ""));
       var o = n.replace(/^\s+/, "").replace(/\(eval code/g, "(").replace(/^.*?\s+/, ""), s = o.match(/ (\(.+\)$)/);
       o = s ? o.replace(s[0], "") : o;
-      var l2 = this.extractLocation(s ? s[1] : o), d2 = s && o || void 0, u2 = ["eval", "<anonymous>"].indexOf(l2[0]) > -1 ? void 0 : l2[0];
-      return new x2({ functionName: d2, fileName: u2, lineNumber: l2[1], columnNumber: l2[2], source: n });
+      var l = this.extractLocation(s ? s[1] : o), d2 = s && o || void 0, u2 = ["eval", "<anonymous>"].indexOf(l[0]) > -1 ? void 0 : l[0];
+      return new x2({ functionName: d2, fileName: u2, lineNumber: l[1], columnNumber: l[2], source: n });
     }, this);
-  }, "ErrorStackParser$$parseV8OrIE"), parseFFOrSafari: c(function(r) {
+  }, "ErrorStackParser$$parseV8OrIE"), parseFFOrSafari: c2(function(r) {
     var a2 = r.stack.split(`
 `).filter(function(n) {
       return !n.match(t);
@@ -32673,12 +32679,12 @@ function ne2() {
     return a2.map(function(n) {
       if (n.indexOf(" > eval") > -1 && (n = n.replace(/ line (\d+)(?: > eval line \d+)* > eval:\d+:\d+/g, ":$1")), n.indexOf("@") === -1 && n.indexOf(":") === -1)
         return new x2({ functionName: n });
-      var o = /((.*".+"[^@]*)?[^@]*)(?:@)/, s = n.match(o), l2 = s && s[1] ? s[1] : void 0, d2 = this.extractLocation(n.replace(o, ""));
-      return new x2({ functionName: l2, fileName: d2[0], lineNumber: d2[1], columnNumber: d2[2], source: n });
+      var o = /((.*".+"[^@]*)?[^@]*)(?:@)/, s = n.match(o), l = s && s[1] ? s[1] : void 0, d2 = this.extractLocation(n.replace(o, ""));
+      return new x2({ functionName: l, fileName: d2[0], lineNumber: d2[1], columnNumber: d2[2], source: n });
     }, this);
   }, "ErrorStackParser$$parseFFOrSafari") };
 }
-c(ne2, "ErrorStackParser");
+c2(ne2, "ErrorStackParser");
 var re = new ne2();
 var M = re;
 var g2 = typeof process == "object" && typeof process.versions == "object" && typeof process.versions.node == "string" && !process.browser;
@@ -32698,20 +32704,20 @@ var D;
 async function T2() {
   if (!g2 || (V2 = (await import("node:url")).default, H = await import("node:fs"), D = await import("node:fs/promises"), z = (await import("node:vm")).default, L2 = await import("node:path"), U2 = L2.sep, typeof O2 < "u"))
     return;
-  let e = H, t = await import("node:crypto"), i = await import("./browser-VNBV4QEY.js"), r = await import("node:child_process"), a2 = { fs: e, crypto: t, ws: i, child_process: r };
+  let e = H, t = await import("node:crypto"), i = await import("./browser-H5WX4RIP.js"), r = await import("node:child_process"), a2 = { fs: e, crypto: t, ws: i, child_process: r };
   globalThis.require = function(n) {
     return a2[n];
   };
 }
-c(T2, "initNodeModules");
+c2(T2, "initNodeModules");
 function ie2(e, t) {
   return L2.resolve(t || ".", e);
 }
-c(ie2, "node_resolvePath");
+c2(ie2, "node_resolvePath");
 function ae2(e, t) {
   return t === void 0 && (t = location), new URL(e, t).toString();
 }
-c(ae2, "browser_resolvePath");
+c2(ae2, "browser_resolvePath");
 var k2;
 g2 ? k2 = ie2 : k2 = ae2;
 var U2;
@@ -32719,12 +32725,12 @@ g2 || (U2 = "/");
 function se2(e, t) {
   return e.startsWith("file://") && (e = e.slice(7)), e.includes("://") ? { response: fetch(e) } : { binary: D.readFile(e).then((i) => new Uint8Array(i.buffer, i.byteOffset, i.byteLength)) };
 }
-c(se2, "node_getBinaryResponse");
+c2(se2, "node_getBinaryResponse");
 function ce(e, t) {
   let i = new URL(e, location);
   return { response: fetch(i, t ? { integrity: t } : {}) };
 }
-c(ce, "browser_getBinaryResponse");
+c2(ce, "browser_getBinaryResponse");
 var R2;
 g2 ? R2 = se2 : R2 = ce;
 async function q2(e, t) {
@@ -32736,12 +32742,12 @@ async function q2(e, t) {
     throw new Error(`Failed to load '${e}': request failed.`);
   return new Uint8Array(await a2.arrayBuffer());
 }
-c(q2, "loadBinaryFile");
+c2(q2, "loadBinaryFile");
 var F2;
 if ($2)
-  F2 = c(async (e) => await import(e), "loadScript");
+  F2 = c2(async (e) => await import(e), "loadScript");
 else if (j)
-  F2 = c(async (e) => {
+  F2 = c2(async (e) => {
     try {
       globalThis.importScripts(e);
     } catch (t) {
@@ -32758,7 +32764,7 @@ else
 async function le2(e) {
   e.startsWith("file://") && (e = e.slice(7)), e.includes("://") ? z.runInThisContext(await (await fetch(e)).text()) : await import(V2.pathToFileURL(e).href);
 }
-c(le2, "nodeLoadScript");
+c2(le2, "nodeLoadScript");
 async function J(e) {
   if (g2) {
     await T2();
@@ -32767,7 +32773,7 @@ async function J(e) {
   } else
     return await (await fetch(e)).json();
 }
-c(J, "loadLockFile");
+c2(J, "loadLockFile");
 async function K() {
   if (A2)
     return __dirname;
@@ -32787,7 +32793,7 @@ async function K() {
     throw new Error("Could not extract indexURL path from pyodide module location");
   return t.slice(0, i);
 }
-c(K, "calculateDirname");
+c2(K, "calculateDirname");
 function Y2(e) {
   let t = e.FS, i = e.FS.filesystems.MEMFS, r = e.PATH, a2 = { DIR_MODE: 16895, FILE_MODE: 33279, mount: function(n) {
     if (!n.opts.fileSystemHandle)
@@ -32795,38 +32801,38 @@ function Y2(e) {
     return i.mount.apply(null, arguments);
   }, syncfs: async (n, o, s) => {
     try {
-      let l2 = a2.getLocalSet(n), d2 = await a2.getRemoteSet(n), u2 = o ? d2 : l2, m2 = o ? l2 : d2;
+      let l = a2.getLocalSet(n), d2 = await a2.getRemoteSet(n), u2 = o ? d2 : l, m2 = o ? l : d2;
       await a2.reconcile(n, u2, m2), s(null);
-    } catch (l2) {
-      s(l2);
+    } catch (l) {
+      s(l);
     }
   }, getLocalSet: (n) => {
     let o = /* @__PURE__ */ Object.create(null);
     function s(u2) {
       return u2 !== "." && u2 !== "..";
     }
-    c(s, "isRealDir");
-    function l2(u2) {
+    c2(s, "isRealDir");
+    function l(u2) {
       return (m2) => r.join2(u2, m2);
     }
-    c(l2, "toAbsolute");
-    let d2 = t.readdir(n.mountpoint).filter(s).map(l2(n.mountpoint));
+    c2(l, "toAbsolute");
+    let d2 = t.readdir(n.mountpoint).filter(s).map(l(n.mountpoint));
     for (; d2.length; ) {
       let u2 = d2.pop(), m2 = t.stat(u2);
-      t.isDir(m2.mode) && d2.push.apply(d2, t.readdir(u2).filter(s).map(l2(u2))), o[u2] = { timestamp: m2.mtime, mode: m2.mode };
+      t.isDir(m2.mode) && d2.push.apply(d2, t.readdir(u2).filter(s).map(l(u2))), o[u2] = { timestamp: m2.mtime, mode: m2.mode };
     }
     return { type: "local", entries: o };
   }, getRemoteSet: async (n) => {
     let o = /* @__PURE__ */ Object.create(null), s = await de2(n.opts.fileSystemHandle);
-    for (let [l2, d2] of s)
-      l2 !== "." && (o[r.join2(n.mountpoint, l2)] = { timestamp: d2.kind === "file" ? (await d2.getFile()).lastModifiedDate : /* @__PURE__ */ new Date(), mode: d2.kind === "file" ? a2.FILE_MODE : a2.DIR_MODE });
+    for (let [l, d2] of s)
+      l !== "." && (o[r.join2(n.mountpoint, l)] = { timestamp: d2.kind === "file" ? (await d2.getFile()).lastModifiedDate : /* @__PURE__ */ new Date(), mode: d2.kind === "file" ? a2.FILE_MODE : a2.DIR_MODE });
     return { type: "remote", entries: o, handles: s };
   }, loadLocalEntry: (n) => {
-    let s = t.lookupPath(n).node, l2 = t.stat(n);
-    if (t.isDir(l2.mode))
-      return { timestamp: l2.mtime, mode: l2.mode };
-    if (t.isFile(l2.mode))
-      return s.contents = i.getFileDataAsTypedArray(s), { timestamp: l2.mtime, mode: l2.mode, contents: s.contents };
+    let s = t.lookupPath(n).node, l = t.stat(n);
+    if (t.isDir(l.mode))
+      return { timestamp: l.mtime, mode: l.mode };
+    if (t.isFile(l.mode))
+      return s.contents = i.getFileDataAsTypedArray(s), { timestamp: l.mtime, mode: l.mode, contents: s.contents };
     throw new Error("node type not supported");
   }, storeLocalEntry: (n, o) => {
     if (t.isDir(o.mode))
@@ -32849,7 +32855,7 @@ function Y2(e) {
       throw new Error("unknown kind: " + n.kind);
     }
   }, storeRemoteEntry: async (n, o, s) => {
-    let l2 = n.get(r.dirname(o)), d2 = t.isFile(s.mode) ? await l2.getFileHandle(r.basename(o), { create: true }) : await l2.getDirectoryHandle(r.basename(o), { create: true });
+    let l = n.get(r.dirname(o)), d2 = t.isFile(s.mode) ? await l.getFileHandle(r.basename(o), { create: true }) : await l.getDirectoryHandle(r.basename(o), { create: true });
     if (d2.kind === "file") {
       let u2 = await d2.createWritable();
       await u2.write(s.contents), await u2.close();
@@ -32858,15 +32864,15 @@ function Y2(e) {
   }, removeRemoteEntry: async (n, o) => {
     await n.get(r.dirname(o)).removeEntry(r.basename(o)), n.delete(o);
   }, reconcile: async (n, o, s) => {
-    let l2 = 0, d2 = [];
+    let l = 0, d2 = [];
     Object.keys(o.entries).forEach(function(f2) {
       let y2 = o.entries[f2], S2 = s.entries[f2];
-      (!S2 || t.isFile(y2.mode) && y2.timestamp.getTime() > S2.timestamp.getTime()) && (d2.push(f2), l2++);
+      (!S2 || t.isFile(y2.mode) && y2.timestamp.getTime() > S2.timestamp.getTime()) && (d2.push(f2), l++);
     }), d2.sort();
     let u2 = [];
     if (Object.keys(s.entries).forEach(function(f2) {
-      o.entries[f2] || (u2.push(f2), l2++);
-    }), u2.sort().reverse(), !l2)
+      o.entries[f2] || (u2.push(f2), l++);
+    }), u2.sort().reverse(), !l)
       return;
     let m2 = o.type === "remote" ? o.handles : s.handles;
     for (let f2 of d2) {
@@ -32889,14 +32895,14 @@ function Y2(e) {
   } };
   e.FS.filesystems.NATIVEFS_ASYNC = a2;
 }
-c(Y2, "initializeNativeFS");
-var de2 = c(async (e) => {
+c2(Y2, "initializeNativeFS");
+var de2 = c2(async (e) => {
   let t = [];
   async function i(a2) {
     for await (let n of a2.values())
       t.push(n), n.kind === "directory" && await i(n);
   }
-  c(i, "collect"), await i(e);
+  c2(i, "collect"), await i(e);
   let r = /* @__PURE__ */ new Map();
   r.set(".", e);
   for (let a2 of t) {
@@ -32911,7 +32917,7 @@ function G2(e) {
   }, print: e.stdout, printErr: e.stderr, arguments: e.args, API: { config: e }, locateFile: (i) => e.indexURL + i, instantiateWasm: ye2(e.indexURL) };
   return t;
 }
-c(G2, "createSettings");
+c2(G2, "createSettings");
 function ue2(e) {
   return function(t) {
     let i = "/";
@@ -32923,20 +32929,20 @@ function ue2(e) {
     t.FS.chdir(e);
   };
 }
-c(ue2, "createHomeDirectory");
+c2(ue2, "createHomeDirectory");
 function fe2(e) {
   return function(t) {
     Object.assign(t.ENV, e);
   };
 }
-c(fe2, "setEnvironment");
+c2(fe2, "setEnvironment");
 function me2(e) {
   return (t) => {
     for (let i of e)
       t.FS.mkdirTree(i), t.FS.mount(t.FS.filesystems.NODEFS, { root: i }, i);
   };
 }
-c(me2, "mountLocalDirectories");
+c2(me2, "mountLocalDirectories");
 function pe2(e) {
   let t = q2(e);
   return (i) => {
@@ -32950,12 +32956,12 @@ function pe2(e) {
     });
   };
 }
-c(pe2, "installStdlib");
+c2(pe2, "installStdlib");
 function ge2(e) {
   let t;
   return e.stdLibURL != null ? t = e.stdLibURL : t = e.indexURL + "python_stdlib.zip", [pe2(t), ue2(e.env.HOME), fe2(e.env), me2(e._node_mounts), Y2];
 }
-c(ge2, "getFileSystemInitializationFuncs");
+c2(ge2, "getFileSystemInitializationFuncs");
 function ye2(e) {
   let { binary: t, response: i } = R2(e + "pyodide.asm.wasm");
   return function(r, a2) {
@@ -32971,9 +32977,9 @@ function ye2(e) {
     }(), {};
   };
 }
-c(ye2, "getInstantiateWasmFunc");
-var C = "0.26.2";
-async function $e2(e = {}) {
+c2(ye2, "getInstantiateWasmFunc");
+var C = "0.26.3";
+async function $e(e = {}) {
   var u2, m2;
   await T2();
   let t = e.indexURL || await K();
@@ -32998,12 +33004,12 @@ async function $e2(e = {}) {
   s.locateFile = (f2) => {
     throw new Error("Didn't expect to load any more file_packager files!");
   };
-  let l2;
-  o && (l2 = n.restoreSnapshot(o));
-  let d2 = n.finalizeBootstrap(l2);
+  let l;
+  o && (l = n.restoreSnapshot(o));
+  let d2 = n.finalizeBootstrap(l);
   return n.sys.path.insert(0, n.config.env.HOME), d2.version.includes("dev") || n.setCdnUrl(`https://cdn.jsdelivr.net/pyodide/v${d2.version}/full/`), n._pyodide.set_excepthook(), await n.packageIndexReady, n.initializeStreams(r.stdin, r.stdout, r.stderr), d2;
 }
-c($e2, "loadPyodide");
+c2($e, "loadPyodide");
 
 // src/pyodide-proxy.ts
 async function setupPythonEnv(pyodide, callJS) {
@@ -33048,7 +33054,7 @@ var NormalPyodideProxy = class _NormalPyodideProxy {
     this.stderrCallback = stderrCallback;
   }
   async init(config) {
-    this.pyodide = await $e2(config);
+    this.pyodide = await $e(config);
     this.pyUtils = await setupPythonEnv(this.pyodide, this.callJS);
   }
   loadPackagesFromImports(code) {
@@ -33936,7 +33942,7 @@ async function initWebR({
     stdout = (x3) => console.log("webR echo:" + x3);
   if (!stderr)
     stderr = (x3) => console.error("webR error:" + x3);
-  const channelType = crossOriginIsolated ? A.Automatic : A.PostMessage;
+  const channelType = crossOriginIsolated ? O.Automatic : O.PostMessage;
   const baseUrl = currentScriptDir() + "/webr/";
   const webRProxy = await loadWebRProxy(
     {
@@ -34139,6 +34145,19 @@ webr::shim_install()
 
 .webr_pkg_cache <- list()
 
+.install_pkg_tgz <- function(path, lib) {
+  tmp <- tempfile()
+  on.exit(unlink(tmp, recursive = TRUE))
+
+  utils::download.file(path, tmp, quiet = TRUE)
+  utils::untar(
+    tmp,
+    exdir = lib,
+    tar = "internal",
+    extras = "--no-same-permissions"
+  )
+}
+
 .mount_vfs_images <- function() {
   metadata_url <- glue::glue("{.base_url}packages/metadata.rds")
   metadata_path <- glue::glue("/shinylive/webr/packages/metadata.rds")
@@ -34165,7 +34184,16 @@ webr::shim_install()
       try({
         # Mount the virtual filesystem image, unless we already have done so
         if (available && !file.exists(mountpoint)) {
-          webr::mount(mountpoint, glue::glue("{.base_url}{path}"))
+          tryCatch({
+            webr::mount(mountpoint, glue::glue("{.base_url}{path}"))
+          }, error = function(cnd) {
+            # File extraction fallback for .tgz with no filesystem metadata
+            if (grepl(".tgz$", path)) {
+              .install_pkg_tgz(path, "/shinylive/webr/packages/")
+            } else {
+              stop(cnd)
+            }
+          })
         }
 
         # If this is a full library, add it to .libPaths()
@@ -35117,7 +35145,8 @@ async function resetRAppFrame(webRProxy, appName, appFrame) {
 function Viewer({
   proxyHandle,
   setViewerMethods,
-  devMode = false
+  devMode = false,
+  setWindowTitle = false
 }) {
   const viewerFrameRef = React9.useRef(null);
   const [appRunningState, setAppRunningState] = React9.useState("loading");
@@ -35125,6 +35154,32 @@ function Viewer({
   const [lastErrorMessage, setLastErrorMessage] = React9.useState(
     null
   );
+  React9.useEffect(() => {
+    if (!setWindowTitle || !viewerFrameRef.current)
+      return;
+    const iframe = viewerFrameRef.current;
+    const observer = new MutationObserver(() => {
+      if (iframe.contentDocument?.title) {
+        document.title = setWindowTitle.prefix + iframe.contentDocument.title;
+      } else {
+        document.title = setWindowTitle.defaultTitle;
+      }
+    });
+    const onLoad = () => {
+      if (iframe.contentDocument) {
+        observer.observe(iframe.contentDocument, {
+          subtree: true,
+          childList: true,
+          characterData: true
+        });
+      }
+    };
+    iframe.addEventListener("load", onLoad);
+    return () => {
+      observer.disconnect();
+      iframe.removeEventListener("load", onLoad);
+    };
+  }, [setWindowTitle]);
   React9.useEffect(() => {
     if (!proxyHandle.shinyReady)
       return;
@@ -35648,7 +35703,8 @@ function App({
               {
                 proxyHandle,
                 setViewerMethods,
-                devMode: true
+                devMode: true,
+                setWindowTitle: appOptions.setWindowTitle
               }
             )
           ]
@@ -35710,7 +35766,8 @@ function App({
               {
                 proxyHandle,
                 setViewerMethods,
-                devMode: true
+                devMode: true,
+                setWindowTitle: appOptions.setWindowTitle
               }
             )
           ]
@@ -35825,7 +35882,8 @@ function App({
             {
               proxyHandle,
               setViewerMethods,
-              devMode: true
+              devMode: true,
+              setWindowTitle: appOptions.setWindowTitle
             }
           )
         ]
@@ -35852,7 +35910,8 @@ function App({
             {
               proxyHandle,
               setViewerMethods,
-              devMode: false
+              devMode: false,
+              setWindowTitle: appOptions.setWindowTitle
             }
           )
         }

@@ -1,4 +1,4 @@
-// Shinylive 0.7.0
+// Shinylive 0.9.0
 // Copyright 2024 Posit, PBC
 import {
   Icon,
@@ -13,7 +13,7 @@ import {
   require_jsx_runtime,
   require_react,
   stringToUint8Array
-} from "./chunk-VTIKB4TP.js";
+} from "./chunk-ASVBLSKJ.js";
 import {
   __commonJS,
   __esm,
@@ -23,7 +23,7 @@ import {
   __publicField,
   __toCommonJS,
   __toESM
-} from "./chunk-6XGWWLNE.js";
+} from "./chunk-YYZJYZVZ.js";
 
 // node_modules/events/events.js
 var require_events = __commonJS({

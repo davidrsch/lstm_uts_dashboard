@@ -160,7 +160,7 @@ app_ui = ui.page_fluid(
                         src = "https://raw.githubusercontent.com/davidrsch/LSTM_UTS/main/logo.png",
                         height = "95"
                     ),
-                    href = ""
+                    href = "https://0192def5-e80b-f2a8-66e3-12e608a87111.share.connect.posit.cloud/"
                 ),
                 class_ = "card ms-depth-8",
                 style = "padding: 22px; height: 151px; display: flex; align-items: center; justify-content: center; border-radius: 0px;"
@@ -337,7 +337,7 @@ def server(input, output, session):
                 (df['inp_amount'].astype(str) == input.inp_amount()) &
                 (df['lstm'].astype(str) == input.lstm())
             ]
-            
+
             test_results = pd.DataFrame(plot_data['tests_results'].iloc[0])
             test_cols = [col for col in test_results.columns if col.startswith('test_')]
             test_results['min'] = test_results[test_cols].min(axis=1)

@@ -16,6 +16,8 @@ Where you will see displayed at the second and third columns on the first row of
 
 Additionally you can explore the results obtained by all the models using the first button to the left in the fourth column on the dashboard's first row as well as a model parameters' heatmap.
 
-![Results table and parameters heatmap](descp/modals.png)
+<div style="width: 100%; height: 5px;"></div>
+
+![Results table and parameters heatmap](descp/modals.png){width="100%"}
 
 *Note:* The results displayed in the previously exposed images correspond to using the **LSTM_UTS** on the data available at [Electric Power Consumption](https://www.kaggle.com/datasets/fedesoriano/electric-power-consumption) using only the **PowerConcsumption_Zone1** historic observations to forecast future observations.

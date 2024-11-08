@@ -5,6 +5,10 @@ import json
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import plotly.express as px
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+from shinywidgets import output_widget, render_plotly
 
 app_ui = ui.page_fluid(
     ui.head_content(
@@ -209,7 +213,7 @@ app_ui = ui.page_fluid(
                     ),
                     class_ = "custom-row"
                 ),
-                ui.output_plot("predictions_plot"),
+                output_widget("predictions_plot"),
                 class_ = "card ms-depth-8",
                 style = "padding: 22px; border-radius: 0px;"
             ),
@@ -234,7 +238,7 @@ app_ui = ui.page_fluid(
                     ),
                     class_ = "custom-row"
                 ),
-                ui.output_plot("parameters_rmse"),
+                output_widget("parameters_rmse"),
                 class_ = "card ms-depth-8",
                 style = "padding: 22px; border-radius: 0px;"
             ),
@@ -319,7 +323,7 @@ def server(input, output, session):
             ui.update_select("lstm", choices = unique_lstm)
 
     @output
-    @render.plot
+    @render_plotly
     def predictions_plot():
         if all(input[select_id]() for select_id in ["transfo", "scales", "inp_amount", "lstm"]):
             data = file_data()
@@ -333,18 +337,8 @@ def server(input, output, session):
                 (df['inp_amount'].astype(str) == input.inp_amount()) &
                 (df['lstm'].astype(str) == input.lstm())
             ]
-
-            if plot_data.empty:
-                fig, ax = plt.subplots()
-                ax.text(0.5, 0.5, "Couldn't find any model\n with these parameters",
-                        ha='center', va='center', fontsize=12, color='blue')
-                ax.set_xlim(0, 1)
-                ax.set_ylim(0, 1)
-                ax.axis('off')
-                return fig
-
-            test_results = pd.DataFrame(plot_data['tests_results'].iloc[0])
             
+            test_results = pd.DataFrame(plot_data['tests_results'].iloc[0])
             test_cols = [col for col in test_results.columns if col.startswith('test_')]
             test_results['min'] = test_results[test_cols].min(axis=1)
             test_results['min_5'] = test_results[test_cols].quantile(0.05, axis=1)
@@ -353,30 +347,126 @@ def server(input, output, session):
             test_results['max'] = test_results[test_cols].max(axis=1)
             test_results['sd'] = test_results[test_cols].std(axis=1)
 
-            fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 8), gridspec_kw={'height_ratios': [3, 1]})
+            fig = make_subplots(rows=2, cols=1, 
+                       row_heights=[0.75, 0.25],
+                       vertical_spacing=0.1)
 
-            ax1.fill_between(test_results.index, test_results['min'], test_results['min_5'], alpha=0.3, color='blue')
-            ax1.fill_between(test_results.index, test_results['max'], test_results['max_95'], alpha=0.3, color='blue')
-            ax1.fill_between(test_results.index, test_results['min_5'], test_results['max_95'], alpha=0.6, color='blue')
-            ax1.plot(test_results.index, test_results['mean'], color='blue', linestyle='dashed', label='Predicted (mean)')
-            ax1.plot(test_results.index, test_results['max'], color='blue')
-            ax1.plot(test_results.index, test_results['min'], color='blue')
-            ax1.plot(test_results.index, test_results['max_95'], color='blue')
-            ax1.plot(test_results.index, test_results['min_5'], color='blue', label='Predicted')
-            ax1.plot(test_results.index, test_results['value'], color='green', label='Real', alpha=0.5)
-            ax1.set_ylabel('Predicted and Real values')
-            ax1.legend()
+            # Add fills between lines for uncertainty ranges
+            fig.add_trace(
+                go.Scatter(
+                    x=test_results.index.tolist() + test_results.index.tolist()[::-1],
+                    y=test_results['min'].tolist() + test_results['min_5'].tolist()[::-1],
+                    fill='tonexty',
+                    fillcolor='rgba(0,0,255,0.3)',
+                    line=dict(width=0),
+                    showlegend=False,
+                    name='Min Range'
+                ),
+                row=1, col=1
+            )
 
-            ax2.plot(test_results.index, test_results['sd'], color='black', label='Predictions Standard deviation')
-            ax2.set_xlabel('Sequence')
-            ax2.set_ylabel('SD')
-            ax2.legend()
+            fig.add_trace(
+                go.Scatter(
+                    x=test_results.index.tolist() + test_results.index.tolist()[::-1],
+                    y=test_results['max'].tolist() + test_results['max_95'].tolist()[::-1],
+                    fill='tonexty',
+                    fillcolor='rgba(0,0,255,0.3)',
+                    line=dict(width=0),
+                    showlegend=False,
+                    name='Max Range'
+                ),
+                row=1, col=1
+            )
 
-            plt.tight_layout()
+            fig.add_trace(
+                go.Scatter(
+                    x=test_results.index.tolist() + test_results.index.tolist()[::-1],
+                    y=test_results['min_5'].tolist() + test_results['max_95'].tolist()[::-1],
+                    fill='tonexty',
+                    fillcolor='rgba(0,0,255,0.6)',
+                    line=dict(width=0),
+                    showlegend=False,
+                    name='95% Range'
+                ),
+                row=1, col=1
+            )
+
+            # Add mean line
+            fig.add_trace(
+                go.Scatter(
+                    x=test_results.index,
+                    y=test_results['mean'],
+                    line=dict(color='blue', dash='dash'),
+                    name='Predicted (mean)'
+                ),
+                row=1, col=1
+            )
+
+            # Add boundary lines
+            for col in ['max', 'min', 'max_95', 'min_5']:
+                fig.add_trace(
+                    go.Scatter(
+                        x=test_results.index,
+                        y=test_results[col],
+                        line=dict(color='blue'),
+                        showlegend=False if col not in ['min_5'] else True,
+                        name='Predicted' if col == 'min_5' else col
+                    ),
+                    row=1, col=1
+                )
+
+            # Add real values
+            fig.add_trace(
+                go.Scatter(
+                    x=test_results.index,
+                    y=test_results['value'],
+                    line=dict(color='green'),
+                    opacity=0.5,
+                    name='Real'
+                ),
+                row=1, col=1
+            )
+
+            # Add standard deviation plot
+            fig.add_trace(
+                go.Scatter(
+                    x=test_results.index,
+                    y=test_results['sd'],
+                    line=dict(color='black'),
+                    name='Predictions Standard deviation'
+                ),
+                row=2, col=1
+            )
+
+            # Update layout
+            fig.update_layout(
+                height=375,
+                showlegend=True,
+                yaxis1=dict(title='Predicted and Real values'),
+                yaxis2=dict(title='SD'),
+                xaxis2=dict(title='Sequence'),
+                legend=dict(
+                    yanchor="top",
+                    y=0.99,
+                    xanchor="right",
+                    x=0.99,
+                    tracegroupgap=5  # Add some gap between legend groups
+                ),
+                legend2=dict(
+                    yanchor="top",
+                    y=0.25,    # Position for the second legend
+                    xanchor="right",
+                    x=0.99
+                )
+            )
+
+            # Update the SD trace to use the second legend
+            fig.data[-1].update(legendgroup="group2", legend="legend2")
+
             return fig
         
     @output
-    @render.plot
+    @render_plotly
     @reactive.Calc
     def parameters_rmse():
         if not input.parameter() or file_data() is None:
@@ -387,21 +477,18 @@ def server(input, output, session):
         plot_data = df[[input.parameter(), 'rmse']]
         plot_data.columns = ['parameter', 'RMSE']
         
-        fig, ax = plt.subplots()
-        
-        unique_params = plot_data['parameter'].unique()
-        
-        if len(unique_params) == 1:
-            # If there's only one unique parameter value, create a single box plot
-            ax.boxplot(plot_data['RMSE'].values)
-            ax.set_xticklabels([unique_params[0]])
-        else:
-            # If there are multiple parameter values, create a box plot for each
-            ax.boxplot([group['RMSE'].values for name, group in plot_data.groupby('parameter')])
-            ax.set_xticklabels(unique_params)
-        
-        ax.set_ylabel('RMSE')
-        ax.set_xlabel(input.parameter())
+        fig = px.box(
+            plot_data,
+            x='parameter',
+            y='RMSE',       
+            title='RMSE by Parameter',  
+        )
+    
+        # Customize axis labels
+        fig.update_layout(
+            xaxis_title=input.parameter(),  
+            yaxis_title="RMSE"              
+        )
         
         return fig
 
